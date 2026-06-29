@@ -45,17 +45,14 @@ and explicitly marks what remains open for anyone with more hardware or more cur
 ## Repository structure
 
 ```
-rblm/                       Core library (model, router, trainer, eval)
-experiments/                Experiment scripts (heteromini_long.py, streaming_prototype.py, …)
-scripts/                    Utilities (plot_asweep.py, build_figures.py, …)
-queues/                     JSON job queues used for overnight training runs
+rblm/                       Core model library (model, router, trainer, tokenizer, eval)
+experiments/                Training and evaluation scripts (heteromini_long.py, streaming_prototype.py, …)
 monograph/
-  docs/chapters/            Research monograph (8 chapters, Markdown)
-  data/eval/                All eval JSON artifacts (no checkpoints)
+  docs/chapters/            Research monograph — 8 chapters (Markdown)
+  data/eval/                All eval JSON artifacts backing every claim in the text
   figures/                  Publication-ready figures (PNG)
-paper/                      Condensed paper drafts (draft_v3.md = submission-ready)
-results/                    Raw JSON results from all experiments
-data/                       Training corpus — not committed (see below)
+  scripts/                  Figure-generation and eval scripts
+data/                       Training corpus — not committed (rebuild with rblm/heteromini.py)
 ```
 
 ---
@@ -87,7 +84,7 @@ Figures depend only on `monograph/data/eval/` — no checkpoints needed:
 python monograph/scripts/build_figures.py
 
 # A-sweep depth plot
-python scripts/plot_asweep.py
+python monograph/scripts/plot_asweep.py
 ```
 
 Output goes to `monograph/figures/`.
@@ -161,8 +158,8 @@ No cloud compute. Training times: ~1.5h per 15k-step run; streaming prototype st
 
 | What | License |
 |---|---|
-| Code (`rblm/`, `experiments/`, `scripts/`) and model checkpoints | [MIT](LICENSE) |
-| Research monograph (`dissertation/`) and paper drafts (`paper/`) | [CC BY 4.0](LICENSE-CC-BY-4.0.md) |
+| Code (`rblm/`, `experiments/`, `monograph/scripts/`) and model checkpoints | [MIT](LICENSE) |
+| Research monograph (`monograph/docs/`) | [CC BY 4.0](LICENSE-CC-BY-4.0.md) |
 
 Copyright (c) 2026 Viktor Jedich
 
