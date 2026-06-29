@@ -1,0 +1,70 @@
+{
+  "experiment": "hm_srcore_b32_k8_R6",
+  "variant": "sparse",
+  "n_params": 10826400,
+  "rows": [
+    {
+      "step": 1000,
+      "Lfin": 7.0158,
+      "anytime": 0.0017,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2246.6,
+      "dead_blocks": 3
+    },
+    {
+      "step": 2500,
+      "Lfin": 6.2724,
+      "anytime": 0.0022,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2558.5,
+      "dead_blocks": 1
+    },
+    {
+      "step": 5000,
+      "Lfin": 5.5767,
+      "anytime": 0.0258,
+      "WS": 8.0,
+      "reuse_p90": 11.0,
+      "k8_kb_per_token": 2962.1,
+      "dead_blocks": 0
+    },
+    {
+      "step": 7500,
+      "Lfin": 5.3447,
+      "anytime": 0.0714,
+      "WS": 8.0,
+      "reuse_p90": 54.0,
+      "k8_kb_per_token": 2978.7,
+      "dead_blocks": 0
+    },
+    {
+      "step": 10000,
+      "Lfin": 5.0153,
+      "anytime": 0.1166,
+      "WS": 8.0,
+      "reuse_p90": 10.0,
+      "k8_kb_per_token": 2914.2,
+      "dead_blocks": 0
+    },
+    {
+      "step": 12500,
+      "Lfin": 4.9272,
+      "anytime": 0.1302,
+      "WS": 8.0,
+      "reuse_p90": 10.0,
+      "k8_kb_per_token": 2924.6,
+      "dead_blocks": 0
+    },
+    {
+      "step": 15000,
+      "Lfin": 5.0143,
+      "anytime": 0.1367,
+      "WS": 8.0,
+      "reuse_p90": 11.0,
+      "k8_kb_per_token": 2965.9,
+      "dead_blocks": 0
+    }
+  ]
+}

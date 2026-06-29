@@ -1,0 +1,40 @@
+[
+  {
+    "name": "reduced_noise_0p1",
+    "args": [
+      "-m", "experiments.heteromini_long",
+      "--variant", "sparse",
+      "--n_blocks", "64",
+      "--k", "8",
+      "--R", "6",
+      "--core_mode", "per_token",
+      "--max_steps", "17000",
+      "--lr_horizon", "15000",
+      "--noise_std", "0.1",
+      "--exp_tag", "_reduced_noise_0p1",
+      "--cont_src", "results/hm_cont_hm_srcore_b64_k8_R6_s0.pt",
+      "--device", "cuda"
+    ],
+    "log": "_b64_reduced_noise_0p1",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k8_R6_reduced_noise_0p1_s0.pt"
+  },
+  {
+    "name": "entmin_r1_lam001",
+    "args": [
+      "-m", "experiments.heteromini_long",
+      "--variant", "sparse",
+      "--n_blocks", "64",
+      "--k", "8",
+      "--R", "6",
+      "--core_mode", "per_token",
+      "--max_steps", "17000",
+      "--lr_horizon", "15000",
+      "--lambda_entropy", "0.001",
+      "--exp_tag", "_entmin_r1_lam001",
+      "--cont_src", "results/hm_cont_hm_srcore_b64_k8_R6_s0.pt",
+      "--device", "cuda"
+    ],
+    "log": "_b64_entmin_r1_lam001",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k8_R6_entmin_r1_lam001_s0.pt"
+  }
+]

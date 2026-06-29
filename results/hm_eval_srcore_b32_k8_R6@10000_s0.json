@@ -1,0 +1,94 @@
+{
+  "n_blocks": 32,
+  "block_params": 263424,
+  "domains": [
+    "web",
+    "wiki",
+    "code",
+    "lit"
+  ],
+  "loss_per_iter": [
+    5.3993,
+    5.3834,
+    5.3735,
+    5.3676,
+    5.3647,
+    5.3644
+  ],
+  "anytime": 0.0349,
+  "working_set": {
+    "contiguous": 8.0,
+    "shuffled": 8.0
+  },
+  "cache_miss": {
+    "contiguous": {
+      "4": 0.9995,
+      "8": 0.1119,
+      "12": 0.0869,
+      "16": 0.0587,
+      "32": 0.005
+    },
+    "shuffled": {
+      "4": 0.9995,
+      "8": 0.1266,
+      "12": 0.1022,
+      "16": 0.0724,
+      "32": 0.0052
+    }
+  },
+  "reuse_distance": {
+    "contiguous": {
+      "p50": 8.0,
+      "p90": 9.0,
+      "p99": 439.0
+    },
+    "shuffled": {
+      "p50": 8.0,
+      "p90": 55.0,
+      "p99": 485.0
+    }
+  },
+  "bytes_per_token": {
+    "fp16": 4214784,
+    "int8": 2107392,
+    "note": "WS_mean * block_params * bytes/param"
+  },
+  "active_blocks_per_domain": {
+    "web": 32,
+    "wiki": 32,
+    "code": 32,
+    "lit": 32
+  },
+  "domain_jaccard_offdiag": 0.352,
+  "domain_jaccard_matrix": [
+    [
+      1.0,
+      0.45,
+      0.23,
+      0.6
+    ],
+    [
+      0.45,
+      1.0,
+      0.23,
+      0.45
+    ],
+    [
+      0.23,
+      0.23,
+      1.0,
+      0.14
+    ],
+    [
+      0.6,
+      0.45,
+      0.14,
+      1.0
+    ]
+  ],
+  "domain_clf_acc": 0.595,
+  "domain_clf_chance": 0.25,
+  "gini": 0.2672,
+  "dead_blocks": 0,
+  "experiment": "srcore_b32_k8_R6@10000"
+}

@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0369,
+      "std": 0.0317,
+      "n": 29
+    },
+    "wiki": {
+      "mean_gain": 0.0324,
+      "std": 0.0301,
+      "n": 35
+    },
+    "code": {
+      "mean_gain": 0.0379,
+      "std": 0.0429,
+      "n": 50
+    },
+    "lit": {
+      "mean_gain": 0.0236,
+      "std": 0.027,
+      "n": 46
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.1379,
+      "domain": "code",
+      "snippet": " either version 3 of the License, or # (at your option) any later version. # # PIConGPU is distributed in the hope that "
+    },
+    {
+      "gain": 0.1325,
+      "domain": "code",
+      "snippet": "licenses/LICENSE-2.0 # # Unless required by applicable law or agreed to in writing, software # distributed under the Lic"
+    },
+    {
+      "gain": 0.1278,
+      "domain": "code",
+      "snippet": " ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, # EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT"
+    },
+    {
+      "gain": 0.1208,
+      "domain": "code",
+      "snippet": " obtain a copy of the License at # # http://www.apache.org/licenses/LICENSE-2.0 # # Unless required by applicable law or"
+    },
+    {
+      "gain": 0.1182,
+      "domain": "lit",
+      "snippet": "IC MOTIONS\r     \r \r \r  \r \r \r       ATOMIC FORMS AND THEIR COMBINATIONS\r     \r \r \r       ABSENCE OF SECONDARY QUALITIES\r "
+    },
+    {
+      "gain": 0.114,
+      "domain": "code",
+      "snippet": "path.dirname(__file__), 'README.rst')).read(),     url=\"https://github.com/xrmx/pylokit\",     license='MPL 2.0"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0255,
+      "domain": "code",
+      "snippet": ".objects.create(username='unmanageable_password', password='$')         cls.u6 = User.objects.create(username='unknown_p"
+    },
+    {
+      "gain": -0.0316,
+      "domain": "lit",
+      "snippet": " estimate this as, frankly, quite the best,\r \r “all round,” of all my productions; any failure of that\r \r justification "
+    },
+    {
+      "gain": -0.0348,
+      "domain": "wiki",
+      "snippet": " possession of the territories.  Alfonso also moved the capital from Pravia, where Silo had located it, to Oviedo, the c"
+    },
+    {
+      "gain": -0.0459,
+      "domain": "lit",
+      "snippet": "apse.\r \r \r Some have felt that these blundering lives are due to the inconvenient\r \r indefiniteness with which the Supre"
+    },
+    {
+      "gain": -0.0481,
+      "domain": "web",
+      "snippet": "žana Municipality site - Snoj, Marko. 2009. Etimološki slovar slovenskih zemljepisnih imen. Lj"
+    },
+    {
+      "gain": -0.0564,
+      "domain": "code",
+      "snippet": "HEMA.root, p)) as f:       s = jsonpatch.apply_patch(s, json.load(f))   return s  class ExtraFields:   def __init__(self"
+    }
+  ],
+  "n_examples": 160,
+  "experiment": "dense_d24",
+  "step": 10000
+}

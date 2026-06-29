@@ -1,0 +1,836 @@
+{
+  "n_blocks": 32,
+  "k_active": 4,
+  "R": 6,
+  "n_domains": 4,
+  "domains": [
+    "web",
+    "wiki",
+    "code",
+    "lit"
+  ],
+  "n_tokens_analyzed": 81920,
+  "n_unique_cores_total": 696,
+  "n_unique_cores_per_domain": {
+    "web": 410,
+    "wiki": 434,
+    "code": 386,
+    "lit": 388
+  },
+  "top_cores_per_domain": {
+    "web": [
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          30
+        ],
+        "count": 2116,
+        "frac": 0.104
+      },
+      {
+        "blocks": [
+          0,
+          3,
+          24,
+          26
+        ],
+        "count": 1013,
+        "frac": 0.0498
+      },
+      {
+        "blocks": [
+          15,
+          20,
+          24,
+          30
+        ],
+        "count": 849,
+        "frac": 0.0417
+      },
+      {
+        "blocks": [
+          16,
+          21,
+          24,
+          31
+        ],
+        "count": 685,
+        "frac": 0.0337
+      },
+      {
+        "blocks": [
+          21,
+          24,
+          25,
+          31
+        ],
+        "count": 680,
+        "frac": 0.0334
+      },
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          24
+        ],
+        "count": 530,
+        "frac": 0.026
+      },
+      {
+        "blocks": [
+          8,
+          24,
+          30,
+          31
+        ],
+        "count": 526,
+        "frac": 0.0258
+      },
+      {
+        "blocks": [
+          13,
+          21,
+          24,
+          25
+        ],
+        "count": 514,
+        "frac": 0.0253
+      },
+      {
+        "blocks": [
+          0,
+          19,
+          22,
+          24
+        ],
+        "count": 488,
+        "frac": 0.024
+      },
+      {
+        "blocks": [
+          0,
+          1,
+          24,
+          26
+        ],
+        "count": 475,
+        "frac": 0.0233
+      }
+    ],
+    "wiki": [
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          30
+        ],
+        "count": 2263,
+        "frac": 0.0951
+      },
+      {
+        "blocks": [
+          15,
+          20,
+          24,
+          30
+        ],
+        "count": 1089,
+        "frac": 0.0457
+      },
+      {
+        "blocks": [
+          21,
+          24,
+          25,
+          31
+        ],
+        "count": 1080,
+        "frac": 0.0454
+      },
+      {
+        "blocks": [
+          17,
+          21,
+          24,
+          25
+        ],
+        "count": 890,
+        "frac": 0.0374
+      },
+      {
+        "blocks": [
+          8,
+          24,
+          30,
+          31
+        ],
+        "count": 822,
+        "frac": 0.0345
+      },
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          24
+        ],
+        "count": 797,
+        "frac": 0.0335
+      },
+      {
+        "blocks": [
+          8,
+          19,
+          22,
+          24
+        ],
+        "count": 713,
+        "frac": 0.0299
+      },
+      {
+        "blocks": [
+          2,
+          8,
+          22,
+          24
+        ],
+        "count": 646,
+        "frac": 0.0271
+      },
+      {
+        "blocks": [
+          0,
+          19,
+          22,
+          24
+        ],
+        "count": 548,
+        "frac": 0.023
+      },
+      {
+        "blocks": [
+          13,
+          21,
+          24,
+          25
+        ],
+        "count": 532,
+        "frac": 0.0223
+      }
+    ],
+    "code": [
+      {
+        "blocks": [
+          21,
+          24,
+          25,
+          31
+        ],
+        "count": 2465,
+        "frac": 0.1267
+      },
+      {
+        "blocks": [
+          21,
+          24,
+          30,
+          31
+        ],
+        "count": 2443,
+        "frac": 0.1256
+      },
+      {
+        "blocks": [
+          15,
+          19,
+          22,
+          24
+        ],
+        "count": 1229,
+        "frac": 0.0632
+      },
+      {
+        "blocks": [
+          15,
+          20,
+          24,
+          30
+        ],
+        "count": 1024,
+        "frac": 0.0526
+      },
+      {
+        "blocks": [
+          16,
+          21,
+          24,
+          31
+        ],
+        "count": 844,
+        "frac": 0.0434
+      },
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          30
+        ],
+        "count": 792,
+        "frac": 0.0407
+      },
+      {
+        "blocks": [
+          8,
+          24,
+          30,
+          31
+        ],
+        "count": 790,
+        "frac": 0.0406
+      },
+      {
+        "blocks": [
+          15,
+          22,
+          24,
+          30
+        ],
+        "count": 539,
+        "frac": 0.0277
+      },
+      {
+        "blocks": [
+          5,
+          24,
+          30,
+          31
+        ],
+        "count": 460,
+        "frac": 0.0236
+      },
+      {
+        "blocks": [
+          24,
+          26,
+          30,
+          31
+        ],
+        "count": 400,
+        "frac": 0.0206
+      }
+    ],
+    "lit": [
+      {
+        "blocks": [
+          0,
+          19,
+          22,
+          24
+        ],
+        "count": 1615,
+        "frac": 0.0882
+      },
+      {
+        "blocks": [
+          2,
+          15,
+          20,
+          30
+        ],
+        "count": 1307,
+        "frac": 0.0714
+      },
+      {
+        "blocks": [
+          17,
+          21,
+          24,
+          25
+        ],
+        "count": 876,
+        "frac": 0.0479
+      },
+      {
+        "blocks": [
+          0,
+          17,
+          19,
+          24
+        ],
+        "count": 678,
+        "frac": 0.037
+      },
+      {
+        "blocks": [
+          0,
+          15,
+          19,
+          24
+        ],
+        "count": 644,
+        "frac": 0.0352
+      },
+      {
+        "blocks": [
+          16,
+          21,
+          24,
+          31
+        ],
+        "count": 610,
+        "frac": 0.0333
+      },
+      {
+        "blocks": [
+          16,
+          21,
+          24,
+          25
+        ],
+        "count": 527,
+        "frac": 0.0288
+      },
+      {
+        "blocks": [
+          0,
+          17,
+          21,
+          24
+        ],
+        "count": 515,
+        "frac": 0.0281
+      },
+      {
+        "blocks": [
+          0,
+          15,
+          20,
+          24
+        ],
+        "count": 508,
+        "frac": 0.0278
+      },
+      {
+        "blocks": [
+          0,
+          3,
+          24,
+          26
+        ],
+        "count": 402,
+        "frac": 0.022
+      }
+    ]
+  },
+  "core_coverage": {
+    "web": {
+      "top_1": 0.104,
+      "top_5": 0.263,
+      "top_10": 0.387,
+      "top_20": 0.562
+    },
+    "wiki": {
+      "top_1": 0.095,
+      "top_5": 0.258,
+      "top_10": 0.394,
+      "top_20": 0.565
+    },
+    "code": {
+      "top_1": 0.127,
+      "top_5": 0.411,
+      "top_10": 0.565,
+      "top_20": 0.724
+    },
+    "lit": {
+      "top_1": 0.088,
+      "top_5": 0.28,
+      "top_10": 0.42,
+      "top_20": 0.566
+    }
+  },
+  "block_overlap_between_domains": {
+    "web_x_wiki": {
+      "intersection": 20,
+      "union": 20,
+      "jaccard": 1.0,
+      "blocks_i": 20,
+      "blocks_j": 20
+    },
+    "web_x_code": {
+      "intersection": 19,
+      "union": 21,
+      "jaccard": 0.905,
+      "blocks_i": 20,
+      "blocks_j": 20
+    },
+    "web_x_lit": {
+      "intersection": 20,
+      "union": 21,
+      "jaccard": 0.952,
+      "blocks_i": 20,
+      "blocks_j": 21
+    },
+    "wiki_x_code": {
+      "intersection": 19,
+      "union": 21,
+      "jaccard": 0.905,
+      "blocks_i": 20,
+      "blocks_j": 20
+    },
+    "wiki_x_lit": {
+      "intersection": 20,
+      "union": 21,
+      "jaccard": 0.952,
+      "blocks_i": 20,
+      "blocks_j": 21
+    },
+    "code_x_lit": {
+      "intersection": 19,
+      "union": 22,
+      "jaccard": 0.864,
+      "blocks_i": 20,
+      "blocks_j": 21
+    }
+  },
+  "domain_jaccard_offdiag_mean": 0.314,
+  "domain_jaccard_matrix": {
+    "web": {
+      "web": 1.0,
+      "wiki": 0.6,
+      "code": 0.143,
+      "lit": 0.333
+    },
+    "wiki": {
+      "web": 0.6,
+      "wiki": 1.0,
+      "code": 0.333,
+      "lit": 0.143
+    },
+    "code": {
+      "web": 0.143,
+      "wiki": 0.333,
+      "code": 1.0,
+      "lit": 0.333
+    },
+    "lit": {
+      "web": 0.333,
+      "wiki": 0.143,
+      "code": 0.333,
+      "lit": 1.0
+    }
+  },
+  "dominant_domain_per_block": {
+    "0": {
+      "domain": "lit",
+      "frac": 0.412,
+      "all_fracs": {
+        "web": 0.327,
+        "wiki": 0.227,
+        "code": 0.03,
+        "lit": 0.412
+      }
+    },
+    "1": {
+      "domain": "web",
+      "frac": 0.104,
+      "all_fracs": {
+        "web": 0.104,
+        "wiki": 0.103,
+        "code": 0.004,
+        "lit": 0.076
+      }
+    },
+    "2": {
+      "domain": "wiki",
+      "frac": 0.275,
+      "all_fracs": {
+        "web": 0.258,
+        "wiki": 0.275,
+        "code": 0.093,
+        "lit": 0.128
+      }
+    },
+    "3": {
+      "domain": "web",
+      "frac": 0.118,
+      "all_fracs": {
+        "web": 0.118,
+        "wiki": 0.058,
+        "code": 0.028,
+        "lit": 0.06
+      }
+    },
+    "4": {
+      "domain": null,
+      "frac": 0.0,
+      "status": "dead"
+    },
+    "5": {
+      "domain": "code",
+      "frac": 0.089,
+      "all_fracs": {
+        "web": 0.006,
+        "wiki": 0.005,
+        "code": 0.089,
+        "lit": 0.001
+      }
+    },
+    "6": {
+      "domain": "web",
+      "frac": 0.005,
+      "all_fracs": {
+        "web": 0.005,
+        "wiki": 0.004,
+        "code": 0.003,
+        "lit": 0.001
+      }
+    },
+    "7": {
+      "domain": "lit",
+      "frac": 0.023,
+      "all_fracs": {
+        "web": 0.0,
+        "wiki": 0.0,
+        "code": 0.003,
+        "lit": 0.023
+      }
+    },
+    "8": {
+      "domain": "wiki",
+      "frac": 0.243,
+      "all_fracs": {
+        "web": 0.151,
+        "wiki": 0.243,
+        "code": 0.11,
+        "lit": 0.139
+      }
+    },
+    "9": {
+      "domain": "web",
+      "frac": 0.0,
+      "all_fracs": {
+        "web": 0.0,
+        "wiki": 0.0,
+        "code": 0.0,
+        "lit": 0.0
+      }
+    },
+    "10": {
+      "domain": null,
+      "frac": 0.0,
+      "status": "dead"
+    },
+    "11": {
+      "domain": "web",
+      "frac": 0.026,
+      "all_fracs": {
+        "web": 0.026,
+        "wiki": 0.025,
+        "code": 0.012,
+        "lit": 0.023
+      }
+    },
+    "12": {
+      "domain": null,
+      "frac": 0.0,
+      "status": "dead"
+    },
+    "13": {
+      "domain": "lit",
+      "frac": 0.107,
+      "all_fracs": {
+        "web": 0.038,
+        "wiki": 0.047,
+        "code": 0.012,
+        "lit": 0.107
+      }
+    },
+    "14": {
+      "domain": "wiki",
+      "frac": 0.0,
+      "all_fracs": {
+        "web": 0.0,
+        "wiki": 0.0,
+        "code": 0.0,
+        "lit": 0.0
+      }
+    },
+    "15": {
+      "domain": "code",
+      "frac": 0.314,
+      "all_fracs": {
+        "web": 0.297,
+        "wiki": 0.312,
+        "code": 0.314,
+        "lit": 0.237
+      }
+    },
+    "16": {
+      "domain": "lit",
+      "frac": 0.128,
+      "all_fracs": {
+        "web": 0.068,
+        "wiki": 0.05,
+        "code": 0.063,
+        "lit": 0.128
+      }
+    },
+    "17": {
+      "domain": "lit",
+      "frac": 0.195,
+      "all_fracs": {
+        "web": 0.039,
+        "wiki": 0.059,
+        "code": 0.021,
+        "lit": 0.195
+      }
+    },
+    "18": {
+      "domain": "lit",
+      "frac": 0.005,
+      "all_fracs": {
+        "web": 0.0,
+        "wiki": 0.001,
+        "code": 0.002,
+        "lit": 0.005
+      }
+    },
+    "19": {
+      "domain": "lit",
+      "frac": 0.336,
+      "all_fracs": {
+        "web": 0.139,
+        "wiki": 0.166,
+        "code": 0.105,
+        "lit": 0.336
+      }
+    },
+    "20": {
+      "domain": "wiki",
+      "frac": 0.289,
+      "all_fracs": {
+        "web": 0.288,
+        "wiki": 0.289,
+        "code": 0.175,
+        "lit": 0.198
+      }
+    },
+    "21": {
+      "domain": "code",
+      "frac": 0.389,
+      "all_fracs": {
+        "web": 0.227,
+        "wiki": 0.233,
+        "code": 0.389,
+        "lit": 0.336
+      }
+    },
+    "22": {
+      "domain": "code",
+      "frac": 0.236,
+      "all_fracs": {
+        "web": 0.181,
+        "wiki": 0.217,
+        "code": 0.236,
+        "lit": 0.231
+      }
+    },
+    "23": {
+      "domain": null,
+      "frac": 0.0,
+      "status": "dead"
+    },
+    "24": {
+      "domain": "code",
+      "frac": 0.895,
+      "all_fracs": {
+        "web": 0.867,
+        "wiki": 0.876,
+        "code": 0.895,
+        "lit": 0.874
+      }
+    },
+    "25": {
+      "domain": "wiki",
+      "frac": 0.223,
+      "all_fracs": {
+        "web": 0.16,
+        "wiki": 0.223,
+        "code": 0.198,
+        "lit": 0.131
+      }
+    },
+    "26": {
+      "domain": "web",
+      "frac": 0.202,
+      "all_fracs": {
+        "web": 0.202,
+        "wiki": 0.11,
+        "code": 0.071,
+        "lit": 0.112
+      }
+    },
+    "27": {
+      "domain": "code",
+      "frac": 0.023,
+      "all_fracs": {
+        "web": 0.016,
+        "wiki": 0.014,
+        "code": 0.023,
+        "lit": 0.012
+      }
+    },
+    "28": {
+      "domain": "code",
+      "frac": 0.0,
+      "all_fracs": {
+        "web": 0.0,
+        "wiki": 0.0,
+        "code": 0.0,
+        "lit": 0.0
+      }
+    },
+    "29": {
+      "domain": null,
+      "frac": 0.0,
+      "status": "dead"
+    },
+    "30": {
+      "domain": "code",
+      "frac": 0.524,
+      "all_fracs": {
+        "web": 0.268,
+        "wiki": 0.276,
+        "code": 0.524,
+        "lit": 0.145
+      }
+    },
+    "31": {
+      "domain": "code",
+      "frac": 0.6,
+      "all_fracs": {
+        "web": 0.212,
+        "wiki": 0.186,
+        "code": 0.6,
+        "lit": 0.089
+      }
+    }
+  },
+  "blocks_dominated_per_domain": {
+    "web": 6,
+    "wiki": 5,
+    "code": 9,
+    "lit": 7
+  },
+  "mean_block_exclusivity": 0.499,
+  "chance_exclusivity_uniform": 0.25,
+  "loss_r1": 5.2567,
+  "loss_rR": 5.2044,
+  "experiment": "naked_b32_R6@10000",
+  "step": 10000
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "softsharp_a2_lam001",
+    "args": [
+      "-m", "experiments.heteromini_long",
+      "--variant", "sparse",
+      "--n_blocks", "64",
+      "--k", "8",
+      "--R", "6",
+      "--core_mode", "per_token",
+      "--max_steps", "17000",
+      "--lr_horizon", "15000",
+      "--lambda_core", "0.01",
+      "--core_reg_mode", "soft_sharp",
+      "--core_reg_alpha", "2.0",
+      "--exp_tag", "_coreloc_softsharp_a2_lam001",
+      "--cont_src", "results/hm_cont_hm_srcore_b64_k8_R6_s0.pt",
+      "--device", "cuda"
+    ],
+    "log": "_b64_softsharp_a2",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k8_R6_coreloc_softsharp_a2_lam001_s0.pt"
+  }
+]

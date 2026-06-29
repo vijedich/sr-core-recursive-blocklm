@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0321,
+      "std": 0.0324,
+      "n": 171
+    },
+    "wiki": {
+      "mean_gain": 0.0265,
+      "std": 0.033,
+      "n": 167
+    },
+    "code": {
+      "mean_gain": 0.034,
+      "std": 0.0484,
+      "n": 155
+    },
+    "lit": {
+      "mean_gain": 0.0228,
+      "std": 0.0313,
+      "n": 147
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.2141,
+      "domain": "code",
+      "snippet": " Public License as published by  # # the Free Software Foundation, either version 3 of the License, or            # # (a"
+    },
+    {
+      "gain": 0.206,
+      "domain": "code",
+      "snippet": "icense\"); you may #    not use this file except in compliance with the License. You may obtain #    a copy of the Licens"
+    },
+    {
+      "gain": 0.1948,
+      "domain": "lit",
+      "snippet": " \r \r \r  CXLI \r \r \r  CXLII \r \r \r  CXLII \r \r \r  CXLIV \r \r \r  CXLV \r \r \r  CXLVI \r \r \r  CXLVII \r \r \r  CXLVIII \r \r \r  CXLIX \r"
+    },
+    {
+      "gain": 0.164,
+      "domain": "code",
+      "snippet": "us. # # Hydrus is free software: you can redistribute it and/or modify # it under the terms of the GNU General Public Li"
+    },
+    {
+      "gain": 0.1636,
+      "domain": "wiki",
+      "snippet": " is a city in Belgium and capital of the Antwerp province.  Antwerp may also refer to:  In Belgium  Antwerp (district)  "
+    },
+    {
+      "gain": 0.163,
+      "domain": "wiki",
+      "snippet": "–1185), Byzantine emperor Andronikos II Palaiologos (1258–1332) Andronikos III Palaiologos (1297–1341) Andronikos IV Pal"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0645,
+      "domain": "lit",
+      "snippet": "art.  Abe Shivers come cl'ar 'cross the river—powerful frien'ly—an'\r \r ever' time Nance ud walk out to the fence with hi"
+    },
+    {
+      "gain": -0.0649,
+      "domain": "wiki",
+      "snippet": " ca 1564  Ashmolean Museum Oxford  The ex Wahl ca 1568  Andrea Amati ca 1568  Two-piece back with an ebony inlay of \""
+    },
+    {
+      "gain": -0.0709,
+      "domain": "code",
+      "snippet": " proc (x int);   dcl s int;   s = m * x;   print(\"s = \", s); end; p(n); print(m);\"\"\"  test3_source"
+    },
+    {
+      "gain": -0.0753,
+      "domain": "code",
+      "snippet": "LongProperty = make_property_type(     \"LongProperty\", isa=six.integer_types[-1], trait_name=\"long\",     attrs={        "
+    },
+    {
+      "gain": -0.097,
+      "domain": "code",
+      "snippet": "parmaxes) = freeze_par(pars, parmins, parmaxes, i)                          fit_pars = fitfunc(statfunc, current_pars,  "
+    },
+    {
+      "gain": -0.0972,
+      "domain": "code",
+      "snippet": "                     ===================== # # ETE is distributed under the GPL copyleft license (2008-2015). # # If you"
+    }
+  ],
+  "n_examples": 640,
+  "experiment": "dense_d24@10000",
+  "step": 10000
+}

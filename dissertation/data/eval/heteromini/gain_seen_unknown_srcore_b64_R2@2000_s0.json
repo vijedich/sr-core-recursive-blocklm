@@ -1,0 +1,209 @@
+{
+  "experiment": "srcore_b64_R2",
+  "step": 2000,
+  "source": "hm_srcore_b64_R2",
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": -0.0001,
+        "std": 0.001,
+        "n": 144
+      },
+      "wiki": {
+        "mean_gain": -0.0001,
+        "std": 0.0011,
+        "n": 166
+      },
+      "code": {
+        "mean_gain": -0.0001,
+        "std": 0.0021,
+        "n": 175
+      },
+      "lit": {
+        "mean_gain": -0.0001,
+        "std": 0.0013,
+        "n": 155
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0094,
+        "domain": "lit",
+        "snippet": "TZKIN \r \r \r  BEAUTY AND THE BEAST \r \r \r  THE MASTER-MAID \r \r \r  WHY THE SEA IS SALT \r \r \r  THE MASTER CAT; OR, PUSS IN B"
+      },
+      {
+        "gain": 0.005,
+        "domain": "lit",
+        "snippet": " WHAT THE CHANCELLOR’S WIFE SAW   CHAPTER XII.   BEFORE THEM ALL!\r \r           CHAPTER XIII.   A KING\r \r         UP HIS "
+      },
+      {
+        "gain": 0.0046,
+        "domain": "code",
+        "snippet": "_mods = []  #  request body format: #    {\"auth_info\": { #            \"participant\": 1, #            \"key\": \"xyz\" #     "
+      },
+      {
+        "gain": 0.0041,
+        "domain": "code",
+        "snippet": "_possible_size):                 total_used_size = maximum_possible_size             backup_logger.log(\"Assertion Check,"
+      },
+      {
+        "gain": 0.0041,
+        "domain": "code",
+        "snippet": "our\"     DaySpan = \"DaySpan\"     TimeSpan = \"TimeSpan\"     Age = \"Age\"     StringAdd = \"StringAdd\"     Space = \"Space\"  "
+      },
+      {
+        "gain": 0.0039,
+        "domain": "code",
+        "snippet": "             with open(\"/proc/cmdline\") as f:                 for option in f.readline().strip().split():               "
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0044,
+        "domain": "code",
+        "snippet": "kwargs):         self.dbpath = dbpath         self.capture = capture         self.kwargs = kwargs      def __call__(self"
+      },
+      {
+        "gain": -0.0046,
+        "domain": "code",
+        "snippet": "metric_name': {'key': 'metricName', 'type': 'str'},         'metric_resource_uri': {'key': 'metricResourceUri', 'type': "
+      },
+      {
+        "gain": -0.0049,
+        "domain": "code",
+        "snippet": " ion.x = x             ion.dx = dx             ion.y = y             ion.dl = dl         self.forward_if_not_lost(ion)  "
+      },
+      {
+        "gain": -0.0049,
+        "domain": "code",
+        "snippet": "command(self, command_name):         return self.commands[command_name]      def current_nucleator_command(self):       "
+      },
+      {
+        "gain": -0.0052,
+        "domain": "code",
+        "snippet": "ax + ay*ay + az*az)     if lca == 0:         for j in range(nb_p_vs):             p_v1 = p_vs[(j+n"
+      },
+      {
+        "gain": -0.0053,
+        "domain": "code",
+        "snippet": " exception assertions in code that is wrapped by try                 except because the try except intercepts the except"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": -0.0001,
+        "std": 0.0009,
+        "n": 160
+      },
+      "wiki": {
+        "mean_gain": -0.0003,
+        "std": 0.0014,
+        "n": 144
+      },
+      "code": {
+        "mean_gain": -0.0004,
+        "std": 0.0018,
+        "n": 180
+      },
+      "lit": {
+        "mean_gain": 0.0001,
+        "std": 0.0017,
+        "n": 156
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0122,
+        "domain": "lit",
+        "snippet": "all the rest are now dead—”\r \r      \r \r \r       He always shouted when telephoning\r \r     \r \r \r       “Two million dolla"
+      },
+      {
+        "gain": 0.0093,
+        "domain": "wiki",
+        "snippet": "آ أَذًۭى ۙ لَّهُمْ أَجْرُه"
+      },
+      {
+        "gain": 0.0051,
+        "domain": "lit",
+        "snippet": " — MEDICAL OPINION. \r \r \r  CHAPTER X. — A BOLD ATTEMPT. \r \r \r  CHAPTER XI. — BUSINESS IS BUSINESS. \r \r \r  CHAPTER XII. —"
+      },
+      {
+        "gain": 0.005,
+        "domain": "lit",
+        "snippet": " IX.   THE\r \r         SOLITARY FARMHOUSE   CHAPTER X.   AN\r \r         EXCITING SCENE   CHAPTER XI.   TRIED\r \r         FO"
+      },
+      {
+        "gain": 0.0047,
+        "domain": "lit",
+        "snippet": "BURG—FORTIFICATIONS ABOUT VICKSBURG—THE CANAL—LAKE\r \r PROVIDENCE—OPERATIONS AT YAZOO PASS.\r"
+      },
+      {
+        "gain": 0.0045,
+        "domain": "lit",
+        "snippet": " MYSTIFIED \r \r \r  CHAPTER XVIII — MR. DUNCAN'S SECRET \r \r \r  CHAPTER XIX — EFFECTING A LOAN \r \r \r  CHAPTER XX — LUKE TAL"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0043,
+        "domain": "code",
+        "snippet": ", inplace, division, comm_nccl_opts):     check_comm_nccl_opts(comm_nccl_opts)      comm = comm_nccl_opts."
+      },
+      {
+        "gain": -0.0043,
+        "domain": "code",
+        "snippet": " 'preparingPipette'),   ('confirmTip', 'inspectingTip', 'measuringTipOffset'),   ('jog', 'measuringTipOffset', '"
+      },
+      {
+        "gain": -0.0044,
+        "domain": "wiki",
+        "snippet": " respective communities.   Arabic  Catalan  Chinese  Danish  Dutch  English (North-American and British)  Euskera  Finni"
+      },
+      {
+        "gain": -0.0044,
+        "domain": "wiki",
+        "snippet": " respective communities.   Arabic  Catalan  Chinese  Danish  Dutch  English (North-American and British)  Euskera  Finni"
+      },
+      {
+        "gain": -0.0045,
+        "domain": "wiki",
+        "snippet": "Districts  Mechernich has the following districts:  Antweiler, Berg, Bergbuir, Bergheim, Bescheid, Bleibuir, B"
+      },
+      {
+        "gain": -0.0049,
+        "domain": "code",
+        "snippet": " self.assertEqual(attr.attr_type, NUMBER)          attr = NumberAttribute(default=1)         self.assertEqual(attr.defau"
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": -0.0001,
+      "gain_unknown": -0.0001,
+      "delta": 0.0,
+      "ratio_u_s": -100.0
+    },
+    "wiki": {
+      "gain_seen": -0.0001,
+      "gain_unknown": -0.0003,
+      "delta": -0.0002,
+      "ratio_u_s": -300.0
+    },
+    "code": {
+      "gain_seen": -0.0001,
+      "gain_unknown": -0.0004,
+      "delta": -0.0003,
+      "ratio_u_s": -400.0
+    },
+    "lit": {
+      "gain_seen": -0.0001,
+      "gain_unknown": 0.0001,
+      "delta": 0.0002,
+      "ratio_u_s": 100.0
+    }
+  }
+}

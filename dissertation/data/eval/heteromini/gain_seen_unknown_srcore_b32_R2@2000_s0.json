@@ -1,0 +1,209 @@
+{
+  "experiment": "srcore_b32_R2",
+  "step": 2000,
+  "source": "hm_srcore_b32_R2",
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0,
+        "std": 0.0008,
+        "n": 165
+      },
+      "wiki": {
+        "mean_gain": -0.0003,
+        "std": 0.0009,
+        "n": 177
+      },
+      "code": {
+        "mean_gain": 0.0001,
+        "std": 0.0018,
+        "n": 141
+      },
+      "lit": {
+        "mean_gain": 0.0002,
+        "std": 0.0012,
+        "n": 157
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0051,
+        "domain": "code",
+        "snippet": "()(0xff, 0xc5, 0xc5),         \"filesystem\": qt.qcolor()(0xff, 0xe3, 0xc5),         \"process\": qt"
+      },
+      {
+        "gain": 0.0035,
+        "domain": "code",
+        "snippet": "ccurrence.\"\"\"         # Base case         self.assertEqual(self.fp.fingerprint(''), '0' * 16)          # https://arxiv.o"
+      },
+      {
+        "gain": 0.0034,
+        "domain": "code",
+        "snippet": ".AutoField', [], {'primary_key': 'True'}),             'name': ('django.db.models.fields.CharField', [], {'max_length': "
+      },
+      {
+        "gain": 0.0031,
+        "domain": "code",
+        "snippet": " the terms of the GNU General Public License as published by # the Free Software Foundation, either version 3 of the Lic"
+      },
+      {
+        "gain": 0.0031,
+        "domain": "lit",
+        "snippet": "enkfelders.\r \r          Preliminary Steps.  The “First Company”.  Chapter III.\r \r         The First Year in Georgia.  Th"
+      },
+      {
+        "gain": 0.003,
+        "domain": "code",
+        "snippet": "MM/yyyy\"      AUTHOR = \"yɛlɛman s.à.r.l\"     AUTHOR_EMAIL = \"info@yeleman.com\""
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0039,
+        "domain": "code",
+        "snippet": "5)     is_active = models.BooleanField(default=True)     users = models.ManyToManyField(Profile)      def __str__(self):"
+      },
+      {
+        "gain": -0.0042,
+        "domain": "code",
+        "snippet": "':tf.Variable(tf.random_normal([n_nodes_hl2]))}      hidden_3_layer={'weights':tf.Variable(tf.random_normal([n_nodes"
+      },
+      {
+        "gain": -0.0042,
+        "domain": "code",
+        "snippet": "conf)      engine = create_engine(conf['sqlalchemy.url'], echo=True)     meta = MetaData()     conn = engine.connect()  "
+      },
+      {
+        "gain": -0.0043,
+        "domain": "code",
+        "snippet": "' # Directory of corpus. corpus0 = PlaintextCorpusReader(corpusdir, '.*') corpus  = nltk.Text(corp"
+      },
+      {
+        "gain": -0.0045,
+        "domain": "code",
+        "snippet": ",sys,inspect currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) parentdir = os.path."
+      },
+      {
+        "gain": -0.0046,
+        "domain": "lit",
+        "snippet": "’ Signature\r \r \r Chapter 105. The Cemetery of Père-Lachaise \r \r \r Chapter 106. Dividing the Proceeds\r \r \r Chapter 107. T"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": -0.0001,
+        "std": 0.0009,
+        "n": 166
+      },
+      "wiki": {
+        "mean_gain": -0.0005,
+        "std": 0.001,
+        "n": 139
+      },
+      "code": {
+        "mean_gain": 0.0001,
+        "std": 0.002,
+        "n": 177
+      },
+      "lit": {
+        "mean_gain": 0.0004,
+        "std": 0.0012,
+        "n": 158
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0084,
+        "domain": "code",
+        "snippet": " if \"services\" not in parent:       parent[\"services\"] = []     parent[\"services\"].extend(base[\"services\"])    if \"proce"
+      },
+      {
+        "gain": 0.0055,
+        "domain": "code",
+        "snippet": " listado = ['admin', 'settings', 'news', 'about', 'help', 'signin', 'signup',          'signout', 'terms', 'privacy', 'c"
+      },
+      {
+        "gain": 0.0048,
+        "domain": "code",
+        "snippet": "ia\",   action=\"loadprogram\", url=\"http://www.8tv.cat/8aldia/category/tertulia/\",        folder=True) )     itemlist.appe"
+      },
+      {
+        "gain": 0.0045,
+        "domain": "code",
+        "snippet": "': '2013',                         'Month': '6',                         'Day': '26',                         'Hour': '1"
+      },
+      {
+        "gain": 0.004,
+        "domain": "code",
+        "snippet": "1': ('HN', 'Honduras'),  '352': ('BZ', 'Belize'),  '354': ('JM', 'Jamaica'),  '358': ('MX"
+      },
+      {
+        "gain": 0.0037,
+        "domain": "lit",
+        "snippet": "UED THE ADVENTURE OF THE KNIGHT OF THE GROVE, TOGETHER WITH\r \r       THE SENSIBLE, ORIGINAL, AND TRANQUIL COLLOQUY THAT "
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0035,
+        "domain": "lit",
+        "snippet": " CHAPTER 14 \r \r \r  CHAPTER 15 \r \r \r  CHAPTER 16 \r \r \r  CHAPTER 17 \r \r \r  CHAPTER 18 \r \r \r  CHAPTER 19 \r \r \r  CHAPTER 20 "
+      },
+      {
+        "gain": -0.0036,
+        "domain": "code",
+        "snippet": "=build_strategy)         quantized_test_program = test_graph.to_program()         iters = 5         batch_size = 8      "
+      },
+      {
+        "gain": -0.0038,
+        "domain": "web",
+        "snippet": " mouse. - Personal visit (December 3, 2007). - Das Bonner Münster - official website - Bonner Münster - German Wikipedia"
+      },
+      {
+        "gain": -0.004,
+        "domain": "code",
+        "snippet": "va instância. A metaclasse usa este atributo `order` para ordenar uma lista com os nomes dos campos.      >>> class B"
+      },
+      {
+        "gain": -0.0041,
+        "domain": "code",
+        "snippet": ", 'in', protocol='valid')         self.o_bit  = Port(bit, 'out', protocol='valid')         self.append_worker(self.life_"
+      },
+      {
+        "gain": -0.0045,
+        "domain": "code",
+        "snippet": ".edit_stocks(coffee=mc.max_stocks['coffee'])         stock['coffee'] = mc.max_stocks['coffee']         self.assertEqual("
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.0,
+      "gain_unknown": -0.0001,
+      "delta": -0.0001,
+      "ratio_u_s": -100.0
+    },
+    "wiki": {
+      "gain_seen": -0.0003,
+      "gain_unknown": -0.0005,
+      "delta": -0.0002,
+      "ratio_u_s": -500.0
+    },
+    "code": {
+      "gain_seen": 0.0001,
+      "gain_unknown": 0.0001,
+      "delta": 0.0,
+      "ratio_u_s": 1.0
+    },
+    "lit": {
+      "gain_seen": 0.0002,
+      "gain_unknown": 0.0004,
+      "delta": 0.0002,
+      "ratio_u_s": 2.0
+    }
+  }
+}

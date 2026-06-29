@@ -1,0 +1,53 @@
+# ── Model checkpoints (upload to Hugging Face instead) ───────────────────────
+results/*.pt
+dissertation/data/checkpoints/
+checkpoints/
+
+# ── Raw training data (rebuild with rblm/heteromini.py) ──────────────────────
+data/heteromini_v1/
+data/heteromini_v1_heldout/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# ── LaTeX build artifacts ─────────────────────────────────────────────────────
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+latex/*.log
+*.synctex.gz
+*.toc
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+.env.*
+secrets.yaml
+credentials.json
+
+# ── Training noise ────────────────────────────────────────────────────────────
+runs/
+wandb/

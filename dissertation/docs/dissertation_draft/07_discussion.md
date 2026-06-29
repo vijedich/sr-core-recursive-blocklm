@@ -1,0 +1,218 @@
+# Chapter 7: Discussion and Future Work
+
+## 7.1 What This Work Demonstrates
+
+This dissertation has investigated SR-Core, a recursive block-sparse language model
+architecture with a hard working-set guarantee (WS=k), and characterized the effect
+of entropy-based router consolidation on cache efficiency and language quality.
+
+### Demonstrated properties
+
+**Architectural:**
+- The WS=k guarantee holds by construction (Chapter 2) and empirically at all tested
+  bank sizes n ∈ {16, 32, 64, 128, 256} on TinyStories (Chapter 3)
+- Sparse routing (k=4 of n) outperforms dense execution (16/16) at equal compute on
+  synthetic tasks; pure recursion without routing is strictly dominated
+- Block specialization is reproducible (MI_norm = 0.197 ± 0.030 over 3 seeds)
+
+**Routing structure:**
+- Two-phase routing emerges in free-routing variants: exploration at r=1 (J₁ ≈ 0.20),
+  collapse at r≥2 (J ≈ 0.984)
+- Entropy-based consolidation induces a controllable axis: increasing λ monotonically
+  reduces routing entropy, unique core combinations, and simulated bytes-in-motion
+- Pre-selection entropy is the correct intervention point (softfull negative control
+  moves in the wrong direction)
+
+**Cache efficiency:**
+- λ=0.003 is a Pareto improvement over unregularized baseline: cache efficiency and
+  code generalization both improve, replicated across two independent seeds
+- At K=8, SR-Core requires 4.1× fewer simulated bytes/token than dense layer-offloading
+
+**Quality:**
+- Dense d24 is the quality ceiling. SR-Core b64 k8 R6 reaches L = 5.30 ± 0.05 (stable across
+  4 seeds), ~0.5–0.6 nats behind Dense d24 (~4.70–4.81) — and Dense achieves this with half
+  the block-applications per token (24 vs. 48). SR-Core does not win on language quality
+  (Chapter 5a.5)
+- The gap is intrinsic to the format, not a budget artifact: a param- *and* compute-matched
+  SR-Core (8.75M params, 6.29M apps/token = Dense d24) still trails by ~0.5 nats (Chapter 5a.5).
+  Matching parameters and compute does not close it — the cost is the narrow-active-set +
+  recursion format, not a parameter or compute deficit. (Both models are still descending at
+  15k, so the figure is a lower bound, not a converged value)
+- This is by design, not a shortfall: SR-Core's contribution is transfer efficiency, not
+  quality. Under the bandwidth-bound premise (Chapter 5b.0) the extra compute is free, and the
+  quality gap is the price paid for moving k=8 instead of 24 blocks per token
+- λ=0.003 entropy consolidation does not degrade quality relative to ctrl
+
+## 7.2 What This Work Does Not Demonstrate
+
+**Wall-clock inference speedup at scale.** A real RAM→VRAM prototype (Chapter 5b.4) now
+demonstrates the wall-clock advantage *at small scale*: with a grouped block matmul (removing
+the per-block kernel-launch overhead that made a naive implementation launch-bound), SR-Core
+reaches 297 tok/s vs. 205 tok/s for dense layer-offloading at a VRAM budget below the dense
+model size — a 1.45× measured advantage on an RTX 2060. What remains undemonstrated is that
+this *grows* at deployment scale (large blocks, model ≫ VRAM, where the projection predicts a
+much larger gap), under asynchronous stream overlap, and in batched (not batch-1) serving.
+The mechanism is now measured; its magnitude at scale is still a projection.
+
+**Dense-quality parity.** Entropy minimization shapes routing structure; it is not a
+path toward closing the quality gap with dense models.
+
+**Large-scale validation.** All experiments use a ~19M parameter model on a ~6.6M token
+corpus. Whether the WS=k guarantee retains its cache-efficiency advantage at 7B or 70B
+parameters (where n ≫ 64) is untested.
+
+**Downstream task evaluation.** All evaluation is on held-out language modeling loss
+(next-token cross-entropy). No downstream task (classification, generation quality,
+reasoning) has been tested.
+
+**Leiterbahn index.** The routing trace analysis sufficient to build a block-prefetch
+index has not been implemented. The Leiterbahn concept (Section 10 of Theorie.md)
+remains a design direction, not an experimental result.
+
+## 7.3 Relationship to the Original Research Plan
+
+The original research plan (Theorie.md) envisioned a 7-phase program:
+
+| Phase | Plan | Status |
+|---|---|---|
+| 1 | Feasibility, tunnel emergence, anytime property | Complete |
+| 2 | Harder routing (Gumbel, temperature curriculum) | Partial (top-k with noise) |
+| 3 | 3D spatial topology, trainable coordinates | Not implemented |
+| 4 | Leiterbahn index | Not implemented |
+| 5 | I/O loss, hardware-cost simulation | LRU simulation only |
+| 6 | Dynamic halting | Not implemented |
+| 7 | Real RAM→VRAM streaming | Not implemented |
+
+The work presented here covers Phase 1 (fully), a component of Phase 2 (entropy
+regularization as an alternative to temperature curriculum), and Phase 5 (LRU
+simulation). The 3D topology and Leiterbahn concepts remain important directions but
+were not the focus of this experimental program.
+
+The entropy regularization approach (Chapter 6) was not part of the original plan; it
+emerged from the observation that routing collapse at deep steps was a training artifact,
+and that the pre-topk entropy was the appropriate target for intervention.
+
+## 7.4 The Most Important Open Question
+
+The fundamental open question is whether the transfer reduction demonstrated at simulation
+level (4.1×) survives real hardware measurement as a wall-clock **throughput** gain.
+
+A real RAM→VRAM prototype (Chapter 5b.4) has now answered this in the affirmative at small
+scale. On the *transfer axis*: at the measured H2D bandwidth (~11 GB/s on an RTX 2060)
+SR-Core moves 6.7× fewer bytes/token than dense layer-offloading, and the simulated
+bytes/token reproduce exactly. On the *wall-clock axis*: a first naive implementation was
+kernel-launch-bound and slower than dense, but once the k per-block calls of each recursion
+step are fused into one grouped matmul, SR-Core reaches 297 vs. 205 tok/s — a 1.45× measured
+throughput advantage, with the dense baseline transfer-bound (it reloads all layers per token
+at a VRAM budget below its size) and SR-Core moving 6× less.
+
+The chain *fewer bytes → more tokens/second* is therefore no longer only simulated; it is
+measured end-to-end on real hardware. The open question that remains is one of *magnitude*,
+not existence: does the advantage grow at deployment scale (large blocks, model ≫ VRAM, where
+the projection predicts far more than 1.45×), under asynchronous transfer/compute overlap, and
+in batched serving? The mechanism is demonstrated; its payoff at scale is the remaining work.
+
+## 7.5 Future Directions
+
+### 7.5.1 Real-Latency Measurement (In Progress)
+
+The RAM→VRAM prototype exists (Chapter 5b.4) and has cleared three milestones: the real
+transfer measurement; the grouped block matmul that removed per-block kernel-launch overhead
+(with which SR-Core surpasses dense layer-offloading, 1.45× at small scale); and asynchronous
+two-stream overlap (prefetch the next token's blocks during the current token's compute),
+which adds a further 5–9% in the transfer-heavy regime (small VRAM cache) and, as expected,
+nothing when the cache is large enough that transfer is already free. The end-to-end measured
+advantage on an RTX 2060 reaches ~1.6× with overlap. The remaining steps: (1) batched serving
+rather than batch-1 (the union-of-routes problem); (2) measurement at deployment scale (large
+blocks, model ≫ VRAM) where the projection predicts the advantage grows well beyond the
+small-scale figure, and where the compute path is FLOP-bound rather than partly launch-bound,
+so overlap should hide a larger transfer fraction. The target — SR-Core tokens/second > dense
+layer-offloading on the same hardware — is met at small scale; the open question is magnitude
+at scale.
+
+Hardware target: GPU with ≤8 GB VRAM, ≥64 GB CPU RAM, where the dense 7B+ model
+does not fit in VRAM but the k=8 active blocks of SR-Core do.
+
+### 7.5.2 Bank Size Scaling
+
+The 4.1× transfer reduction at n=64 benefits from the fact that k/n = 8/64 = 12.5%.
+At n=512 with k=8, the fraction drops to 1.6% — a 63× theoretical reduction vs. dense.
+Whether SR-Core training remains stable at n=512 and whether the quality gap to dense
+remains manageable at that scale is a critical open question.
+
+### 7.5.3 3D Topology and Leiterbahn
+
+If routing paths are reproducible (MI_norm > 0.197, routing structure replicates across
+seeds), then routing trace analysis on a large validation set should reveal structure
+suitable for Leiterbahn indexing. The original plan (Theorie.md §27) describes this
+step in detail. It requires:
+
+1. Routing trace recording on 10,000+ validation sequences
+2. Tunnel clustering by entry region and path similarity
+3. Index construction mapping entry signatures to block prefetch plans
+4. Prefetch-precision measurement on held-out sequences
+
+### 7.5.4 Targeted Entropy Objectives
+
+The current objective (λ·H(p)) applies uniform pressure across all tokens. A targeted
+variant — penalizing only when H(p) exceeds a threshold H_target — concentrates pressure
+on high-entropy tokens. The target-entropy variants tested in Chapter 6 converge slowly
+in 2,000 steps but may be more effective at longer continuation. The interaction between
+target-entropy objectives and load-balancing terms (which encourage entropy at the batch
+level) is also unexplored.
+
+### 7.5.5 Attention Blocks
+
+MLP blocks have low arithmetic intensity (~0.25 FLOPs/Byte at d=256, h=512). Attention
+blocks have substantially higher intensity (~128 FLOPs/Byte at seq=512, d=256), making
+them more favorable for the RAM→VRAM scenario: more computation per loaded byte.
+Replacing MLP blocks with attention blocks while maintaining SR-Core routing would
+increase the transfer-efficiency of the architecture.
+
+### 7.5.6 Convergence of the Quality Gap (Cheap, Decisive)
+
+The ~0.5-nat quality gap (Chapter 5a.5) is measured at 15k steps, where both the
+param/compute-matched SR-Core and Dense d24 are still descending (~0.2 nats per 2,500 steps
+each). It is therefore a lower bound, not a converged value. Training both to convergence
+(~40k+ steps; ~6–8 h on the same RTX 2060, with auto-resume from the 15k snapshots — no new
+setup) would settle whether the gap narrows, holds, or widens at convergence. The descent rates
+are comparable at 15k, so this data shows no sign of SR-Core catching up — but a weight-tied
+recursive core may simply need more training to "drill in" the shared refinement operator, and
+that is exactly what this run would test. It is the one open question in this work that the
+available hardware can answer cleanly; the rest (scale, downstream tasks, the Leiterbahn index)
+require resources and curiosity beyond this program.
+
+## 7.6 Claim Boundaries
+
+This dissertation claims:
+
+> SR-Core provides a hard working-set guarantee WS=k, and entropy-based router
+> consolidation creates a reproducible cache/locality axis without degrading language
+> quality at the Pareto-optimal operating point (λ=0.003, two seeds).
+
+It also claims, now backed by measurement rather than simulation:
+
+> Under RAM→VRAM offloading on consumer hardware (RTX 2060), SR-Core achieves a real
+> wall-clock throughput advantage over dense layer-offloading (~1.6×) at small scale, at a
+> measured intrinsic quality cost of ~0.5 nats (param- and compute-matched).
+
+It does **not** claim:
+
+> dense-quality parity, a converged quality gap, or demonstrated efficiency *at deployment
+> scale* (≫VRAM models, batched serving).
+
+The honest framing is: the chain *fewer bytes → more tokens/second* is now demonstrated
+end-to-end on real hardware, and the quality price for it is measured and intrinsic to the
+format. What remains open is magnitude at scale — whether the small-scale throughput win and the
+quality gap both move favourably as models grow — which requires hardware beyond this program.
+
+## 7.7 Conclusion
+
+Block-sparse recursive language models with shared routing (SR-Core) combine two
+properties that are jointly necessary for predictable parameter streaming: a hard active-
+set bound (WS=k) and, with entropy regularization, a controllable cache locality axis.
+
+Both properties have been demonstrated at the scale studied. The primary remaining task
+is demonstrating that they survive the translation from simulation to real hardware —
+a demonstration that requires a RAM→VRAM prototype with GPU-native sparse dispatch and
+block sizes large enough to amortize transfer overhead.

@@ -1,0 +1,208 @@
+{
+  "experiment": "srcore_b64_R6@5000",
+  "step": 5000,
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": -0.0004,
+        "std": 0.0037,
+        "n": 154
+      },
+      "wiki": {
+        "mean_gain": 0.0002,
+        "std": 0.004,
+        "n": 166
+      },
+      "code": {
+        "mean_gain": -0.0008,
+        "std": 0.0036,
+        "n": 157
+      },
+      "lit": {
+        "mean_gain": 0.0007,
+        "std": 0.0033,
+        "n": 163
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0166,
+        "domain": "code",
+        "snippet": "## ## Invenio is free software; you can redistribute it and/or ## modify it under the terms of the GNU General Public Li"
+      },
+      {
+        "gain": 0.0139,
+        "domain": "wiki",
+        "snippet": " the ear, and served as Chief Astronaut, the administrative head of the Astronaut Office. He had experimental surgery in"
+      },
+      {
+        "gain": 0.0138,
+        "domain": "lit",
+        "snippet": "VEN \r \r \r  CHAPTER TWENTY-EIGHT \r \r \r  CHAPTER TWENTY-NINE \r \r \r  CHAPTER THIRTY \r \r \r  CHAPTER THIRTY-ONE \r \r \r  CHAPTE"
+      },
+      {
+        "gain": 0.0124,
+        "domain": "lit",
+        "snippet": " rabbelen, Prov. G. rabbeln,\r \r       to prattle, to chatter: cf. L. rabula a brawling advocate, a\r \r       pettifogger,"
+      },
+      {
+        "gain": 0.0108,
+        "domain": "wiki",
+        "snippet": ", he was given a leave of absence for half the year in order to let him travel the world to collect musical information "
+      },
+      {
+        "gain": 0.0102,
+        "domain": "wiki",
+        "snippet": " she developed her mathematical and technological skills.  Ada Byron had an affair with a tutor in early 1833. She tried"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0095,
+        "domain": "wiki",
+        "snippet": " Arkansas has been pronounced and spelled in a variety of fashions. The region was organized as the Territory of Arkansa"
+      },
+      {
+        "gain": -0.0097,
+        "domain": "code",
+        "snippet": "', 'c', 'd'], dtype='int64')         renamed = s.rename({'b': 'foo', 'd': 'bar'})         tm.assert_index_equal(renamed."
+      },
+      {
+        "gain": -0.0099,
+        "domain": "web",
+        "snippet": " shaft has three layers the cuticle, medulla and cortex.Cuticle is the outer layers and protects the inner layers. It is"
+      },
+      {
+        "gain": -0.0099,
+        "domain": "web",
+        "snippet": ". Yesterday I visited the ………….. and I saw …………….. Today, I’m going to ………………. I highly recommend …………"
+      },
+      {
+        "gain": -0.0104,
+        "domain": "code",
+        "snippet": "TokenType from lp.services.verification.model.logintoken import LoginToken from lp.testing.layers import DatabaseFunctio"
+      },
+      {
+        "gain": -0.0136,
+        "domain": "wiki",
+        "snippet": " cycle. For example, the separation of fingers and toes in a developing human embryo occurs because cells between the di"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": -0.0002,
+        "std": 0.004,
+        "n": 151
+      },
+      "wiki": {
+        "mean_gain": 0.0009,
+        "std": 0.0041,
+        "n": 159
+      },
+      "code": {
+        "mean_gain": -0.0003,
+        "std": 0.0044,
+        "n": 189
+      },
+      "lit": {
+        "mean_gain": 0.0004,
+        "std": 0.0034,
+        "n": 141
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.0239,
+        "domain": "wiki",
+        "snippet": "� يَوْمَ ٱلْفُرْقَانِ يَوْ"
+      },
+      {
+        "gain": 0.0186,
+        "domain": "code",
+        "snippet": " free of charge, to any person obtaining a copy # of this software and associated documentation files (the \"Software\"), "
+      },
+      {
+        "gain": 0.0159,
+        "domain": "wiki",
+        "snippet": " became an Army Air Field in conjunction with Salt Lake City Municipal Airport and housed the 7th Bombardment Group oper"
+      },
+      {
+        "gain": 0.0128,
+        "domain": "code",
+        "snippet": "HELP = \"\"\" Note: building the documentation is no longer done using 'python setup.py build_docs'. Instead you will need "
+      },
+      {
+        "gain": 0.0125,
+        "domain": "code",
+        "snippet": "engthOrHeightZscoreConfigForAge(Sex.map[pmap['sex']], attrmap['age_in_days'], attrmap['height'], pmap['measured"
+      },
+      {
+        "gain": 0.0103,
+        "domain": "web",
+        "snippet": "hip and Immigration Services USDA – U.S. Department of Agriculture VA – Department of Veterans Affairs VEAP – Veterans E"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0102,
+        "domain": "web",
+        "snippet": "emens, Europe's largest engineering firm and the builder of all Germany's nuclear plants, abandons the nuclear energy bu"
+      },
+      {
+        "gain": -0.0103,
+        "domain": "web",
+        "snippet": ", plastic pallets are impervious to moisture and most chemicals, so they can be used over and over. Plastic recycling ra"
+      },
+      {
+        "gain": -0.0105,
+        "domain": "lit",
+        "snippet": "RATIONS BY\r HELEN MASON GROSE\r To\r My Friend\r Eva Baker\r \r CONTENTS\r \r \r CHAPTER I\r CHAPTER II\r CHAPTER III\r CHAPTER IV"
+      },
+      {
+        "gain": -0.0106,
+        "domain": "web",
+        "snippet": " are impervious to moisture and most chemicals, so they can be used over and over. Plastic recycling rates are growing f"
+      },
+      {
+        "gain": -0.0128,
+        "domain": "code",
+        "snippet": "author__ = u\"Your name\" __author_email__ = u\"Your email address\" __copyright__ = u\"(c) 2015-2017 - %s\" % __author__ __"
+      },
+      {
+        "gain": -0.017,
+        "domain": "code",
+        "snippet": "__ = u\"GNU Affero General Public License, version 3\" __git_url__ = u\"https://github.com/alignak-monitoring-contrib/align"
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": -0.0004,
+      "gain_unknown": -0.0002,
+      "delta": 0.0002,
+      "ratio_u_s": -200.0
+    },
+    "wiki": {
+      "gain_seen": 0.0002,
+      "gain_unknown": 0.0009,
+      "delta": 0.0007,
+      "ratio_u_s": 4.5
+    },
+    "code": {
+      "gain_seen": -0.0008,
+      "gain_unknown": -0.0003,
+      "delta": 0.0005,
+      "ratio_u_s": -300.0
+    },
+    "lit": {
+      "gain_seen": 0.0007,
+      "gain_unknown": 0.0004,
+      "delta": -0.0003,
+      "ratio_u_s": 0.571
+    }
+  }
+}

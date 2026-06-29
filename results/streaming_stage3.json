@@ -1,0 +1,11 @@
+{
+  "model": "srcore_b64_k8_R6@15000",
+  "K": 20,
+  "R": 6,
+  "k": 8,
+  "n_tokens": 512,
+  "tok_per_s_serial": 307.4,
+  "tok_per_s_overlap": 333.9,
+  "speedup": 1.086,
+  "bandwidth_gbs_measured": 11.0
+}

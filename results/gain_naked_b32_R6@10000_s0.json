@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0495,
+      "std": 0.0394,
+      "n": 142
+    },
+    "wiki": {
+      "mean_gain": 0.0474,
+      "std": 0.0384,
+      "n": 168
+    },
+    "code": {
+      "mean_gain": 0.0659,
+      "std": 0.0633,
+      "n": 173
+    },
+    "lit": {
+      "mean_gain": 0.0375,
+      "std": 0.0355,
+      "n": 157
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.3276,
+      "domain": "code",
+      "snippet": " General Public License along # with this program; if not, write to the Free Software Foundation, Inc., # 51 Franklin St"
+    },
+    {
+      "gain": 0.2824,
+      "domain": "code",
+      "snippet": "org/licenses/LICENSE-2.0 # # Unless required by applicable law or agreed to in writing, software # distributed under the"
+    },
+    {
+      "gain": 0.2717,
+      "domain": "code",
+      "snippet": " of # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the # GNU General Public License for more details. # # Y"
+    },
+    {
+      "gain": 0.2518,
+      "domain": "code",
+      "snippet": "# #    Unless required by applicable law or agreed to in writing, software #    distributed under the License is distrib"
+    },
+    {
+      "gain": 0.2279,
+      "domain": "code",
+      "snippet": " %d, %Y'  # If true, SmartyPants will be used to convert quotes and dashes to # typographically correct entities. #html_"
+    },
+    {
+      "gain": 0.2265,
+      "domain": "lit",
+      "snippet": " Incipit Liber Primus \r \r \r  BOOK II. Incipit Prohemium Secundi Libri.\r             \r \r \r  BOOK III. Incipit prohemium t"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0492,
+      "domain": "code",
+      "snippet": " if x is not None else True,     'IF': lambda x, y, z: y if x else z,     'ISBLANK': lambda x: x is None,     'LOG': lam"
+    },
+    {
+      "gain": -0.0529,
+      "domain": "code",
+      "snippet": "from .utils import GLOBALS, clear_tempdir, terminate_job_launcher, pjoin, pexist from .errors import * import six from s"
+    },
+    {
+      "gain": -0.0546,
+      "domain": "lit",
+      "snippet": "ARCH'S LIVES\r     \r \r       By A. H. Clough\r     \r \r \r CONTENTS\r \r \r  THESEUS \r \r \r  ROMULUS \r \r \r  COMPARISON OF ROMULU"
+    },
+    {
+      "gain": -0.0546,
+      "domain": "lit",
+      "snippet": ") MAN AND THE UNKTOMI\r \r         (SPIDER) \r \r \r  THE RESUSCITATION OF THE ONLY DAUGHTER \r \r \r  THE STORY OF THE PET CRAN"
+    },
+    {
+      "gain": -0.0568,
+      "domain": "web",
+      "snippet": " copy which recorded everything from the original record. - koseki shohon ~ certified copy which recorded only parts fro"
+    },
+    {
+      "gain": -0.0694,
+      "domain": "code",
+      "snippet": " except Exception as e:         print \"Exception loading hip file\"         print str(e)         raise     except:       "
+    }
+  ],
+  "n_examples": 640,
+  "experiment": "naked_b32_R6@10000",
+  "step": 10000
+}

@@ -1,0 +1,52 @@
+{
+  "experiment": "hm_srcore_b32_R6",
+  "variant": "sparse",
+  "n_params": 10826400,
+  "rows": [
+    {
+      "step": 1000,
+      "Lfin": 7.0023,
+      "anytime": 0.0027,
+      "WS": 4.0,
+      "reuse_p90": 4.0,
+      "k8_kb_per_token": 158.9,
+      "dead_blocks": 6
+    },
+    {
+      "step": 2500,
+      "Lfin": 6.0815,
+      "anytime": 0.0079,
+      "WS": 4.0,
+      "reuse_p90": 4.0,
+      "k8_kb_per_token": 295.7,
+      "dead_blocks": 8
+    },
+    {
+      "step": 5000,
+      "Lfin": 5.5148,
+      "anytime": 0.0131,
+      "WS": 4.0,
+      "reuse_p90": 4.0,
+      "k8_kb_per_token": 504.8,
+      "dead_blocks": 3
+    },
+    {
+      "step": 7500,
+      "Lfin": 5.3253,
+      "anytime": 0.0209,
+      "WS": 4.0,
+      "reuse_p90": 5.0,
+      "k8_kb_per_token": 674.9,
+      "dead_blocks": 0
+    },
+    {
+      "step": 10000,
+      "Lfin": 5.3557,
+      "anytime": 0.0212,
+      "WS": 4.0,
+      "reuse_p90": 5.0,
+      "k8_kb_per_token": 745.9,
+      "dead_blocks": 0
+    }
+  ]
+}

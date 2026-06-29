@@ -1,0 +1,10 @@
+[
+  {
+    "name": "asw_k32",
+    "args": ["-m", "experiments.heteromini_long", "--variant", "sparse", "--core_mode", "per_token",
+             "--n_blocks", "64", "--k", "32", "--R", "6", "--max_steps", "15000",
+             "--bs", "16", "--seq_len", "128", "--seed", "0", "--exp_tag", "_asw"],
+    "log": "_asw_k32",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k32_R6_asw_s0.pt"
+  }
+]

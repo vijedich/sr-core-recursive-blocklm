@@ -1,0 +1,86 @@
+{
+  "label_a": "ctrl@17k",
+  "label_b": "target_H375@17k",
+  "step_a": 17000,
+  "step_b": 17000,
+  "metrics_a": {
+    "soft_overlap_raw": 0.721,
+    "soft_overlap_sharp": 0.4915,
+    "hard_overlap_eval": 0.2493,
+    "router_entropy": 3.8256,
+    "topk_margin": 3.5e-05,
+    "unique_cores": 26283,
+    "dead_blocks": 0,
+    "reuseP50": 17.0,
+    "reuseP90": 88.0,
+    "reuseP99": 317.4899999999907,
+    "block_bytes": 526848,
+    "lb": {
+      "8": {
+        "lru": 3028.8,
+        "hot_core_pin": 2847.8,
+        "vs_lru_pct": 6.0
+      },
+      "16": {
+        "lru": 1863.4,
+        "hot_core_pin": 1913.0,
+        "vs_lru_pct": -2.7
+      },
+      "24": {
+        "lru": 1114.1,
+        "hot_core_pin": 1091.5,
+        "vs_lru_pct": 2.0
+      },
+      "32": {
+        "lru": 625.3,
+        "hot_core_pin": 596.5,
+        "vs_lru_pct": 4.6
+      },
+      "48": {
+        "lru": 227.8,
+        "hot_core_pin": 196.6,
+        "vs_lru_pct": 13.7
+      }
+    }
+  },
+  "metrics_b": {
+    "soft_overlap_raw": 0.6996,
+    "soft_overlap_sharp": 0.4629,
+    "hard_overlap_eval": 0.2671,
+    "router_entropy": 3.7845,
+    "topk_margin": 3.9e-05,
+    "unique_cores": 22355,
+    "dead_blocks": 0,
+    "reuseP50": 16.0,
+    "reuseP90": 87.0,
+    "reuseP99": 320.0,
+    "block_bytes": 526848,
+    "lb": {
+      "8": {
+        "lru": 2990.6,
+        "hot_core_pin": 2816.7,
+        "vs_lru_pct": 5.8
+      },
+      "16": {
+        "lru": 1786.6,
+        "hot_core_pin": 1848.1,
+        "vs_lru_pct": -3.4
+      },
+      "24": {
+        "lru": 1039.0,
+        "hot_core_pin": 1017.7,
+        "vs_lru_pct": 2.0
+      },
+      "32": {
+        "lru": 567.6,
+        "hot_core_pin": 538.6,
+        "vs_lru_pct": 5.1
+      },
+      "48": {
+        "lru": 221.0,
+        "hot_core_pin": 189.7,
+        "vs_lru_pct": 14.2
+      }
+    }
+  }
+}

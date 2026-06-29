@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0195,
+      "std": 0.0199,
+      "n": 219
+    },
+    "wiki": {
+      "mean_gain": 0.0226,
+      "std": 0.0293,
+      "n": 241
+    },
+    "code": {
+      "mean_gain": 0.0392,
+      "std": 0.0414,
+      "n": 252
+    },
+    "lit": {
+      "mean_gain": 0.0209,
+      "std": 0.0257,
+      "n": 248
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.2005,
+      "domain": "wiki",
+      "snippet": "ranchises by episode count List of American animated television series List of Canadian animated television series List "
+    },
+    {
+      "gain": 0.1546,
+      "domain": "code",
+      "snippet": ".fields.related.ForeignKey', [], {'to': \"orm['trans.Project']\"}),             'source': ('django.db.models.fields.CharFi"
+    },
+    {
+      "gain": 0.1529,
+      "domain": "code",
+      "snippet": "iliates. All Rights Reserved. # # Copyright (c) 2017-2018, NVIDIA CORPORATION. All rights reserved. # # Licensed under t"
+    },
+    {
+      "gain": 0.1485,
+      "domain": "code",
+      "snippet": "fields.BooleanField', [], {'default': 'False'}),             'last_login': ('django.db.models.fields.DateTimeField', [],"
+    },
+    {
+      "gain": 0.1483,
+      "domain": "code",
+      "snippet": "iance with the License. You may obtain #    a copy of the License at # #         http://www.apache.org/licenses/LICENSE-"
+    },
+    {
+      "gain": 0.1446,
+      "domain": "code",
+      "snippet": " without even the implied warranty of # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the # GNU General Publ"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0456,
+      "domain": "wiki",
+      "snippet": "AusE, AusEng, AuE, AuEng, en-AU) is the set of varieties of the English language native to Australia. It is the country'"
+    },
+    {
+      "gain": -0.0481,
+      "domain": "code",
+      "snippet": "IndicesF = '%s/test.indices' % foldDir     teIndices = np.loadtxt(teIndicesF, dtype=int)     sys.stdout.write(\"Read trai"
+    },
+    {
+      "gain": -0.0606,
+      "domain": "wiki",
+      "snippet": "inungen.  (1788) Zweifel über die Kantischen Begriffe von Zeit und Raum.  (1793) Über Wahrheit und"
+    },
+    {
+      "gain": -0.0619,
+      "domain": "code",
+      "snippet": "lower()         if choice == 's'and self.gold >= 25:             self.gold -= 25             self.has_sword = True      "
+    },
+    {
+      "gain": -0.0809,
+      "domain": "lit",
+      "snippet": "STOCRACY \r \r \r  THE STORY \r \r \r  CHAPTER THE FIRST ~~ THE BOY GROWS UP \r \r \r  CHAPTER THE SECOND ~~ THE YOUNG MAN ABOUT\r"
+    },
+    {
+      "gain": -0.2252,
+      "domain": "code",
+      "snippet": "# under the  terms of the  GNU General Public License  as published by # the Free Software Foundation in version 2.  che"
+    }
+  ],
+  "n_examples": 960,
+  "experiment": "hm_srcore_b32_R6",
+  "step": 10000
+}

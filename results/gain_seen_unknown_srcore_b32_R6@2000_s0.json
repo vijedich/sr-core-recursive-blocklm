@@ -1,0 +1,209 @@
+{
+  "experiment": "srcore_b32_R6",
+  "step": 2000,
+  "source": "hm_srcore_b32_R6",
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0142,
+        "std": 0.0273,
+        "n": 161
+      },
+      "wiki": {
+        "mean_gain": 0.0084,
+        "std": 0.0287,
+        "n": 158
+      },
+      "code": {
+        "mean_gain": 0.0552,
+        "std": 0.0716,
+        "n": 142
+      },
+      "lit": {
+        "mean_gain": 0.0259,
+        "std": 0.0296,
+        "n": 179
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.2604,
+        "domain": "code",
+        "snippet": "CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({})}, extra=vol.ALLOW_EXTRA)  STREAM_SERVICE"
+      },
+      {
+        "gain": 0.2447,
+        "domain": "code",
+        "snippet": "P\\u2082O\\u2085',                'Fe2O3':'Fe\\u2082O\\u2083',                'TiO2':'TiO\\u2082',"
+      },
+      {
+        "gain": 0.2413,
+        "domain": "code",
+        "snippet": "YFile\r \r class dlg(QtGui.QDialog):\r     def __init__(self, args=None, parent=None):\r         super(dlg, self).__init__(p"
+      },
+      {
+        "gain": 0.1864,
+        "domain": "code",
+        "snippet": " Purcaro\", \"vuolter@gmail.com\")]       VALID_UNTIL_PATTERN  = r'Premium expires:\\s*<b>"
+      },
+      {
+        "gain": 0.186,
+        "domain": "code",
+        "snippet": "{HomeDir_Name}/\".format(HomeDir_Name=HomeDir_Name))         )     rsync_project(         local_dir = \"scripts/StationA/c"
+      },
+      {
+        "gain": 0.174,
+        "domain": "code",
+        "snippet": "=IrfChoice(simutime)     emin = 0.2     emax = 10     irf = str(area)+\"_\"+str(irfTime)+\"h\""
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0775,
+        "domain": "code",
+        "snippet": "parse as sp  from ..base import BaseEstimator, ClusterMixin, TransformerMixin from ..metrics.pairwise import euclidean_d"
+      },
+      {
+        "gain": -0.0782,
+        "domain": "code",
+        "snippet": " columns         for x in range(starCols):             # if both row and column are odd, draw the star             if no"
+      },
+      {
+        "gain": -0.0822,
+        "domain": "code",
+        "snippet": "GameObjectMixin, generics.ListCreateAPIView):     \"\"\"     Implements Player list actions         - GET list of players f"
+      },
+      {
+        "gain": -0.0834,
+        "domain": "code",
+        "snippet": " cloth', 'Tan cloth', 'Violet cloth', 'White cloth',                    'Yellow cloth', 'Fine aqua cloth', 'Fine black c"
+      },
+      {
+        "gain": -0.0905,
+        "domain": "web",
+        "snippet": "i ~ adopted child or son - youjo ~ adopted daughter - muko youshi ~ a man without sons may adopt his eldest daughter’s h"
+      },
+      {
+        "gain": -0.0983,
+        "domain": "code",
+        "snippet": " ):     def __init__( self ):         \"\"\"         Encapsulates state related to a job that is being run via SGE and     "
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0118,
+        "std": 0.0212,
+        "n": 148
+      },
+      "wiki": {
+        "mean_gain": 0.0097,
+        "std": 0.0323,
+        "n": 150
+      },
+      "code": {
+        "mean_gain": 0.0438,
+        "std": 0.0661,
+        "n": 172
+      },
+      "lit": {
+        "mean_gain": 0.0328,
+        "std": 0.0637,
+        "n": 170
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.4737,
+        "domain": "lit",
+        "snippet": "IED IN A KNOT \r \r \r  CHAPTER XI — WE HAVE DONE WITH TEARS AND\r \r       TREASONS \r \r \r  CHAPTER XII — A HEART THAT WAITS "
+      },
+      {
+        "gain": 0.3982,
+        "domain": "lit",
+        "snippet": " CHAPTER XX \r \r \r  CHAPTER XXI \r \r \r  CHAPTER XXII \r \r \r  CHAPTER XXIII \r \r \r  CHAPTER XXIV \r \r \r  CHAPTER XXV \r \r \r  CH"
+      },
+      {
+        "gain": 0.3853,
+        "domain": "lit",
+        "snippet": " -- THE EVENTS OF A NIGHT \r \r \r  CHAPTER XXVII   -- WALTER BECOMES A CAPITALIST \r \r \r  CHAPTER XXVIII   -- WALTER GOES O"
+      },
+      {
+        "gain": 0.3727,
+        "domain": "code",
+        "snippet": "h**2, self.Np**2))\r         self.Vphhp = csr_matrix((self.Nh*self.Np, self.Nh*self.Np))\r         self"
+      },
+      {
+        "gain": 0.2189,
+        "domain": "code",
+        "snippet": "Calls.cur_indent = 0      def __call__(self, fn):         @wraps(fn)         def wrapper(*args, **kwargs):             i"
+      },
+      {
+        "gain": 0.2132,
+        "domain": "wiki",
+        "snippet": ".    2003: MultiLingua Classics: English One & Two, 2 CD-ROMs.   updated edition, 1st edition published 1995  2004: Viim"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0602,
+        "domain": "wiki",
+        "snippet": " (Younger Son)  Mitsuko Yoshikawa as Haha (Yoshi's Wife)  Hideo Sugawara as Ryoichi (Older Son) "
+      },
+      {
+        "gain": -0.061,
+        "domain": "code",
+        "snippet": "isinstance(self.collection.author, type(self.pump.Person())))      def test_collection_attr_links(self):         self.as"
+      },
+      {
+        "gain": -0.0685,
+        "domain": "code",
+        "snippet": "unction):         -d0flip         -d1flip         -jitter (x,y)     returns a 3 channel image of (ball, offense, defense"
+      },
+      {
+        "gain": -0.0688,
+        "domain": "code",
+        "snippet": " service',                               'no': u'For mange forsøk. Du er midlertidig utestengt fra denne tjenesten'},   "
+      },
+      {
+        "gain": -0.1017,
+        "domain": "code",
+        "snippet": "(\"spoiler-header\")[0]         spoiler_content = spoiler.find_class(\"spoiler-content\")[0]         header_content = header"
+      },
+      {
+        "gain": -0.1287,
+        "domain": "code",
+        "snippet": ".reference import ReferenceHandler from handlers.home.references import ReferencesHandler from handlers.home.resume_curr"
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.0142,
+      "gain_unknown": 0.0118,
+      "delta": -0.0024,
+      "ratio_u_s": 0.831
+    },
+    "wiki": {
+      "gain_seen": 0.0084,
+      "gain_unknown": 0.0097,
+      "delta": 0.0013,
+      "ratio_u_s": 1.155
+    },
+    "code": {
+      "gain_seen": 0.0552,
+      "gain_unknown": 0.0438,
+      "delta": -0.0114,
+      "ratio_u_s": 0.793
+    },
+    "lit": {
+      "gain_seen": 0.0259,
+      "gain_unknown": 0.0328,
+      "delta": 0.0069,
+      "ratio_u_s": 1.266
+    }
+  }
+}

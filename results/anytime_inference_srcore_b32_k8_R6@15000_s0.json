@@ -1,0 +1,69 @@
+{
+  "model": "srcore_b32_k8_R6@15000",
+  "step": 15000,
+  "R_full": 6,
+  "toks_per_s": 4780.3,
+  "ms_per_tok": 0.209,
+  "rows": [
+    {
+      "r": 1,
+      "block_apps": 8,
+      "Lfin_seen": 5.2626,
+      "anytime_seen": 0.0,
+      "code_gain_seen": 0.0,
+      "Lfin_unk": 5.4512,
+      "code_gain_unk": 0.0,
+      "toks_per_s": 4780.3,
+      "ms_per_tok": 0.209,
+      "code_ratio": 0.0
+    },
+    {
+      "r": 2,
+      "block_apps": 16,
+      "Lfin_seen": 5.3117,
+      "anytime_seen": 0.019,
+      "code_gain_seen": 0.0259,
+      "Lfin_unk": 5.4286,
+      "code_gain_unk": 0.0304,
+      "toks_per_s": 4780.3,
+      "ms_per_tok": 0.209,
+      "code_ratio": 1.174
+    },
+    {
+      "r": 3,
+      "block_apps": 24,
+      "Lfin_seen": 5.2976,
+      "anytime_seen": 0.0325,
+      "code_gain_seen": 0.0492,
+      "Lfin_unk": 5.4393,
+      "code_gain_unk": 0.0501,
+      "toks_per_s": 4780.3,
+      "ms_per_tok": 0.209,
+      "code_ratio": 1.018
+    },
+    {
+      "r": 4,
+      "block_apps": 32,
+      "Lfin_seen": 5.1976,
+      "anytime_seen": 0.0397,
+      "code_gain_seen": 0.0588,
+      "Lfin_unk": 5.4491,
+      "code_gain_unk": 0.0499,
+      "toks_per_s": 4780.3,
+      "ms_per_tok": 0.209,
+      "code_ratio": 0.849
+    },
+    {
+      "r": 6,
+      "block_apps": 48,
+      "Lfin_seen": 5.2351,
+      "anytime_seen": 0.038,
+      "code_gain_seen": 0.0525,
+      "Lfin_unk": 5.4403,
+      "code_gain_unk": 0.0496,
+      "toks_per_s": 4780.3,
+      "ms_per_tok": 0.209,
+      "code_ratio": 0.945
+    }
+  ]
+}

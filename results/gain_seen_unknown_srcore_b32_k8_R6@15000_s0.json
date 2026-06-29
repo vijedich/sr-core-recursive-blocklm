@@ -1,0 +1,216 @@
+{
+  "experiment": "srcore_b32_k8_R6@15000",
+  "step": 15000,
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0302,
+        "std": 0.0327,
+        "n": 171
+      },
+      "wiki": {
+        "mean_gain": 0.0318,
+        "std": 0.0314,
+        "n": 154
+      },
+      "code": {
+        "mean_gain": 0.0539,
+        "std": 0.0632,
+        "n": 161
+      },
+      "lit": {
+        "mean_gain": 0.0347,
+        "std": 0.0385,
+        "n": 154
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.3321,
+        "domain": "code",
+        "snippet": "�口的测试 - 主方法         :param name: case 名称         :param desc: case的详"
+      },
+      {
+        "gain": 0.3115,
+        "domain": "code",
+        "snippet": " FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE     AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, I"
+      },
+      {
+        "gain": 0.31,
+        "domain": "code",
+        "snippet": "._meta.pk.name]))   def ext_results(cl):     if cl.formset:         for res, form in zip(cl.result_list, cl.formset.form"
+      },
+      {
+        "gain": 0.2942,
+        "domain": "code",
+        "snippet": "BMC Mega Pack Addon.      Copyright (C) 2014 Wolverine (xbmcmegapack@gmail.com)      This program is free software: you "
+      },
+      {
+        "gain": 0.2311,
+        "domain": "lit",
+        "snippet": "ATION \r \r \r  VII. -- PAUL BEGINS HIS JOURNEY. \r \r \r  VIII. -- A FRIEND IN NEED. \r \r \r  IX. -- A CLOUD IN THE MUDGE HORIZ"
+      },
+      {
+        "gain": 0.2131,
+        "domain": "code",
+        "snippet": " # it under the terms of the GNU General Public License as published by # the Free Software Foundation, either version 3"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0422,
+        "domain": "web",
+        "snippet": " one to build a support system. A good support system includes the safe and healthy people in her life. Don't spread gos"
+      },
+      {
+        "gain": -0.0425,
+        "domain": "code",
+        "snippet": "  # ##################### test_default_inputs ###############################   def test_default_inputs():     input_dic"
+      },
+      {
+        "gain": -0.0564,
+        "domain": "web",
+        "snippet": " up-to-the-minute happenings, you can search Twitter with a hashtag, like this: #americanidol. - Try posting your questi"
+      },
+      {
+        "gain": -0.0739,
+        "domain": "code",
+        "snippet": ".Fy() + self.prop.Fy() + cori                 return saida      def CalcK(self):         \"\"\"         Calcula o momento d"
+      },
+      {
+        "gain": -0.118,
+        "domain": "code",
+        "snippet": "JvckxvZyAvdmFy L2xvZy9hcGFjaGUyL2tleXN0b25lLmxvZwogICAg"
+      },
+      {
+        "gain": -0.1183,
+        "domain": "lit",
+        "snippet": "  \r \r         CHAPTER VI   CHAPTER VII \r  CHAPTER VIII   CHAPTER IX  \r \r         CHAPTER X   CHAPTER XI \r  CHAPTER XII  "
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0329,
+        "std": 0.0388,
+        "n": 151
+      },
+      "wiki": {
+        "mean_gain": 0.0351,
+        "std": 0.0417,
+        "n": 169
+      },
+      "code": {
+        "mean_gain": 0.045,
+        "std": 0.0576,
+        "n": 176
+      },
+      "lit": {
+        "mean_gain": 0.0446,
+        "std": 0.0443,
+        "n": 144
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.2904,
+        "domain": "code",
+        "snippet": " following disclaimer in #    the documentation and/or other materialsprovided with the #    distribution. # # THIS SOFT"
+      },
+      {
+        "gain": 0.2392,
+        "domain": "wiki",
+        "snippet": "owski\" - Academia Nacional de Medicina - 1986  Selected publications  PAVAN, C. and BREUER, M. E. 1952. Polytene chrom"
+      },
+      {
+        "gain": 0.2322,
+        "domain": "lit",
+        "snippet": ".CHAPTER VI.    LEMBARENE.CHAPTER\r VII.   ON THE WAY FROM KANGWE TO LAKE NCOVI.CHAPTER VIII. \r FROM NCOVI"
+      },
+      {
+        "gain": 0.2162,
+        "domain": "code",
+        "snippet": "进行测试，不必注意\r def __timertest():\r     with Timer(100,msg=\"COUNTING\") as"
+      },
+      {
+        "gain": 0.2111,
+        "domain": "code",
+        "snippet": " # #    Unless required by applicable law or agreed to in writing, software #    distributed under the License is distri"
+      },
+      {
+        "gain": 0.2105,
+        "domain": "code",
+        "snippet": " + math.log(fdt[t, d]) if fdt[t, d] > 0 else 0      qt = [x.strip(string.punctuation) for x in q.split"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.069,
+        "domain": "code",
+        "snippet": "ent_id)s on network %(network_id)s \"                               \"invalid segment, vif_type: %(vif_type)s\"),          "
+      },
+      {
+        "gain": -0.0754,
+        "domain": "web",
+        "snippet": " f of x is the same thing as y, so that y is equal to 2x and then to find the inverse we just switch our x and our y. So"
+      },
+      {
+        "gain": -0.0802,
+        "domain": "code",
+        "snippet": "This script expects two text files in the directory that is passed as an argument:      nodes_main.txt     nodes_test.tx"
+      },
+      {
+        "gain": -0.0921,
+        "domain": "code",
+        "snippet": " = -999             eta4j[0]    = -999             eta3j[0]    = -999             phi4j[0]    = -999             phi3j"
+      },
+      {
+        "gain": -0.1107,
+        "domain": "lit",
+        "snippet": "?\r \r     \r \r Peggy. I don't know—he didn't tell me.\r \r     \r \r Bill. Is he writin'?\r \r     \r \r Peggy. Yes—or else thinki"
+      },
+      {
+        "gain": -0.111,
+        "domain": "code",
+        "snippet": "~ {'status': 'Created'},             #~ {'status': 'Completed'},             #~ {'status': 'Failed'}         #~ ]     #~"
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.0302,
+      "gain_unknown": 0.0329,
+      "delta": 0.0027,
+      "ratio_u_s": 1.089,
+      "n_seen": 171,
+      "n_unknown": 151
+    },
+    "wiki": {
+      "gain_seen": 0.0318,
+      "gain_unknown": 0.0351,
+      "delta": 0.0033,
+      "ratio_u_s": 1.104,
+      "n_seen": 154,
+      "n_unknown": 169
+    },
+    "code": {
+      "gain_seen": 0.0539,
+      "gain_unknown": 0.045,
+      "delta": -0.0089,
+      "ratio_u_s": 0.835,
+      "n_seen": 161,
+      "n_unknown": 176
+    },
+    "lit": {
+      "gain_seen": 0.0347,
+      "gain_unknown": 0.0446,
+      "delta": 0.0099,
+      "ratio_u_s": 1.285,
+      "n_seen": 154,
+      "n_unknown": 144
+    }
+  }
+}

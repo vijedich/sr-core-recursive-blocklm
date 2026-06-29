@@ -1,0 +1,21 @@
+{
+  "experiment": "hm_srcore_b64_k8_R6_reduced_noise_0p1",
+  "variant": "sparse",
+  "n_params": 19258112,
+  "lambda_core": 0.0,
+  "core_reg_mode": "soft_full",
+  "rows": [
+    {
+      "step": 17000,
+      "Lfin": 5.315,
+      "anytime": 0.025,
+      "WS": 8.0,
+      "reuse_p90": 55.0,
+      "k8_kb_per_token": 3211.9,
+      "dead_blocks": 0,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0981,
+      "router_entropy": 3.8738
+    }
+  ]
+}

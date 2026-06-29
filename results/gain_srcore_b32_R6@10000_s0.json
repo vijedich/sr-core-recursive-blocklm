@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0237,
+      "std": 0.0204,
+      "n": 151
+    },
+    "wiki": {
+      "mean_gain": 0.0258,
+      "std": 0.0268,
+      "n": 148
+    },
+    "code": {
+      "mean_gain": 0.0379,
+      "std": 0.0411,
+      "n": 164
+    },
+    "lit": {
+      "mean_gain": 0.0188,
+      "std": 0.0231,
+      "n": 177
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.1848,
+      "domain": "code",
+      "snippet": "# # This program is free software: you can redistribute it and/or modify # it under the terms of the GNU Affero Public L"
+    },
+    {
+      "gain": 0.179,
+      "domain": "code",
+      "snippet": " \"License\"); # you may not use this file except in compliance with the License. # You may obtain a copy of the License a"
+    },
+    {
+      "gain": 0.1775,
+      "domain": "code",
+      "snippet": " with this work for additional information # regarding copyright ownership.  The ASF licenses this file # to you under t"
+    },
+    {
+      "gain": 0.1466,
+      "domain": "wiki",
+      "snippet": ", some Greeks in Late Antiquity came to use the name Asia Minor (Μικρὰ Ἀσία, Mikrà Asía"
+    },
+    {
+      "gain": 0.1457,
+      "domain": "code",
+      "snippet": "#         http://www.apache.org/licenses/LICENSE-2.0 # #    Unless required by applicable law or agreed to in writing, s"
+    },
+    {
+      "gain": 0.1324,
+      "domain": "code",
+      "snippet": "-2105-11-24 # # Note that extra references to the specific methods implemented in # the toolkit may be available in the "
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0339,
+      "domain": "wiki",
+      "snippet": " of its suggestive subject matter, including a risque game of cards, \"Stripping Cupid\".  The case was dismissed.  His ma"
+    },
+    {
+      "gain": -0.0409,
+      "domain": "code",
+      "snippet": " the GNU General Public License # along with ETE.  If not, see <http://www.gnu.org/licenses/>. # # #                    "
+    },
+    {
+      "gain": -0.041,
+      "domain": "lit",
+      "snippet": "\r \r In new habiliments can quickly dight.”\r \r FLETCHER’S Purple Island\r \r \r Es lassen sich Erzählungen ohne Zusam"
+    },
+    {
+      "gain": -0.0453,
+      "domain": "code",
+      "snippet": "raint(             ['competition_id', 'season_id'],             ['competition_seasons.competition_id', 'competition_seas"
+    },
+    {
+      "gain": -0.0487,
+      "domain": "code",
+      "snippet": "%y',             # '25/10/2006', '25/10/06'\r     # '%b %d %Y', '%b %d, %Y',          # 'Oct 25 2006', 'O"
+    },
+    {
+      "gain": -0.0515,
+      "domain": "lit",
+      "snippet": " place of\r \r rest.\"\r \r \r Chapter LXI - They begin to follow Satan.\r \r \r Chapter LXII - Two fruit trees.\r \r \r Chapter LXI"
+    }
+  ],
+  "n_examples": 640,
+  "experiment": "srcore_b32_R6@10000",
+  "step": 10000
+}

@@ -1,0 +1,52 @@
+{
+  "experiment": "hm_dense_d24",
+  "variant": "dense",
+  "n_params": 8699904,
+  "rows": [
+    {
+      "step": 1000,
+      "Lfin": 6.8188,
+      "anytime": 0.1199,
+      "WS": 24.0,
+      "reuse_p90": 24.0,
+      "k8_kb_per_token": 12348.0,
+      "dead_blocks": 0
+    },
+    {
+      "step": 2500,
+      "Lfin": 5.9959,
+      "anytime": 0.0092,
+      "WS": 24.0,
+      "reuse_p90": 24.0,
+      "k8_kb_per_token": 12348.0,
+      "dead_blocks": 0
+    },
+    {
+      "step": 5000,
+      "Lfin": 5.435,
+      "anytime": 0.0093,
+      "WS": 24.0,
+      "reuse_p90": 24.0,
+      "k8_kb_per_token": 12348.0,
+      "dead_blocks": 0
+    },
+    {
+      "step": 7500,
+      "Lfin": 5.2896,
+      "anytime": 0.0143,
+      "WS": 24.0,
+      "reuse_p90": 24.0,
+      "k8_kb_per_token": 12348.0,
+      "dead_blocks": 0
+    },
+    {
+      "step": 10000,
+      "Lfin": 5.3186,
+      "anytime": 0.025,
+      "WS": 24.0,
+      "reuse_p90": 24.0,
+      "k8_kb_per_token": 12348.0,
+      "dead_blocks": 0
+    }
+  ]
+}

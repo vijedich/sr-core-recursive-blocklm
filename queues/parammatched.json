@@ -1,0 +1,26 @@
+[
+  {
+    "name": "pm_s0",
+    "args": ["-m", "experiments.heteromini_long", "--variant", "sparse", "--core_mode", "per_token",
+             "--n_blocks", "64", "--k", "16", "--R", "4", "--d_model", "256", "--block_hidden", "192",
+             "--max_steps", "15000", "--bs", "16", "--seq_len", "128", "--seed", "0"],
+    "log": "_pm_k16R4_s0",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k16_R4_d256h192_s0.pt"
+  },
+  {
+    "name": "pm_s1",
+    "args": ["-m", "experiments.heteromini_long", "--variant", "sparse", "--core_mode", "per_token",
+             "--n_blocks", "64", "--k", "16", "--R", "4", "--d_model", "256", "--block_hidden", "192",
+             "--max_steps", "15000", "--bs", "16", "--seq_len", "128", "--seed", "1"],
+    "log": "_pm_k16R4_s1",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k16_R4_d256h192_s1.pt"
+  },
+  {
+    "name": "pm_s2",
+    "args": ["-m", "experiments.heteromini_long", "--variant", "sparse", "--core_mode", "per_token",
+             "--n_blocks", "64", "--k", "16", "--R", "4", "--d_model", "256", "--block_hidden", "192",
+             "--max_steps", "15000", "--bs", "16", "--seq_len", "128", "--seed", "2"],
+    "log": "_pm_k16R4_s2",
+    "skip_if": "results/hm_cont_hm_srcore_b64_k16_R4_d256h192_s2.pt"
+  }
+]

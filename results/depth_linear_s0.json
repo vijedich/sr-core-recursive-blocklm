@@ -1,0 +1,34 @@
+{
+  "steps": 2000,
+  "weighting": "linear",
+  "seed": 0,
+  "D_max": 2,
+  "R": 2,
+  "device": "cuda",
+  "max_distract": 0,
+  "k": 4,
+  "train_s": 235.86600756645203,
+  "L_depth_iter": [
+    [
+      0.2709293042620023,
+      0.3021300956606865
+    ],
+    [
+      2.2315632104873657,
+      2.1709762811660767
+    ]
+  ],
+  "rstar": [
+    1,
+    2
+  ],
+  "G_depth": [
+    -0.031200791398684202,
+    0.06058692932128906
+  ],
+  "corr_rstar_depth_spearman": 0.9999999980000001,
+  "control_oracle_loss": 1.217841259514292,
+  "control_fixedR_loss": 1.2786255863805611,
+  "control_state_reset_L": 1.3197769944866498,
+  "control_shuffle_route_L": 2.454359143972397
+}

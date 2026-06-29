@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0508,
+      "std": 0.0403,
+      "n": 269
+    },
+    "wiki": {
+      "mean_gain": 0.0501,
+      "std": 0.0422,
+      "n": 246
+    },
+    "code": {
+      "mean_gain": 0.0596,
+      "std": 0.0693,
+      "n": 234
+    },
+    "lit": {
+      "mean_gain": 0.0289,
+      "std": 0.0358,
+      "n": 211
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.386,
+      "domain": "code",
+      "snippet": " or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU # Lesser General Public License for more details. # # You should have"
+    },
+    {
+      "gain": 0.3273,
+      "domain": "code",
+      "snippet": "eflow.org. # # Licensed under the Apache License, Version 2.0 (the \"License\"); # you may not use this file except in com"
+    },
+    {
+      "gain": 0.2566,
+      "domain": "code",
+      "snippet": " - 1] << 6) & 255;\r                     j += m[o]\r                     o += 1\r                 else:\r                   "
+    },
+    {
+      "gain": 0.2528,
+      "domain": "code",
+      "snippet": ".0 #  # Unless required by applicable law or agreed to in writing, # software distributed under the License is distribut"
+    },
+    {
+      "gain": 0.2515,
+      "domain": "code",
+      "snippet": " either version 2 of the License, or # (at your option) any later version. # # This program is distributed in the hope t"
+    },
+    {
+      "gain": 0.2406,
+      "domain": "code",
+      "snippet": ". All rights reserved. # Licensed under the MIT License. See License.txt in the project root for # license information. "
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0561,
+      "domain": "code",
+      "snippet": "pattern)         self.regpattern = regpattern      def set_name(self, name):         if name == self.getName():         "
+    },
+    {
+      "gain": -0.0601,
+      "domain": "code",
+      "snippet": " black, gold, and brown).     vsys:         description:             - The vsys to put the object into.             - Fi"
+    },
+    {
+      "gain": -0.0759,
+      "domain": "code",
+      "snippet": "41-1-16bit.flac')\r         audio, samplerate, _, _, _, _ = AudioLoader(filename=filename)()\r         m, s, i, r = Loudne"
+    },
+    {
+      "gain": -0.0888,
+      "domain": "code",
+      "snippet": ".json')   def preprocess_input(x, dim_ordering='default'):      if dim_ordering == 'default':         dim_ordering = K.i"
+    },
+    {
+      "gain": -0.1085,
+      "domain": "code",
+      "snippet": "+X]+F[+FX]-X\", \"F\":\"FF\", \"S\":\"X\", \t\t\t\"direct\":-45, \t\t\t\"angle\":25, \t\t\t\"iter\":6, \t\t"
+    },
+    {
+      "gain": -0.1278,
+      "domain": "code",
+      "snippet": " General Public License as published by the Free   # # Software Foundation, either version 3 of the License, or (at your"
+    }
+  ],
+  "n_examples": 960,
+  "experiment": "hm_naked_b32_R6",
+  "step": 10000
+}

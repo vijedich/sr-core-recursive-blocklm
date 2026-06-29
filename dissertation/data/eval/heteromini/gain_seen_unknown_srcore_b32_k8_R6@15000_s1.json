@@ -1,0 +1,216 @@
+{
+  "experiment": "srcore_b32_k8_R6@15000",
+  "step": 15000,
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0214,
+        "std": 0.0283,
+        "n": 150
+      },
+      "wiki": {
+        "mean_gain": 0.0167,
+        "std": 0.0254,
+        "n": 146
+      },
+      "code": {
+        "mean_gain": 0.0504,
+        "std": 0.0514,
+        "n": 196
+      },
+      "lit": {
+        "mean_gain": 0.0396,
+        "std": 0.0486,
+        "n": 148
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.3338,
+        "domain": "code",
+        "snippet": " # # THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED"
+      },
+      {
+        "gain": 0.2852,
+        "domain": "code",
+        "snippet": " 34,     JOB_ERROR = 35,     JOB_EXECUTION_COMPLETE = 36,     START_EXE_PB_MSG = 37,     ST"
+      },
+      {
+        "gain": 0.2534,
+        "domain": "web",
+        "snippet": " most difficult and enduring questions. About the Editor/Translator: Scott Goins, Ph.D., is Professor of Classics and Di"
+      },
+      {
+        "gain": 0.2478,
+        "domain": "lit",
+        "snippet": " Epimenides.\r \r \r Chapter 2.3.II.\r  The Wakeful.\r \r \r Chapter 2.3.III.\r  Sword in Hand.\r \r \r Chapter 2.3.IV.\r  To fly"
+      },
+      {
+        "gain": 0.2319,
+        "domain": "lit",
+        "snippet": " ‘FIRST HALF’ AT SALEM HOUSE\r \r \r  CHAPTER 8. — MY HOLIDAYS. ESPECIALLY ONE HAPPY AFTERNOON\r \r \r  CHAPTER 9."
+      },
+      {
+        "gain": 0.2161,
+        "domain": "lit",
+        "snippet": "\r     \r \r  SCENE 2\r     \r \r       Yesterday evening.\r     \r \r       [Curtain rises on JOHN and MARY in their suburban ho"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0373,
+        "domain": "code",
+        "snippet": "()     htmlstring = generate_html ( old )     print htmlstring  #-------------- #  Reads Data file from datafilename giv"
+      },
+      {
+        "gain": -0.0404,
+        "domain": "code",
+        "snippet": "69539 40957953066405232632538044100059654939159879593635 2974615218550237130764225"
+      },
+      {
+        "gain": -0.0436,
+        "domain": "code",
+        "snippet": "ADIR, DATAFILE)     d = parse_file(datafile)     firstline = {'Title': 'Please Please Me', 'UK Chart Position': '1', 'L"
+      },
+      {
+        "gain": -0.0453,
+        "domain": "wiki",
+        "snippet": " as airplane hijacking, skyjacking, plane hijacking, plane jacking, air robbery, air piracy, or aircraft piracy, with th"
+      },
+      {
+        "gain": -0.0778,
+        "domain": "code",
+        "snippet": "api.openstack.placement.handlers import allocation from nova.api.openstack.placement.handlers import allocation_candidat"
+      },
+      {
+        "gain": -0.1195,
+        "domain": "code",
+        "snippet": "FgKTXV0ZXggZmlsZToke0FQQUNIRV9MT0NL X0RJUn0gZGVmYXVsdApQ"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0175,
+        "std": 0.0234,
+        "n": 180
+      },
+      "wiki": {
+        "mean_gain": 0.0163,
+        "std": 0.0273,
+        "n": 156
+      },
+      "code": {
+        "mean_gain": 0.0438,
+        "std": 0.0536,
+        "n": 141
+      },
+      "lit": {
+        "mean_gain": 0.038,
+        "std": 0.046,
+        "n": 163
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.3166,
+        "domain": "code",
+        "snippet": "# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINF"
+      },
+      {
+        "gain": 0.2141,
+        "domain": "lit",
+        "snippet": "ABAY. \r \r \r  MOUFFLOU. \r \r \r  BENJY IN BEASTLAND. \r \r \r  THE PORCELAIN STOVE. \r \r \r  THE BABES IN THE WOOD \r \r \r  THE ST"
+      },
+      {
+        "gain": 0.2071,
+        "domain": "lit",
+        "snippet": " “SWEET BEWITCHING MRS. LOCKE.” \r \r \r  MRS. THRALE'S SECOND MARRIAGE. \r \r \r  MRS. THRALE to FANNY BURN"
+      },
+      {
+        "gain": 0.1907,
+        "domain": "code",
+        "snippet": " = _win32_maxpriority.THREAD_PRIORITY_BELOW_NORMAL THREAD_PRIORITY_NORMAL = _win32_maxpri"
+      },
+      {
+        "gain": 0.1846,
+        "domain": "lit",
+        "snippet": " CHAPTER XXVI. AN HONEST SPY. \r \r \r  CHAPTER XXVII. WHAT HELEN HEARD, \r \r \r  CHAPTER XXVIII. WHAT HELEN HEARD MORE \r \r \r"
+      },
+      {
+        "gain": 0.1837,
+        "domain": "code",
+        "snippet": " and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: #  # The above"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0483,
+        "domain": "wiki",
+        "snippet": "ic) (also included on Japan pressings)  Personnel   John Rzeznik –  guitar, lead and backing vocals  Robby Takac – bass,"
+      },
+      {
+        "gain": -0.0493,
+        "domain": "lit",
+        "snippet": " across young Bixby last night—got him home, in fact. Delivered him to\r \r his white-faced little wife. Talk about your m"
+      },
+      {
+        "gain": -0.0525,
+        "domain": "wiki",
+        "snippet": "flin, Harcourt October 2015.]  Awards and honors  Wilbur H. Siebert Award, National Park Service Network to Freedom Prog"
+      },
+      {
+        "gain": -0.0563,
+        "domain": "code",
+        "snippet": ".shape)         self.assertIsInstance(reservoir, ArrayWithUnits)         self.assertEqual(reservoir.dimensions[0], Ident"
+      },
+      {
+        "gain": -0.0799,
+        "domain": "code",
+        "snippet": " self.augment:                 t_jit = np.min([self.config['tfa_jitter_radius'],                                 sequenc"
+      },
+      {
+        "gain": -0.0831,
+        "domain": "wiki",
+        "snippet": "alis - trumpet (#2,8) Roy Hargrove - trumpet (#2,10) Joshua Redman - tenor saxophone (#4)  "
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.0214,
+      "gain_unknown": 0.0175,
+      "delta": -0.0039,
+      "ratio_u_s": 0.818,
+      "n_seen": 150,
+      "n_unknown": 180
+    },
+    "wiki": {
+      "gain_seen": 0.0167,
+      "gain_unknown": 0.0163,
+      "delta": -0.0004,
+      "ratio_u_s": 0.976,
+      "n_seen": 146,
+      "n_unknown": 156
+    },
+    "code": {
+      "gain_seen": 0.0504,
+      "gain_unknown": 0.0438,
+      "delta": -0.0066,
+      "ratio_u_s": 0.869,
+      "n_seen": 196,
+      "n_unknown": 141
+    },
+    "lit": {
+      "gain_seen": 0.0396,
+      "gain_unknown": 0.038,
+      "delta": -0.0016,
+      "ratio_u_s": 0.96,
+      "n_seen": 148,
+      "n_unknown": 163
+    }
+  }
+}

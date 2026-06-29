@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.037,
+      "std": 0.0328,
+      "n": 213
+    },
+    "wiki": {
+      "mean_gain": 0.0251,
+      "std": 0.0339,
+      "n": 224
+    },
+    "code": {
+      "mean_gain": 0.0373,
+      "std": 0.0452,
+      "n": 247
+    },
+    "lit": {
+      "mean_gain": 0.0225,
+      "std": 0.0276,
+      "n": 276
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.224,
+      "domain": "code",
+      "snippet": "als  import datetime  import factory  from wagtail_personalisation import rules   class DayRuleFactory(factory.DjangoMod"
+    },
+    {
+      "gain": 0.2053,
+      "domain": "code",
+      "snippet": ", either version 3 of the License, or     (at your option) any later version.      This program is distributed in the ho"
+    },
+    {
+      "gain": 0.1734,
+      "domain": "code",
+      "snippet": "19 Fortinet, Inc. # # This program is free software: you can redistribute it and/or modify # it under the terms of the G"
+    },
+    {
+      "gain": 0.1677,
+      "domain": "web",
+      "snippet": " • Life History • Ecology • Mussel Harvest on the River • Current Threats • Mussel Conservation Activities • Ongoing Stu"
+    },
+    {
+      "gain": 0.1635,
+      "domain": "wiki",
+      "snippet": " a city in Belgium and capital of the Antwerp province.  Antwerp may also refer to:  In Belgium  Antwerp (district)  Ant"
+    },
+    {
+      "gain": 0.1567,
+      "domain": "code",
+      "snippet": " the implied warranty of # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the # GNU General Public License fo"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0658,
+      "domain": "code",
+      "snippet": "):         \"\"\"Parse aliases stream.          The stream contains a list of usernames (they can be email addresses       "
+    },
+    {
+      "gain": -0.0659,
+      "domain": "code",
+      "snippet": "osition.setFrameShape(QtWidgets.QFrame.WinPanel)         self.statusPosition.setFrameShadow(QtWidgets.QFrame.Sunken)    "
+    },
+    {
+      "gain": -0.0664,
+      "domain": "code",
+      "snippet": "gsnNetworkFailureExt = int(line_sgsn_network_fail_ext.strip().split()[4])\r \r     # KPI Calc\r     sgsnAttachReq ="
+    },
+    {
+      "gain": -0.0749,
+      "domain": "lit",
+      "snippet": ", ole Nance, jes grinned.  Folks come in to ax atter 'em right\r \r peart.  Abe Shivers come cl'ar 'cross the river—powerf"
+    },
+    {
+      "gain": -0.099,
+      "domain": "wiki",
+      "snippet": " in Step 3. Steps 1 and 3 of glycolysis are referred to as \"Priming Steps\". In Phase 2, two equivalents of g3p are conve"
+    },
+    {
+      "gain": -0.1151,
+      "domain": "code",
+      "snippet": " 'Alex'          def __init__(self, DicionarioDerivadas, Nome = 'Teste', Tipo = 'TP'):         \"\"\"\"         Construtor d"
+    }
+  ],
+  "n_examples": 960,
+  "experiment": "hm_dense_d24",
+  "step": 10000
+}

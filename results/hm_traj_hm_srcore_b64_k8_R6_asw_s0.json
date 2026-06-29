@@ -1,0 +1,93 @@
+{
+  "experiment": "hm_srcore_b64_k8_R6_asw",
+  "variant": "sparse",
+  "n_params": 19258112,
+  "lambda_core": 0.0,
+  "core_reg_mode": "soft_full",
+  "rows": [
+    {
+      "step": 1000,
+      "Lfin": 7.1605,
+      "anytime": 0.0003,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 1947.5,
+      "dead_blocks": 28,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.1791,
+      "router_entropy": 3.9717
+    },
+    {
+      "step": 2500,
+      "Lfin": 6.2535,
+      "anytime": 0.0002,
+      "WS": 8.0,
+      "reuse_p90": 9.0,
+      "k8_kb_per_token": 2882.6,
+      "dead_blocks": 6,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0772,
+      "router_entropy": 4.1056
+    },
+    {
+      "step": 5000,
+      "Lfin": 5.7286,
+      "anytime": 0.0002,
+      "WS": 8.0,
+      "reuse_p90": 9.0,
+      "k8_kb_per_token": 2832.6,
+      "dead_blocks": 1,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0768,
+      "router_entropy": 4.1076
+    },
+    {
+      "step": 7500,
+      "Lfin": 5.5781,
+      "anytime": 0.0038,
+      "WS": 8.0,
+      "reuse_p90": 11.0,
+      "k8_kb_per_token": 2995.9,
+      "dead_blocks": 1,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0878,
+      "router_entropy": 4.0802
+    },
+    {
+      "step": 10000,
+      "Lfin": 5.6249,
+      "anytime": 0.0109,
+      "WS": 8.0,
+      "reuse_p90": 55.0,
+      "k8_kb_per_token": 3052.2,
+      "dead_blocks": 1,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0909,
+      "router_entropy": 4.0026
+    },
+    {
+      "step": 12500,
+      "Lfin": 5.5071,
+      "anytime": 0.0086,
+      "WS": 8.0,
+      "reuse_p90": 9.0,
+      "k8_kb_per_token": 2902.4,
+      "dead_blocks": 3,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.091,
+      "router_entropy": 3.9767
+    },
+    {
+      "step": 15000,
+      "Lfin": 5.2156,
+      "anytime": 0.0249,
+      "WS": 8.0,
+      "reuse_p90": 9.0,
+      "k8_kb_per_token": 2854.2,
+      "dead_blocks": 3,
+      "soft_overlap_train": 0.0,
+      "hard_overlap_train": 0.0951,
+      "router_entropy": 3.8372
+    }
+  ]
+}

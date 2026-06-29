@@ -1,0 +1,216 @@
+{
+  "experiment": "srcore_b32_k8_R6@15000",
+  "step": 15000,
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.1075,
+        "std": 0.0583,
+        "n": 182
+      },
+      "wiki": {
+        "mean_gain": 0.1186,
+        "std": 0.0708,
+        "n": 144
+      },
+      "code": {
+        "mean_gain": 0.2159,
+        "std": 0.1189,
+        "n": 174
+      },
+      "lit": {
+        "mean_gain": 0.0976,
+        "std": 0.0598,
+        "n": 140
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.6606,
+        "domain": "code",
+        "snippet": "id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),             'venue': ('django.db.models.fields."
+      },
+      {
+        "gain": 0.5292,
+        "domain": "code",
+        "snippet": "# Changes may cause incorrect behavior and will be lost if the code is regenerated. # ----------------------------------"
+      },
+      {
+        "gain": 0.505,
+        "domain": "code",
+        "snippet": " ...     {2: 0, 3: 1, 1: 2}, ...     {1: 0, 0: 1, 2: 3}, ...     {1: 0, 2: 1, 0: 3},"
+      },
+      {
+        "gain": 0.5027,
+        "domain": "code",
+        "snippet": "   url(r'^password/reset/complete/$',                            auth_views.password_reset_complete,                    "
+      },
+      {
+        "gain": 0.4993,
+        "domain": "code",
+        "snippet": "pathname, pathname2url     from urllib.parse import urlencode else:     basestring = basestring     cmp = cmp     memory"
+      },
+      {
+        "gain": 0.4923,
+        "domain": "code",
+        "snippet": "EGSource.addItem(\"\") \t\tself.comboBoxEEGSource.addItem(\"\") \t\tself.comboBoxEEGSource.addItem(\"\") \t\t"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0207,
+        "domain": "code",
+        "snippet": "Donald Duck & Co>\") == \"&lt;Donald Duck &amp; Co&gt;\"  def test_escape_extra():     return escape(\"Hei på deg"
+      },
+      {
+        "gain": -0.0414,
+        "domain": "wiki",
+        "snippet": ", with detailed analysis of each work in three languages (English, French, German). Schweitzer, who insisted that the sc"
+      },
+      {
+        "gain": -0.0428,
+        "domain": "lit",
+        "snippet": " starting engine, with him agonized as the roar ceased and again\r began the infernal patient snap-ah-ah—a round, flat so"
+      },
+      {
+        "gain": -0.0786,
+        "domain": "code",
+        "snippet": "obj_suffix = '.os'     shobj_prefix = ''     lib_prefix   = 'lib'     lib_suffix   = '.a'     dll_prefix   = 'lib'     d"
+      },
+      {
+        "gain": -0.1007,
+        "domain": "web",
+        "snippet": "||An Chéadaoin||Dé Céadaoin, or alt., Dé Céadaoine (U)||ar an gCéadaoin, alt. ar an Chéadaoin (U)||"
+      },
+      {
+        "gain": -0.1084,
+        "domain": "web",
+        "snippet": " traffic roundabout. Often in proper names as Oxford Circus, Regent Circus. 1714 POPE Rape Lock IV. 117 Sooner shall Gra"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0816,
+        "std": 0.0581,
+        "n": 147
+      },
+      "wiki": {
+        "mean_gain": 0.0915,
+        "std": 0.0707,
+        "n": 161
+      },
+      "code": {
+        "mean_gain": 0.1371,
+        "std": 0.1291,
+        "n": 166
+      },
+      "lit": {
+        "mean_gain": 0.0903,
+        "std": 0.0521,
+        "n": 166
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.8316,
+        "domain": "code",
+        "snippet": "AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT # LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY"
+      },
+      {
+        "gain": 0.6283,
+        "domain": "code",
+        "snippet": " other materialsprovided with the #    distribution. # # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBU"
+      },
+      {
+        "gain": 0.4289,
+        "domain": "code",
+        "snippet": "Development Status :: 5 - Production/Stable',     'Environment :: Console',     'Intended Audience :: Developers',     '"
+      },
+      {
+        "gain": 0.4223,
+        "domain": "code",
+        "snippet": "\", empty_exam)     correct_exam = re.sub(\"\\r?\\n\", \"\\r\\n\", correct_exam)          if os.path.exists(u\"/tmp/ex"
+      },
+      {
+        "gain": 0.4143,
+        "domain": "code",
+        "snippet": "self):         return \"%s %s\" % (self.application, self.license)   class UserApplicationLicense(models.Model):     user "
+      },
+      {
+        "gain": 0.4013,
+        "domain": "code",
+        "snippet": "faces.person import PersonVisibility from lp.services.mail.notificationrecipientset import NotificationRecipientSet from"
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0786,
+        "domain": "code",
+        "snippet": "local:             hdfs_out_dir = self.__hdfs.create_temporary_dir(                 self.__hdfs.join_path([self.__hdfs_t"
+      },
+      {
+        "gain": -0.0861,
+        "domain": "code",
+        "snippet": "(desc_file, miRNA_accessions[accession]) is True: \t\t\t\t\t\tcheck = False \t\t\t\t\t\tif args.no_qc is True: \t\t\t\t\t\t\tmirna_name ="
+      },
+      {
+        "gain": -0.1079,
+        "domain": "code",
+        "snippet": " \"Module:\", musicplayer.__file__  # ffmpeg log levels: {0:panic, 8:fatal, 16:error, 24:warning, 32:info, 40"
+      },
+      {
+        "gain": -0.1104,
+        "domain": "code",
+        "snippet": "A\") ea,s=cf.decode_structure(4) print s,ea  aln = [     \"-----GCUA-AUAUCGCUGU"
+      },
+      {
+        "gain": -0.1141,
+        "domain": "code",
+        "snippet": " 9781234567890     autores : [u'Carroll', u'Tenniel']                Os descritores têm um atributo `order` que "
+      },
+      {
+        "gain": -0.126,
+        "domain": "wiki",
+        "snippet": " No Sad Songs For Me\" (Piccadilly 7N 35309) 1966 \"Let Me In\" / \"How Love Used To Be\" (Piccadilly 7N 35"
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.1075,
+      "gain_unknown": 0.0816,
+      "delta": -0.0259,
+      "ratio_u_s": 0.759,
+      "n_seen": 182,
+      "n_unknown": 147
+    },
+    "wiki": {
+      "gain_seen": 0.1186,
+      "gain_unknown": 0.0915,
+      "delta": -0.0271,
+      "ratio_u_s": 0.772,
+      "n_seen": 144,
+      "n_unknown": 161
+    },
+    "code": {
+      "gain_seen": 0.2159,
+      "gain_unknown": 0.1371,
+      "delta": -0.0788,
+      "ratio_u_s": 0.635,
+      "n_seen": 174,
+      "n_unknown": 166
+    },
+    "lit": {
+      "gain_seen": 0.0976,
+      "gain_unknown": 0.0903,
+      "delta": -0.0073,
+      "ratio_u_s": 0.925,
+      "n_seen": 140,
+      "n_unknown": 166
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "experiment": "hm_srcore_b32_k8_R8",
+  "variant": "sparse",
+  "n_params": 10826400,
+  "rows": [
+    {
+      "step": 1000,
+      "Lfin": 7.0034,
+      "anytime": 0.003,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 1966.7,
+      "dead_blocks": 5
+    },
+    {
+      "step": 2500,
+      "Lfin": 6.1665,
+      "anytime": 0.004,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2371.4,
+      "dead_blocks": 3
+    },
+    {
+      "step": 5000,
+      "Lfin": 5.6345,
+      "anytime": 0.0076,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2500.7,
+      "dead_blocks": 0
+    },
+    {
+      "step": 7500,
+      "Lfin": 5.4873,
+      "anytime": 0.0155,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2621.7,
+      "dead_blocks": 0
+    },
+    {
+      "step": 10000,
+      "Lfin": 5.5413,
+      "anytime": 0.0193,
+      "WS": 8.0,
+      "reuse_p90": 8.0,
+      "k8_kb_per_token": 2678.3,
+      "dead_blocks": 0
+    }
+  ]
+}

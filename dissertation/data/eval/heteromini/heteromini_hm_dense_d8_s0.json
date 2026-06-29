@@ -1,0 +1,20 @@
+{
+  "experiment": "hm_dense_d8",
+  "variant": "dense",
+  "seed": 0,
+  "n_params": 4485120,
+  "steps": 2000,
+  "train_s": 148.5,
+  "loss_per_iter": [
+    6.5466,
+    6.5411,
+    6.5409,
+    6.5409,
+    6.5409,
+    6.541,
+    6.541,
+    6.541
+  ],
+  "Lfin": 6.541,
+  "anytime": 0.0057
+}

@@ -1,0 +1,86 @@
+{
+  "label_a": "ctrl@17k",
+  "label_b": "softsharp_a2@17k",
+  "step_a": 17000,
+  "step_b": 17000,
+  "metrics_a": {
+    "soft_overlap_raw": 0.7291,
+    "soft_overlap_sharp": 0.4954,
+    "hard_overlap_eval": 0.2547,
+    "router_entropy": 3.8431,
+    "topk_margin": 3.6e-05,
+    "unique_cores": 25625,
+    "dead_blocks": 0,
+    "reuseP50": 17.0,
+    "reuseP90": 88.0,
+    "reuseP99": 313.69999999995343,
+    "block_bytes": 526848,
+    "lb": {
+      "8": {
+        "lru": 3020.9,
+        "hot_core_pin": 2868.0,
+        "vs_lru_pct": 5.1
+      },
+      "16": {
+        "lru": 1836.1,
+        "hot_core_pin": 1910.8,
+        "vs_lru_pct": -4.1
+      },
+      "24": {
+        "lru": 1099.1,
+        "hot_core_pin": 1079.5,
+        "vs_lru_pct": 1.8
+      },
+      "32": {
+        "lru": 617.1,
+        "hot_core_pin": 584.1,
+        "vs_lru_pct": 5.3
+      },
+      "48": {
+        "lru": 225.2,
+        "hot_core_pin": 193.4,
+        "vs_lru_pct": 14.1
+      }
+    }
+  },
+  "metrics_b": {
+    "soft_overlap_raw": 0.7469,
+    "soft_overlap_sharp": 0.5251,
+    "hard_overlap_eval": 0.2484,
+    "router_entropy": 3.8691,
+    "topk_margin": 3.3e-05,
+    "unique_cores": 29310,
+    "dead_blocks": 0,
+    "reuseP50": 17.0,
+    "reuseP90": 88.0,
+    "reuseP99": 321.0,
+    "block_bytes": 526848,
+    "lb": {
+      "8": {
+        "lru": 3007.7,
+        "hot_core_pin": 2875.5,
+        "vs_lru_pct": 4.4
+      },
+      "16": {
+        "lru": 1806.1,
+        "hot_core_pin": 1898.7,
+        "vs_lru_pct": -5.1
+      },
+      "24": {
+        "lru": 1086.1,
+        "hot_core_pin": 1073.2,
+        "vs_lru_pct": 1.2
+      },
+      "32": {
+        "lru": 617.2,
+        "hot_core_pin": 588.9,
+        "vs_lru_pct": 4.6
+      },
+      "48": {
+        "lru": 230.1,
+        "hot_core_pin": 199.1,
+        "vs_lru_pct": 13.5
+      }
+    }
+  }
+}

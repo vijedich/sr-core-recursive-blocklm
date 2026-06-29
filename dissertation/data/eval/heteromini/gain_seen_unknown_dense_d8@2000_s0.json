@@ -1,0 +1,209 @@
+{
+  "experiment": "dense_d8",
+  "step": 2000,
+  "source": "hm_dense_d8",
+  "seen": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0084,
+        "std": 0.0121,
+        "n": 159
+      },
+      "wiki": {
+        "mean_gain": 0.009,
+        "std": 0.0142,
+        "n": 163
+      },
+      "code": {
+        "mean_gain": 0.0084,
+        "std": 0.0285,
+        "n": 147
+      },
+      "lit": {
+        "mean_gain": 0.0042,
+        "std": 0.0171,
+        "n": 171
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.1117,
+        "domain": "code",
+        "snippet": "RS_ProcessedSplit/Pre/Black_from_Black/Uncontrolled/')  \t# mat = scipy.io.loadmat('0018001_matrix.mat"
+      },
+      {
+        "gain": 0.098,
+        "domain": "lit",
+        "snippet": " of the Dandies\r 28. A Nation on the Wing\r 29. Husks\r 30. The Faubourg St. Germain\r 31. Men’s Manners\r"
+      },
+      {
+        "gain": 0.0775,
+        "domain": "code",
+        "snippet": " save=\"\",         daemonize=\"no\",         rdbcompression=True,         rdbchecksum=False,         syslog_enabled=False, "
+      },
+      {
+        "gain": 0.0708,
+        "domain": "code",
+        "snippet": "orted_mime_types += list(RAR_MIME_TYPES)      def rename_directory_menuitem_cb(self, menu, cb_parameters):         \"\"\"C"
+      },
+      {
+        "gain": 0.0657,
+        "domain": "code",
+        "snippet": "'z', 123)      with pytest.raises(TypeError):         el.pop(u'x')      with pytest.raises(KeyError):         el.pop(u'z"
+      },
+      {
+        "gain": 0.0645,
+        "domain": "code",
+        "snippet": ".entity = QadEntity()              self.SSGetClass = None       self.entSelClass = None        def __del__(self):       "
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0485,
+        "domain": "code",
+        "snippet": "tabstop=4  # Copyright (c) 2012 dput authors # # This program is free software; you can redistribute it and/or modify # "
+      },
+      {
+        "gain": -0.0488,
+        "domain": "code",
+        "snippet": "       Pere Ramon Erro Mas <pereerro@tecnoba.com> All Rights Reserved. # #    This file is a part of school module # #  "
+      },
+      {
+        "gain": -0.0532,
+        "domain": "code",
+        "snippet": "', [], {'primary_key': 'True'}),             'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True"
+      },
+      {
+        "gain": -0.0583,
+        "domain": "code",
+        "snippet": ". # # This program is Free Software; you can redistribute it and/or # modify it under the terms of the GNU General Publi"
+      },
+      {
+        "gain": -0.0605,
+        "domain": "lit",
+        "snippet": " AGESILAUS\r     \r \r \r  \r \r \r       POMPEY\r     \r \r \r  \r \r \r       COMPARISON OF POMPEY AND AGESILAUS\r     \r \r \r  \r \r \r  "
+      },
+      {
+        "gain": -0.0613,
+        "domain": "code",
+        "snippet": "earmonthdatehoursminutes\",     \"utcyearmonthdatehoursminutesseconds\",     \"utcquartermonth\",     \"utcmonthdate\",     \"ut"
+      }
+    ],
+    "n_examples": 640
+  },
+  "unknown": {
+    "domain_gain": {
+      "web": {
+        "mean_gain": 0.0094,
+        "std": 0.0133,
+        "n": 160
+      },
+      "wiki": {
+        "mean_gain": 0.0146,
+        "std": 0.0333,
+        "n": 175
+      },
+      "code": {
+        "mean_gain": 0.0209,
+        "std": 0.0347,
+        "n": 149
+      },
+      "lit": {
+        "mean_gain": 0.0037,
+        "std": 0.0133,
+        "n": 156
+      }
+    },
+    "top_examples": [
+      {
+        "gain": 0.3824,
+        "domain": "wiki",
+        "snippet": " league contract with the Pittsburgh Pirates, but was released during spring training.  Diablos Rojos del Mexico He then"
+      },
+      {
+        "gain": 0.3022,
+        "domain": "code",
+        "snippet": "#!/usr/bin/env python # -*- coding: utf-8 -*-  #########################################################################"
+      },
+      {
+        "gain": 0.1231,
+        "domain": "wiki",
+        "snippet": " to seek freedom and willful Islamic culture. Due to accelerated economic standards of the town, enormous communication,"
+      },
+      {
+        "gain": 0.0778,
+        "domain": "wiki",
+        "snippet": "#2,8) Roy Hargrove - trumpet (#2,10) Joshua Redman - tenor saxophone (#4)  Production credits  Produ"
+      },
+      {
+        "gain": 0.0733,
+        "domain": "code",
+        "snippet": ".\"\"\"   class Registration(ResourceBody):     \"\"\"Registration Resource Body.      :ivar acme.jose.jwk.JWK key: Public key"
+      },
+      {
+        "gain": 0.0721,
+        "domain": "code",
+        "snippet": ", **kwargs):         \"\"\"Plot a :class:`~gwpy.frequencyseries.FrequencySeries` onto these axes          Parameters       "
+      }
+    ],
+    "bottom_examples": [
+      {
+        "gain": -0.0365,
+        "domain": "code",
+        "snippet": "oreignKey(Company, related_name='licenses')     license = models.ForeignKey(License)     application = models.ForeignKey"
+      },
+      {
+        "gain": -0.0398,
+        "domain": "code",
+        "snippet": "_questions import *  from exam_settings import *  import ParseStudentList  mecs, names = ParseStudentList.parse_student_"
+      },
+      {
+        "gain": -0.0404,
+        "domain": "code",
+        "snippet": " None,     'atanh': None,     'ceil': None,     'copysign': None,     'cos': '\\\\cos(%s)',     'cosh': '\\\\cosh"
+      },
+      {
+        "gain": -0.0407,
+        "domain": "code",
+        "snippet": "View.register_view class HistogramView(View):     def accepts(cls, data_object):         return True      def create_wid"
+      },
+      {
+        "gain": -0.0423,
+        "domain": "code",
+        "snippet": " under the terms of the GNU General Public License as published by ##  the Free Software Foundation, either version 3 of"
+      },
+      {
+        "gain": -0.0433,
+        "domain": "code",
+        "snippet": "ccn+cSKT0mG4W+Ew/uAhQfwUFkl2q3L6dcuDQK62ZSE/ujQw==  "
+      }
+    ],
+    "n_examples": 640
+  },
+  "comparison": {
+    "web": {
+      "gain_seen": 0.0084,
+      "gain_unknown": 0.0094,
+      "delta": 0.001,
+      "ratio_u_s": 1.119
+    },
+    "wiki": {
+      "gain_seen": 0.009,
+      "gain_unknown": 0.0146,
+      "delta": 0.0056,
+      "ratio_u_s": 1.622
+    },
+    "code": {
+      "gain_seen": 0.0084,
+      "gain_unknown": 0.0209,
+      "delta": 0.0125,
+      "ratio_u_s": 2.488
+    },
+    "lit": {
+      "gain_seen": 0.0042,
+      "gain_unknown": 0.0037,
+      "delta": -0.0005,
+      "ratio_u_s": 0.881
+    }
+  }
+}

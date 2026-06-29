@@ -1,0 +1,91 @@
+{
+  "domain_gain": {
+    "web": {
+      "mean_gain": 0.0112,
+      "std": 0.0171,
+      "n": 114
+    },
+    "wiki": {
+      "mean_gain": 0.0138,
+      "std": 0.0222,
+      "n": 116
+    },
+    "code": {
+      "mean_gain": 0.0189,
+      "std": 0.0283,
+      "n": 126
+    },
+    "lit": {
+      "mean_gain": 0.0135,
+      "std": 0.0225,
+      "n": 124
+    }
+  },
+  "top_examples": [
+    {
+      "gain": 0.1147,
+      "domain": "code",
+      "snippet": "# the Free Software Foundation; either version 2 of the License, or # (at your option) any later version. # # This progr"
+    },
+    {
+      "gain": 0.0954,
+      "domain": "wiki",
+      "snippet": " of Wellington (1807–1884), British soldier and nobleman Arthur Wellesley, 4th Duke of Wellington (1849–1934), British s"
+    },
+    {
+      "gain": 0.0914,
+      "domain": "wiki",
+      "snippet": " Anglo-Irish soldier and British prime minister Arthur Wellesley, 2nd Duke of Wellington (1807–1884), British soldier an"
+    },
+    {
+      "gain": 0.0877,
+      "domain": "lit",
+      "snippet": "SE ANYONE EVER LIVED IN\r \r \r  X. DICKON\r \r \r  XI. THE NEST OF THE MISSEL THRUSH\r \r \r  XII. “MIGHT I HAVE A BIT OF EAR"
+    },
+    {
+      "gain": 0.0868,
+      "domain": "code",
+      "snippet": "org/licenses/LICENSE-2.0 #  # Unless required by applicable law or agreed to in writing, # software distributed under th"
+    },
+    {
+      "gain": 0.0836,
+      "domain": "code",
+      "snippet": " published by     #the Free Software Foundation, either version 3 of the License, or     #(at your option) any later ver"
+    }
+  ],
+  "bottom_examples": [
+    {
+      "gain": -0.0431,
+      "domain": "wiki",
+      "snippet": " also   Adventure film  Adventure playground  Adventure travel  Expedition  Exploration  Filibuster (military)  List of "
+    },
+    {
+      "gain": -0.047,
+      "domain": "code",
+      "snippet": "': PROXY_NODES, }  CYCLING_TYPES = [     'family_proxies',     'family_proxy',     'jobs',     'j"
+    },
+    {
+      "gain": -0.0482,
+      "domain": "wiki",
+      "snippet": "�:  Өй - өйдән House - from/off the house  Turkish The ablative in Turkish (-den hal"
+    },
+    {
+      "gain": -0.0546,
+      "domain": "code",
+      "snippet": "\tXXXX XXXXXXXXXXXXXXXXX \t\t\t\t\tXXXXXXXXX XXXXX XX XXX XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXX XXX"
+    },
+    {
+      "gain": -0.062,
+      "domain": "code",
+      "snippet": "             ('author_email', self.gf('django.db.models.fields.CharField')(max_length=255, blank=True)),             ('o"
+    },
+    {
+      "gain": -0.0841,
+      "domain": "lit",
+      "snippet": ",\r \r       “The Aims of Literary Study”, etc.\r \r     \r \r \r       {There are several Greek phrases in this book. ASCII ca"
+    }
+  ],
+  "n_examples": 480,
+  "experiment": "hm_srcore_b32_R6",
+  "step": 5000
+}
