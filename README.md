@@ -17,6 +17,20 @@ enabling predictable RAM→VRAM prefetching.
 
 ---
 
+## How to read this
+
+This is not a claim-maximizing conference paper. It is a self-contained research monograph
+documenting an end-to-end investigation of one architectural idea under consumer-hardware
+constraints (RTX 2060, 6 GB VRAM). The work asks what can be learned about sparse recursive
+offloading architectures when you actually build and measure them on small models — including
+where the first naive implementation fails, why, and what makes it work.
+
+The "small 2060, small models, but consistently measured" constraint is not a shortcoming.
+It is the scope. The monograph documents what SR-Core *can* demonstrably do at this scale,
+and explicitly marks what remains open for anyone with more hardware or more curiosity.
+
+---
+
 ## Four load-bearing results
 
 | # | Result | Where |

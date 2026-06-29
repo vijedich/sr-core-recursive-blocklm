@@ -98,7 +98,7 @@ and that the pre-topk entropy was the appropriate target for intervention.
 
 ## 7.4 The Most Important Open Question
 
-The fundamental open question is whether the transfer reduction demonstrated at simulation
+The fundamental question was whether the transfer reduction demonstrated at simulation
 level (4.1×) survives real hardware measurement as a wall-clock **throughput** gain.
 
 A real RAM→VRAM prototype (Chapter 5b.4) has now answered this in the affirmative at small
@@ -118,7 +118,19 @@ in batched serving? The mechanism is demonstrated; its payoff at scale is the re
 
 ## 7.5 Future Directions
 
-### 7.5.1 Real-Latency Measurement (In Progress)
+The open questions below are not presented as limitations to apologize for. Each is a
+discrete, well-scoped experiment that a group with the right hardware or the right
+curiosity can pick up where this program stopped.
+
+| Open question | Minimal next test | What would it show? |
+|---|---|---|
+| Quality gap convergence | Train Dense d24 and matched SR-Core to ~40k steps from 15k snapshots (~6–8 h on an RTX 2060) | Gap stays / narrows / widens at convergence |
+| Deployment-scale streaming | Measure wall-clock throughput with a block bank that genuinely exceeds VRAM by 4–10× | Whether the small-scale 1.45–1.6× advantage grows, saturates, or is eaten by batching overhead |
+| Batched serving | Measure union-of-routes at batch size > 1 | Whether the working-set bound survives or the effective active set grows to dense size |
+| Leiterbahn index | Record routing traces for 10k+ sequences; cluster by path; test prefetch hit rate | Whether routing structure is predictable enough to prefetch the next token's blocks before they are needed |
+| Attention blocks | Replace MLP blocks with attention-like blocks, retrain | Whether higher FLOP intensity per loaded byte translates to larger throughput advantage |
+
+### 7.5.1 Deployment-Scale Streaming
 
 The RAM→VRAM prototype exists (Chapter 5b.4) and has cleared three milestones: the real
 transfer measurement; the grouped block matmul that removed per-block kernel-launch overhead
@@ -127,15 +139,20 @@ two-stream overlap (prefetch the next token's blocks during the current token's 
 which adds a further 5–9% in the transfer-heavy regime (small VRAM cache) and, as expected,
 nothing when the cache is large enough that transfer is already free. The end-to-end measured
 advantage on an RTX 2060 reaches ~1.6× with overlap. The remaining steps: (1) batched serving
-rather than batch-1 (the union-of-routes problem); (2) measurement at deployment scale (large
-blocks, model ≫ VRAM) where the projection predicts the advantage grows well beyond the
-small-scale figure, and where the compute path is FLOP-bound rather than partly launch-bound,
-so overlap should hide a larger transfer fraction. The target — SR-Core tokens/second > dense
-layer-offloading on the same hardware — is met at small scale; the open question is magnitude
-at scale.
+rather than batch-1 (the union-of-routes problem — the active block *union* across batch items
+widens the effective working set, potentially reducing the k/n advantage); (2) measurement at
+deployment scale (large blocks, model ≫ VRAM) where the projection predicts the advantage
+grows well beyond the small-scale figure, and where the compute path is FLOP-bound rather than
+partly launch-bound, so overlap should hide a larger transfer fraction.
 
 Hardware target: GPU with ≤8 GB VRAM, ≥64 GB CPU RAM, where the dense 7B+ model
 does not fit in VRAM but the k=8 active blocks of SR-Core do.
+
+> **Continuation spec:** Measure wall-clock throughput at deployment scale (model whose
+> total weight bank exceeds VRAM by 4–10×, large blocks). Separately, measure batch>1
+> throughput to quantify the union-of-routes effect. Expected outcome range: advantage
+> grows substantially (transfer-dominated, FLOP-efficient path) or is eaten by batching
+> (union collapses effective sparsity). Either result is informative.
 
 ### 7.5.2 Bank Size Scaling
 
@@ -144,17 +161,28 @@ At n=512 with k=8, the fraction drops to 1.6% — a 63× theoretical reduction v
 Whether SR-Core training remains stable at n=512 and whether the quality gap to dense
 remains manageable at that scale is a critical open question.
 
+> **Continuation spec:** Train SR-Core at n=128 and n=512 on the same HeteroMini-v1
+> corpus with the same hyperparameters. Measure held-out loss and routing entropy collapse.
+> If training is stable, measure offload bytes/token to confirm the theoretical k/n scaling.
+
 ### 7.5.3 3D Topology and Leiterbahn
 
 If routing paths are reproducible (MI_norm > 0.197, routing structure replicates across
 seeds), then routing trace analysis on a large validation set should reveal structure
-suitable for Leiterbahn indexing. The original plan (Theorie.md §27) describes this
-step in detail. It requires:
+suitable for Leiterbahn indexing. The original plan describes this step in detail. It
+requires:
 
 1. Routing trace recording on 10,000+ validation sequences
 2. Tunnel clustering by entry region and path similarity
 3. Index construction mapping entry signatures to block prefetch plans
 4. Prefetch-precision measurement on held-out sequences
+
+> **Continuation spec:** Run routing trace collection on the existing 15k checkpoints
+> (s0–s3) against the full HeteroMini-v1 validation set. Compute per-token block
+> prediction accuracy from the index (does the correct block appear in the top-3
+> prefetch candidates?). If hit rate > 80%, the index is operationally useful; if it
+> is near random, the assumption of reproducible routing structure at this scale is
+> falsified.
 
 ### 7.5.4 Targeted Entropy Objectives
 
@@ -165,6 +193,11 @@ in 2,000 steps but may be more effective at longer continuation. The interaction
 target-entropy objectives and load-balancing terms (which encourage entropy at the batch
 level) is also unexplored.
 
+> **Continuation spec:** Resume target-entropy models from their 2,000-step checkpoints
+> to 15,000 steps. Compare cache efficiency and quality against the standard λ·H(p)
+> baseline at matched training budget. The expected result is faster cache convergence;
+> the risk is quality degradation on high-entropy tokens that currently carry semantic load.
+
 ### 7.5.5 Attention Blocks
 
 MLP blocks have low arithmetic intensity (~0.25 FLOPs/Byte at d=256, h=512). Attention
@@ -172,6 +205,13 @@ blocks have substantially higher intensity (~128 FLOPs/Byte at seq=512, d=256), 
 them more favorable for the RAM→VRAM scenario: more computation per loaded byte.
 Replacing MLP blocks with attention blocks while maintaining SR-Core routing would
 increase the transfer-efficiency of the architecture.
+
+> **Continuation spec:** Replace the MLP block with a multi-head attention block, keep
+> the routing mechanism unchanged. Measure (a) arithmetic intensity per loaded byte,
+> (b) quality on HeteroMini-v1 at matched parameters, (c) wall-clock throughput under
+> forced offloading. The hypothesis is that the throughput advantage grows because the
+> GPU has more useful work to do per byte transferred; the counter-risk is that attention
+> routing dynamics differ from MLP and routing collapse requires different regularization.
 
 ### 7.5.6 Convergence of the Quality Gap (Cheap, Decisive)
 
@@ -185,6 +225,13 @@ recursive core may simply need more training to "drill in" the shared refinement
 that is exactly what this run would test. It is the one open question in this work that the
 available hardware can answer cleanly; the rest (scale, downstream tasks, the Leiterbahn index)
 require resources and curiosity beyond this program.
+
+> **Continuation spec:** Resume both models from their 15k checkpoints to 40k steps
+> (auto-resume, no new setup, ~6–8 h on the same RTX 2060). Measure held-out loss every
+> 2,500 steps. Three outcomes: (1) gap narrows → weight-tied recursion was under-trained,
+> SR-Core may be competitive at longer horizon; (2) gap holds → the ~0.5-nat cost is
+> stable, the current claim is confirmed; (3) gap widens → format under-performs as
+> training length increases, a stronger negative result than the current lower bound.
 
 ## 7.6 Claim Boundaries
 

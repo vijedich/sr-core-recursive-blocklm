@@ -1,5 +1,46 @@
 # Chapter 1: Motivation and Problem Statement
 
+## How to Read This Monograph
+
+This document is a self-published research monograph, not a conference paper and not a
+thesis. It records a small-scale but end-to-end investigation of one architectural question:
+
+> *Can a language model be structured so that, for each token, only a small and predictable
+> subset of its parameters must be resident on the GPU?*
+
+The work was conducted under consumer-hardware constraints — primarily an RTX 2060 (6 GB
+VRAM). Its purpose is not to claim deployment-scale performance, dense-quality parity, or a
+production-ready system. Instead, it documents what could be built, trained, measured,
+falsified, and bounded within those constraints.
+
+**What was simulated vs. what was measured:**
+
+| Claim | Status |
+|---|---|
+| WS=k guarantee (architectural) | Proved and empirically verified (Ch. 2–3) |
+| 4.1× transfer reduction vs. dense | LRU simulation on real trained models (Ch. 5b.0) |
+| Real wall-clock throughput advantage | Measured on RTX 2060 under forced offloading (Ch. 5b.4) |
+| ~0.5 nats quality gap behind Dense d24 | Measured, param- and compute-matched (Ch. 5a.5) |
+| Advantage at deployment scale | Not tested — requires larger models and VRAM budget |
+| Quality gap at convergence | Not tested — both models undertrained at 15k steps |
+
+**The story arc in one paragraph:**
+
+The initial question was whether fewer bytes in motion would mean more tokens per second.
+Simulation said yes. The first naive RAM→VRAM prototype said no — per-block kernel launches
+dominated and made SR-Core slower than dense. Fusing those launches into a grouped block
+matmul revealed the structural advantage: 297 vs. 205 tok/s. Asynchronous two-stream overlap
+added another 5–9% in the transfer-limited regime. The mechanism is real and measured on this
+hardware. The open question is whether it survives at deployment scale — larger blocks, models
+that genuinely exceed VRAM, and batched serving. That test requires hardware beyond what is
+available here.
+
+**Open questions** are structured as continuation points in Section 7.5 — not as limitations to
+apologize for, but as discrete, well-scoped experiments for anyone with the right hardware or
+the right curiosity to pick up.
+
+---
+
 ## 1.1 The Inference Bottleneck on Consumer Hardware
 
 Large language models with 30B, 70B, or 100B+ parameters exceed the VRAM capacity of
