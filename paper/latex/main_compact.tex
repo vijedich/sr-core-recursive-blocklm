@@ -1,0 +1,93 @@
+% ============================================================
+% main_compact.tex — tight layout for 8-page workshop target
+% Content: same sections/*.tex as main.tex
+% Layout:  1-inch margins, compressed float spacing, placeins
+% ============================================================
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{microtype}
+
+% --- Tight page geometry ---
+\usepackage[
+  top=0.75in, bottom=0.75in,
+  left=0.75in, right=0.75in
+]{geometry}
+
+% --- Math ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Figures ---
+\usepackage{graphicx}
+\graphicspath{{../figures/}}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- Float control ---
+\usepackage{placeins}          % \FloatBarrier
+\usepackage[font=small,        % smaller captions
+            labelfont=bf,
+            skip=4pt]{caption}
+
+% Tighter float/text separation
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% Tighter section spacing
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{8pt plus 2pt minus 1pt}{4pt plus 1pt}
+\titlespacing{\subsection}{0pt}{5pt plus 1pt minus 1pt}{2pt plus 1pt}
+\titlespacing{\paragraph}{0pt}{4pt plus 1pt}{0.5em}
+
+% --- List spacing ---
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=2pt}
+
+% --- Hyperlinks ---
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% --- Bibliography ---
+\usepackage[authoryear,round]{natbib}
+\bibliographystyle{plainnat}
+
+% --- Convenience macros ---
+\newcommand{\WS}{\mathrm{WS}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\topk}{\operatorname{top-}k}
+\newcommand{\kb}{\,\text{KB/token}}
+
+% ============================================================
+\begin{document}
+
+\title{Entropy-based Router Consolidation for\\
+       Cache-Efficient Block-Sparse Language Models}
+\author{Viktor Jedich}
+\date{}
+\maketitle
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\input{sections/01_intro}
+\input{sections/02_motivation}
+\input{sections/03_method}
+\input{sections/04_setup}
+\input{sections/05_results}
+\input{sections/06_discussion}
+\input{sections/07_related_work}
+
+\bibliography{references}
+
+\end{document}

@@ -1,7 +1,31 @@
 # ── Model checkpoints (upload to Hugging Face instead) ───────────────────────
 results/*.pt
 dissertation/data/checkpoints/
+monograph/data/checkpoints/
 checkpoints/
+
+# ── Internal working notes (German analysis logs, not part of publication) ────
+AUSWERTUNG_*.md
+ABSCHLUSSBERICHT_*.md
+SESSION_STATUS.md
+MILESTONE_*.md
+TESTFELD_*.md
+TESTPLAN.md
+BERICHT.md
+GESAMTSTAND_*.md
+EXP1_DEPTH.md
+EXP2_STREAMING.md
+EXP3_TINYSTORIES.md
+FINDINGS.md
+RESEARCH_NOTE.md
+Theorie.md
+results_note_entmin_sweep.md
+writeup_skeleton_entmin.md
+GENERATION_SUITE.md
+docs/streaming_prototype.md
+analyze_demo.py
+run_demo.py
+train_one.py
 
 # ── Raw training data (rebuild with rblm/heteromini.py) ──────────────────────
 data/heteromini_v1/

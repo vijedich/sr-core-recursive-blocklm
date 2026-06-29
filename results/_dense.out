@@ -1,0 +1,40 @@
+2026-06-18 10:20:48  Dense-Baselines gestartet (PID 42336) — Tiefen [24, 8]
+2026-06-18 10:20:48  === Dense depth=24 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Dense] ModelA depth=24: 8.7M Parameter, vocab=8000, device=cuda
+  step     1  L1=249.693  Lfin=225.986  26s
+  step   500  L1=4.939  Lfin=4.734  2328s
+  step  1000  L1=4.094  Lfin=4.060  4567s
+  step  1500  L1=3.805  Lfin=3.799  6807s
+  step  2000  L1=3.625  Lfin=3.621  9049s
+  step  2500  L1=3.547  Lfin=3.542  11318s
+  step  3000  L1=3.478  Lfin=3.470  13589s
+[Dense] FERTIG depth=24: loss_per_iter=[3.49, 3.484, 3.483, 3.483, 3.482, 3.482, 3.482, 3.482, 3.482, 3.482, 3.482, 3.482, 3.482, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481, 3.481]  Lfin=3.4812
+[CKPT] Neuer Bestwert (val_loss=3.4812): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d24\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d24\seed_0\step_3000
+[CKPT] SHA256:      f48676ec3e257f73880447361d4e7696f6595745da862eeb2935b4af4c74157c
+2026-06-18 14:07:58  === dense depth=24 exit=0 ===
+2026-06-18 14:07:58  === Dense depth=8 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Dense] ModelA depth=8: 4.5M Parameter, vocab=8000, device=cuda
+  step     1  L1=246.116  Lfin=237.730  1s
+  step   500  L1=4.978  Lfin=4.918  68s
+  step  1000  L1=4.217  Lfin=4.214  136s
+  step  1500  L1=3.905  Lfin=3.903  204s
+  step  2000  L1=3.726  Lfin=3.727  272s
+  step  2500  L1=3.643  Lfin=3.641  341s
+  step  3000  L1=3.555  Lfin=3.552  409s
+[Dense] FERTIG depth=8: loss_per_iter=[3.587, 3.584, 3.583, 3.583, 3.583, 3.583, 3.583, 3.582]  Lfin=3.5825
+[CKPT] Neuer Bestwert (val_loss=3.5825): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d8\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d8\seed_0\step_3000
+[CKPT] SHA256:      357848b4ce5962f6ee4e2d680c1fc98572debd72a8df06123348ae847db15e51
+2026-06-18 14:15:15  === dense depth=8 exit=0 ===
+2026-06-18 14:15:15  DENSE-BASELINES FERTIG.

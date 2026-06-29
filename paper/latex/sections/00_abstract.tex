@@ -1,0 +1,21 @@
+Deploying language models in memory-constrained settings requires moving model parameters
+from host memory at every forward pass.
+We study SR-Core, a recursive block-sparse architecture in which a shared block bank is
+accessed repeatedly with routing decided once and reused, giving a hard working-set
+guarantee of exactly $k$ active blocks per token, independent of bank size or recursion
+depth.
+Analysis of earlier free-routing variants reveals a two-phase routing pattern
+($J_1 \approx 0.20$; $J_{2\ldots6} \approx 0.984$) and a reuse/novelty tension in which
+the collapsed reuse pattern is a training artifact (forced diversity reduces loss by
+$0.104$ nats at $r{=}6$), motivating the SR-Core design and a router-shaping objective.
+We introduce an entropy-based consolidation objective that sharpens the pre-selection
+router distribution, converting the reuse/novelty tension into a controllable cache/locality
+axis.
+At $\lambda = 0.003$, the objective simultaneously improves LRU cache efficiency and
+held-out code generalization relative to the unregularized baseline, replicating across two
+independent seeds.
+At $\lambda = 0.005$, cache metrics improve further with seed-dependent quality effects.
+Offloading simulation confirms structural advantages: sparse SR-Core requires approximately
+$4.1\times$ fewer bytes per token than dense layer-offloading at realistic cache capacities.
+Dense models remain the quality upper bound; the contribution is a controllable
+systems-level degree of freedom within the sparse model family.

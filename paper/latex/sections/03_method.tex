@@ -1,0 +1,104 @@
+\section{Method: Entropy-based Router Consolidation}
+\label{sec:method}
+
+\subsection{SR-Core Architecture}
+\label{sec:arch}
+
+We briefly formalize the architecture to fix notation.
+A block bank $\Bcal = \{F_1, \ldots, F_n\}$ contains $n$ parameter blocks, each a two-layer
+MLP with shared input/output dimension $d$.
+The model processes each input token through $R$ recursive applications of the bank.
+At step $r = 1$, a learned router produces a probability distribution over blocks:
+\begin{equation}
+  \mathbf{p}_t
+    = \mathrm{softmax}\!\left(\mathbf{q}_t^\top \mathbf{K}\right) \in \mathbb{R}^n
+  \label{eq:router}
+\end{equation}
+where $\mathbf{q}_t = W_q \mathbf{h}_{t,0}$ is a query derived from the initial hidden
+state and $\mathbf{K} \in \mathbb{R}^{n \times d_k}$ is a learned key matrix.
+The \textbf{SR-Core} selection is
+\begin{equation}
+  S_t = \topk(\mathbf{p}_t), \qquad \WS = |S_t| = k
+  \label{eq:srcore}
+\end{equation}
+with soft gates $g_{t,b} \propto p_{t,b}$ for $b \in S_t$.
+The hidden state update at step $r$ is
+\begin{equation}
+  \mathbf{h}_{t,r}
+    = \mathbf{h}_{t,r-1}
+      + \sum_{b \in S_t} g_{t,b} \cdot F_b(\mathbf{h}_{t,r-1})
+  \label{eq:update}
+\end{equation}
+using the \emph{same} selection $S_t$ for all $r = 1, \ldots, R$.
+The active working set is therefore exactly $k$ blocks per token, independent of $R$ and $n$.
+
+Training uses a deep-supervision language modeling loss that supervises the output at every
+recursion depth, with end-weighted contributions to preserve full-depth quality while
+allowing intermediate readouts.
+
+\subsection{Entropy-based Consolidation Objective}
+\label{sec:objective}
+
+We augment the language modeling loss with an entropy penalty on the pre-selection router
+distribution:
+\begin{equation}
+  \Lcal = \Lcal_{\mathrm{LM}} + \lambda \cdot \Hcal
+  \label{eq:loss}
+\end{equation}
+where
+\begin{equation}
+  \Hcal = \frac{1}{N} \sum_{t=1}^{N} H\!\left(\mathbf{p}_t^{(1)}\right),
+  \qquad
+  H(\mathbf{p}) = -\sum_{i=1}^{n} p_i \log p_i
+  \label{eq:entropy}
+\end{equation}
+and $\mathbf{p}_t^{(1)}$ is the router distribution for token $t$ at $r = 1$.
+The entropy penalty $\Hcal$ encourages the router to assign concentrated probability mass
+before the top-$k$ selection: lower entropy corresponds to higher confidence in the selected
+blocks, which in practice produces more consistent routing choices across tokens with similar
+content and thereby improves cross-token cache hit rates.
+
+\paragraph{Why $r = 1$ only.}
+Routing decisions are made at $r = 1$; steps $r = 2, \ldots, R$ reuse the same block set
+$S_t$ and do not have a meaningful ``unconcentrated'' distribution to regularize.
+Applying the entropy loss at $r = 1$ is therefore the canonical intervention point.
+
+\paragraph{Why pre-top-$k$.}
+The router distribution $\mathbf{p}_t$ is computed before the top-$k$ cut.
+Applying entropy regularization at this point shapes the entire selection landscape: the
+penalty encourages the router to place probability mass on a small subset of blocks before
+any discretization, rather than penalizing the post-selection gates (which are already
+sparse by construction).
+A concentrated pre-selection distribution also improves the router's top-$k$ margin
+$p_k - p_{k+1}$, stabilizing which blocks fall at the selection boundary.
+
+\paragraph{Distinction from pairwise objectives.}
+We test soft-Jaccard-style overlap objectives as an internal negative control.
+Such objectives operate on \emph{cross-token} routing similarity: they compare the block
+selections of consecutive tokens and penalize dissimilarity.
+This is a different quantity from the \emph{within-token} distribution concentration that
+entropy targets.
+In our evaluation, soft-Jaccard objectives increase soft overlap metrics while
+simultaneously increasing the number of unique routing combinations --- the opposite of the
+cache-beneficial consolidation we seek, and the wrong lever for controlling pre-selection
+sharpness.
+Entropy minimization, by acting on the per-token distribution before the top-$k$ cut,
+produces the qualitatively different effect of a reduced unique routing vocabulary.
+
+\paragraph{Relationship to load balancing.}
+Standard MoE load-balancing losses \citep{fedus2022switch} promote \emph{uniform} block
+utilization, which is the opposite of entropy minimization.
+We do not replace load balancing with the entropy objective; the two terms address different
+failure modes (dead blocks vs.\ over-diffuse routing) and can be combined.
+In our experiments we observe that trained SR-Core models already activate all $n$ blocks
+across a corpus; load balancing is not required as a prerequisite.
+
+\paragraph{Hyperparameter $\lambda$.}
+We sweep $\lambda \in \{0.001, 0.003, 0.005, 0.007\}$.
+The penalty is dimensionally compatible with the language modeling loss (both in nats),
+making $\lambda$ a direct ratio between the two terms.
+Across our sweep, $\lambda = 0.003$ is the most reliable generalization-balanced operating
+point, with cache and code-generalization improvements that replicate across seeds.
+$\lambda = 0.005$ is the stronger cache/systems point, delivering larger LRU byte
+reductions; its quality effects are seed-dependent and should not be characterized as a
+uniform generalization cost (Section~\ref{sec:results}).

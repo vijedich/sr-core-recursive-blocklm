@@ -1,0 +1,34 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Mixture of Experts.}
+Sparse gating routes tokens to expert feed-forward networks
+\citep{shazeer2017moe,fedus2022switch}.
+Standard MoE architectures activate a different expert subset at each layer, accumulating
+a transfer budget proportional to depth; SR-Core replaces per-layer routing with a single
+shared bank and a fixed working set $\WS = k$, independent of recursion depth.
+Load-balancing losses \citep{lepikhin2021gshard,fedus2022switch} address expert collapse;
+the entropy objective addresses over-diffuse routing --- a distinct failure mode.
+
+\paragraph{Looped and recurrent depth.}
+The Universal Transformer \citep{dehghani2019universal} and Deep Equilibrium Models
+\citep{bai2019deq} apply shared parameters repeatedly.
+SR-Core fixes routing at $r = 1$, giving a predictable active-block set at inference time
+rather than a variable computation graph --- a property these models do not address.
+
+\paragraph{Parameter offloading.}
+FlexGen \citep{sheng2023flexgen} and DeepSpeed Inference \citep{aminabadi2022deepspeed}
+optimize layer-offloading schedules for dense transformers; SR-Core reduces \emph{what}
+is loaded per token.
+The two approaches are complementary.
+
+\paragraph{Routing regularization.}
+MoE auxiliary objectives include load-balancing losses \citep{fedus2022switch}, z-loss
+\citep{zoph2022stmoe}, and router noise \citep{shazeer2017moe}.
+These target dead experts or training instability; none control the cross-token cache
+locality that the entropy objective addresses.
+
+\paragraph{Weight sharing.}
+SHA-RNN \citep{merity2019sharnn} and related architectures reuse the same weights
+structurally; SR-Core adds content-dependent routing, keeping the active count fixed at
+$k$ while varying \emph{which} weights are active per token.

@@ -1,0 +1,1036 @@
+2026-06-18 21:06:09  Matrix-Sweep gestartet (PID 19476)
+2026-06-18 21:06:09  === dense_d4 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Dense] ModelA depth=4: 3.4M Parameter, vocab=8000, device=cuda
+  step     1  L1=250.873  Lfin=247.538  1s
+  step   500  L1=4.991  Lfin=4.969  37s
+  step  1000  L1=4.246  Lfin=4.244  72s
+  step  1500  L1=3.948  Lfin=3.948  107s
+  step  2000  L1=3.766  Lfin=3.766  142s
+  step  2500  L1=3.669  Lfin=3.668  178s
+  step  3000  L1=3.598  Lfin=3.597  213s
+[Dense] FERTIG depth=4: loss_per_iter=[3.612, 3.611, 3.611, 3.611]  Lfin=3.6111
+[CKPT] Neuer Bestwert (val_loss=3.6111): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d4\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d4\seed_0\step_3000
+[CKPT] SHA256:      209d466330b6b631c633319b9eed0fdbf87e61054d51ea134e82e2f2333d7521
+2026-06-18 21:10:03  === dense_d4 exit=0 ===
+2026-06-18 21:10:03  === dense_d12 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Dense] ModelA depth=12: 5.5M Parameter, vocab=8000, device=cuda
+  step     1  L1=245.554  Lfin=233.473  2s
+  step   500  L1=4.895  Lfin=4.811  103s
+  step  1000  L1=4.162  Lfin=4.150  204s
+  step  1500  L1=3.874  Lfin=3.872  305s
+  step  2000  L1=3.700  Lfin=3.700  407s
+  step  2500  L1=3.623  Lfin=3.621  509s
+  step  3000  L1=3.535  Lfin=3.531  611s
+[Dense] FERTIG depth=12: loss_per_iter=[3.558, 3.556, 3.555, 3.555, 3.555, 3.555, 3.555, 3.555, 3.555, 3.555, 3.555, 3.555]  Lfin=3.5547
+[CKPT] Neuer Bestwert (val_loss=3.5547): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d12\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\dense_d12\seed_0\step_3000
+[CKPT] SHA256:      9e45c002296f3f28ad0ae352a4792ec1ae82d41c1e4663148f8d459db93d2ef5
+2026-06-18 21:20:34  === dense_d12 exit=0 ===
+2026-06-18 21:20:34  === naked_b16_R2 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 6.6M Parameter, n_blocks=16 k=4 R=2 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.270  Lfin=249.377  Jacc=0.946  |grad|=16.950  1s
+  step   500  L1=4.838  Lfin=4.858  Jacc=0.275  |grad|=1.478  52s
+  step  1000  L1=4.297  Lfin=4.307  Jacc=0.340  |grad|=1.026  104s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1500.pt
+  step  1500  L1=4.053  Lfin=4.053  Jacc=0.409  |grad|=0.780  156s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2000.pt
+  step  2000  L1=3.793  Lfin=3.793  Jacc=0.437  |grad|=0.642  208s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2500.pt
+  step  2500  L1=3.692  Lfin=3.692  Jacc=0.458  |grad|=0.582  260s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R2_seed_0\step_3000.pt
+  step  3000  L1=3.714  Lfin=3.713  Jacc=0.472  |grad|=0.560  313s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b16k4R2_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7129): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R2\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R2\seed_0\step_3000
+[CKPT] SHA256:      06f5ac859c167c2b262d0cc8d478a5e611a426a2e2159163217177d8438f57f6
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b16_R2_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=16 k=4 R=2
+  vocab=8000  steps=3000  315s
+====================================================================
+Verlust pro Iteration:  [3.714, 3.713]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.469]
+Hub-Gini:               0.2530  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     47.8%
+Tote Bloecke:           0 / 16
+
+Einzigartige Bloecke/Token: mean=5.6  p50=6  p90=7  (max=8)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 11.37x weniger Transfer
+  n_blocks=256: 45.5x weniger Transfer
+  n_blocks=1000: 177.72x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.628  zufaellig=0.833  (1.3x)
+  cap=  4: gelernt=0.628  zufaellig=0.833  (1.3x)
+  cap=  8: gelernt=0.369  zufaellig=0.556  (1.5x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.714  Lfin=3.713  unique_blocks=5.6  k=4
+  Effizienzgewinn = 0.00043 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:9.1570  r2:0.0248
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0016
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2
+    r1:  1.00  0.46
+    r2:  0.46  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.739  forced=3.739  delta=+0.000
+    r=2: normal=3.738  forced=nan  delta=+nan
+2026-06-18 21:26:11  === naked_b16_R2 exit=0 ===
+2026-06-18 21:26:11  === naked_b16_R4 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 6.6M Parameter, n_blocks=16 k=4 R=4 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=248.758  Lfin=244.699  Jacc=0.952  |grad|=18.000  1s
+  step   500  L1=4.978  Lfin=4.976  Jacc=0.952  |grad|=1.517  90s
+  step  1000  L1=4.327  Lfin=4.336  Jacc=0.986  |grad|=1.331  179s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1500.pt
+  step  1500  L1=4.063  Lfin=4.069  Jacc=0.981  |grad|=1.017  268s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2000.pt
+  step  2000  L1=3.795  Lfin=3.795  Jacc=0.990  |grad|=1.067  359s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2500.pt
+  step  2500  L1=3.699  Lfin=3.699  Jacc=0.990  |grad|=0.650  449s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R4_seed_0\step_3000.pt
+  step  3000  L1=3.711  Lfin=3.711  Jacc=0.990  |grad|=0.640  539s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b16k4R4_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7106): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R4\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R4\seed_0\step_3000
+[CKPT] SHA256:      f647b8281e911bd2e1299e47df5411a0de164cfc4488750e71e41ef33e49d97e
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b16_R4_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=16 k=4 R=4
+  vocab=8000  steps=3000  541s
+====================================================================
+Verlust pro Iteration:  [3.711, 3.71, 3.71, 3.711]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.333, 0.989, 0.989]
+Hub-Gini:               0.1808  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     43.4%
+Tote Bloecke:           0 / 16
+
+Einzigartige Bloecke/Token: mean=6.2  p50=6  p90=7  (max=16)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 10.39x weniger Transfer
+  n_blocks=256: 41.55x weniger Transfer
+  n_blocks=1000: 162.31x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.371  zufaellig=0.833  (2.2x)
+  cap=  4: gelernt=0.371  zufaellig=0.833  (2.2x)
+  cap=  8: gelernt=0.183  zufaellig=0.556  (3.0x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.711  Lfin=3.711  unique_blocks=6.2  k=4
+  Effizienzgewinn = 0.00003 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:13.9330  r2:0.0103  r3:0.0099  r4:0.0096
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0004  r2->3:0.0003  r3->4:0.0003
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4
+    r1:  1.00  0.33  0.33  0.33
+    r2:  0.33  1.00  0.99  0.98
+    r3:  0.33  0.99  1.00  0.99
+    r4:  0.33  0.98  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.735  forced=3.735  delta=+0.000
+    r=2: normal=3.733  forced=nan  delta=+nan
+    r=3: normal=3.733  forced=nan  delta=+nan
+    r=4: normal=3.733  forced=nan  delta=+nan
+2026-06-18 21:35:38  === naked_b16_R4 exit=0 ===
+2026-06-18 21:35:38  === naked_b16_R6 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 6.6M Parameter, n_blocks=16 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.183  Lfin=240.477  Jacc=0.961  |grad|=19.369  1s
+  step   500  L1=4.768  Lfin=4.778  Jacc=0.989  |grad|=1.311  129s
+  step  1000  L1=4.278  Lfin=4.287  Jacc=0.993  |grad|=1.233  256s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1500.pt
+  step  1500  L1=4.057  Lfin=4.062  Jacc=0.995  |grad|=0.843  384s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2000.pt
+  step  2000  L1=3.819  Lfin=3.822  Jacc=0.993  |grad|=0.680  512s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2500.pt
+  step  2500  L1=3.712  Lfin=3.711  Jacc=0.993  |grad|=0.644  641s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b16_R6_seed_0\step_3000.pt
+  step  3000  L1=3.743  Lfin=3.741  Jacc=0.993  |grad|=0.620  769s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b16k4R6_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7409): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R6\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b16_R6\seed_0\step_3000
+[CKPT] SHA256:      8c75eb69a78013de3bbabbf2996945df801b7341e0c6911eb64e291ee375cd56
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b16_R6_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=16 k=4 R=6
+  vocab=8000  steps=3000  771s
+====================================================================
+Verlust pro Iteration:  [3.743, 3.741, 3.74, 3.74, 3.74, 3.741]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.377, 0.992, 0.993, 0.993, 0.993]
+Hub-Gini:               0.2210  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     47.9%
+Tote Bloecke:           0 / 16
+
+Einzigartige Bloecke/Token: mean=6.0  p50=6  p90=7  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 10.76x weniger Transfer
+  n_blocks=256: 43.02x weniger Transfer
+  n_blocks=1000: 168.07x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.219  zufaellig=0.833  (3.8x)
+  cap=  4: gelernt=0.219  zufaellig=0.833  (3.8x)
+  cap=  8: gelernt=0.108  zufaellig=0.556  (5.2x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.743  Lfin=3.741  unique_blocks=6.0  k=4
+  Effizienzgewinn = 0.00108 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:8.7063  r2:0.0096  r3:0.0079  r4:0.0073  r5:0.0069  r6:0.0066
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:inf  r2->3:0.0003  r3->4:0.0002  r4->5:0.0001  r5->6:0.0001
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.38  0.38  0.38  0.38  0.38
+    r2:  0.38  1.00  0.99  0.98  0.98  0.97
+    r3:  0.38  0.99  1.00  0.99  0.99  0.98
+    r4:  0.38  0.98  0.99  1.00  0.99  0.99
+    r5:  0.38  0.98  0.99  0.99  1.00  0.99
+    r6:  0.38  0.97  0.98  0.99  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.766  forced=3.766  delta=+0.000
+    r=2: normal=3.764  forced=nan  delta=+nan
+    r=3: normal=3.764  forced=nan  delta=+nan
+    r=4: normal=3.763  forced=nan  delta=+nan
+    r=5: normal=3.763  forced=nan  delta=+nan
+    r=6: normal=3.764  forced=nan  delta=+nan
+2026-06-18 21:48:58  === naked_b16_R6 exit=0 ===
+2026-06-18 21:48:58  === naked_b32_R2 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=2 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.553  Lfin=249.676  Jacc=0.930  |grad|=16.880  1s
+  step   500  L1=4.888  Lfin=4.922  Jacc=0.222  |grad|=1.674  80s
+  step  1000  L1=4.361  Lfin=4.368  Jacc=0.500  |grad|=0.955  160s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1500.pt
+  step  1500  L1=4.168  Lfin=4.169  Jacc=0.655  |grad|=0.843  240s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2000.pt
+  step  2000  L1=3.959  Lfin=3.956  Jacc=0.698  |grad|=0.738  320s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2500.pt
+  step  2500  L1=3.859  Lfin=3.858  Jacc=0.722  |grad|=0.558  401s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R2_seed_0\step_3000.pt
+  step  3000  L1=3.878  Lfin=3.875  Jacc=0.716  |grad|=0.561  481s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R2_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.8752): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R2\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R2\seed_0\step_3000
+[CKPT] SHA256:      6dbf60ceb64f5fc9ee07adeb80b25ce3d73d6370d1cddd67d739d857004071d9
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b32_R2_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=2
+  vocab=8000  steps=3000  483s
+====================================================================
+Verlust pro Iteration:  [3.878, 3.875]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.717]
+Hub-Gini:               0.3532  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     32.0%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=4.9  p50=4  p90=7  (max=8)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 13.1x weniger Transfer
+  n_blocks=256: 52.39x weniger Transfer
+  n_blocks=1000: 204.65x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.593  zufaellig=0.920  (1.6x)
+  cap=  8: gelernt=0.469  zufaellig=0.788  (1.7x)
+  cap= 16: gelernt=0.258  zufaellig=0.530  (2.1x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.878  Lfin=3.875  unique_blocks=4.9  k=4
+  Effizienzgewinn = 0.00301 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:0.3596  r2:0.0456
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0058
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2
+    r1:  1.00  0.71
+    r2:  0.71  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.904  forced=3.904  delta=+0.000
+    r=2: normal=3.902  forced=nan  delta=+nan
+2026-06-18 21:57:24  === naked_b32_R2 exit=0 ===
+2026-06-18 21:57:24  === naked_b32_R4 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=4 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=248.659  Lfin=244.615  Jacc=0.922  |grad|=17.479  1s
+  step   500  L1=4.912  Lfin=4.910  Jacc=0.976  |grad|=1.413  139s
+  step  1000  L1=4.319  Lfin=4.331  Jacc=0.986  |grad|=1.095  278s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1500.pt
+  step  1500  L1=4.074  Lfin=4.073  Jacc=0.985  |grad|=1.373  418s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2000.pt
+  step  2000  L1=3.825  Lfin=3.827  Jacc=0.988  |grad|=0.809  558s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2500.pt
+  step  2500  L1=3.713  Lfin=3.716  Jacc=0.981  |grad|=0.620  698s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R4_seed_0\step_3000.pt
+  step  3000  L1=3.728  Lfin=3.729  Jacc=0.982  |grad|=0.582  838s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R4_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7287): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R4\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R4\seed_0\step_3000
+[CKPT] SHA256:      2f43b13cc3e89536f5231e914861134d418b64d9d8663f42ff888eadeedc53bb
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b32_R4_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=4
+  vocab=8000  steps=3000  840s
+====================================================================
+Verlust pro Iteration:  [3.728, 3.728, 3.728, 3.729]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.246, 0.984, 0.983]
+Hub-Gini:               0.3306  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     30.5%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=6.7  p50=7  p90=8  (max=16)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 9.56x weniger Transfer
+  n_blocks=256: 38.24x weniger Transfer
+  n_blocks=1000: 149.38x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.408  zufaellig=0.919  (2.3x)
+  cap=  8: gelernt=0.295  zufaellig=0.788  (2.7x)
+  cap= 16: gelernt=0.156  zufaellig=0.527  (3.4x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.728  Lfin=3.729  unique_blocks=6.7  k=4
+  Effizienzgewinn = -0.00015 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:15.4056  r2:0.0141  r3:0.0124  r4:0.0116
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:nan  r2->3:nan  r3->4:nan
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4
+    r1:  1.00  0.25  0.24  0.24
+    r2:  0.25  1.00  0.98  0.97
+    r3:  0.24  0.98  1.00  0.98
+    r4:  0.24  0.97  0.98  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.758  forced=3.758  delta=+0.000
+    r=2: normal=3.757  forced=nan  delta=+nan
+    r=3: normal=3.758  forced=nan  delta=+nan
+    r=4: normal=3.758  forced=nan  delta=+nan
+2026-06-18 22:11:51  === naked_b32_R4 exit=0 ===
+2026-06-18 22:11:51  === naked_b32_R6 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.303  Lfin=241.360  Jacc=0.921  |grad|=17.790  1s
+  step   500  L1=4.958  Lfin=4.963  Jacc=0.979  |grad|=1.532  198s
+  step  1000  L1=4.332  Lfin=4.343  Jacc=0.977  |grad|=1.044  394s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1500.pt
+  step  1500  L1=4.047  Lfin=4.054  Jacc=0.989  |grad|=1.124  591s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2000.pt
+  step  2000  L1=3.790  Lfin=3.794  Jacc=0.988  |grad|=0.931  789s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2500.pt
+  step  2500  L1=3.659  Lfin=3.660  Jacc=0.989  |grad|=0.655  988s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\naked_b32_R6_seed_0\step_3000.pt
+  step  3000  L1=3.692  Lfin=3.693  Jacc=0.990  |grad|=0.615  1186s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R6_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.6927): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R6\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\naked_b32_R6\seed_0\step_3000
+[CKPT] SHA256:      fcd4a65ab30546b520cf47748278ee43ab24d9fbb0e56f7d5e8b41e8bb67d846
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\naked_b32_R6_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=6
+  vocab=8000  steps=3000  1188s
+====================================================================
+Verlust pro Iteration:  [3.692, 3.692, 3.691, 3.692, 3.692, 3.693]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.237, 0.991, 0.991, 0.991, 0.991]
+Hub-Gini:               0.3522  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     31.5%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=6.7  p50=7  p90=8  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 9.49x weniger Transfer
+  n_blocks=256: 37.96x weniger Transfer
+  n_blocks=1000: 148.3x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.263  zufaellig=0.919  (3.5x)
+  cap=  8: gelernt=0.178  zufaellig=0.788  (4.4x)
+  cap= 16: gelernt=0.103  zufaellig=0.526  (5.1x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.692  Lfin=3.693  unique_blocks=6.7  k=4
+  Effizienzgewinn = -0.00018 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:18.2749  r2:0.0065  r3:0.0063  r4:0.0062  r5:0.0061  r6:0.0060
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0002  r2->3:0.0002  r3->4:0.0002  r4->5:0.0002  r5->6:0.0001
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.24  0.24  0.24  0.24  0.24
+    r2:  0.24  1.00  0.99  0.98  0.97  0.97
+    r3:  0.24  0.99  1.00  0.99  0.98  0.97
+    r4:  0.24  0.98  0.99  1.00  0.99  0.98
+    r5:  0.24  0.97  0.98  0.99  1.00  0.99
+    r6:  0.24  0.97  0.97  0.98  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.710  forced=3.710  delta=+0.000
+    r=2: normal=3.709  forced=nan  delta=+nan
+    r=3: normal=3.709  forced=nan  delta=+nan
+    r=4: normal=3.709  forced=nan  delta=+nan
+    r=5: normal=3.709  forced=nan  delta=+nan
+    r=6: normal=3.710  forced=nan  delta=+nan
+2026-06-18 22:32:10  === naked_b32_R6 exit=0 ===
+2026-06-18 22:32:10  === srcore_b32_R2 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=2 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=249.779  Lfin=248.842  Jacc=1.000  |grad|=16.785  1s
+  step   500  L1=4.914  Lfin=4.930  Jacc=1.000  |grad|=1.877  80s
+  step  1000  L1=4.322  Lfin=4.326  Jacc=1.000  |grad|=1.048  159s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1500.pt
+  step  1500  L1=4.023  Lfin=4.024  Jacc=1.000  |grad|=0.744  238s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2000.pt
+  step  2000  L1=3.765  Lfin=3.765  Jacc=1.000  |grad|=0.840  318s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2500.pt
+  step  2500  L1=3.638  Lfin=3.638  Jacc=1.000  |grad|=0.563  398s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R2_seed_0\step_3000.pt
+  step  3000  L1=3.665  Lfin=3.663  Jacc=1.000  |grad|=0.551  478s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R2_s0_per_token_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.6634): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R2\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R2\seed_0\step_3000
+[CKPT] SHA256:      2945e770f46228c292733f91a5e6efa7e8dd642a354c553ffa30276c3ee818a4
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srcore_b32_R2_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=2
+  vocab=8000  steps=3000  480s
+====================================================================
+Verlust pro Iteration:  [3.665, 3.663]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [1.0]
+Hub-Gini:               0.6953  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     58.3%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=4.0  p50=4  p90=4  (max=8)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 16.0x weniger Transfer
+  n_blocks=256: 64.0x weniger Transfer
+  n_blocks=1000: 250.0x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.347  zufaellig=0.920  (2.7x)
+  cap=  8: gelernt=0.157  zufaellig=0.788  (5.0x)
+  cap= 16: gelernt=0.021  zufaellig=0.530  (24.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.665  Lfin=3.663  unique_blocks=4.0  k=4
+  Effizienzgewinn = 1.93310 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:12.2089  r2:0.0377
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0035
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2
+    r1:  1.00  0.36
+    r2:  0.36  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.673  forced=3.673  delta=+0.000
+    r=2: normal=3.675  forced=nan  delta=+nan
+2026-06-18 22:40:33  === srcore_b32_R2 exit=0 ===
+2026-06-18 22:40:33  === srcore_b32_R4 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=4 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=249.061  Lfin=244.572  Jacc=1.000  |grad|=17.481  1s
+  step   500  L1=5.037  Lfin=4.996  Jacc=1.000  |grad|=1.170  136s
+  step  1000  L1=4.427  Lfin=4.417  Jacc=1.000  |grad|=0.927  271s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1500.pt
+  step  1500  L1=4.225  Lfin=4.211  Jacc=1.000  |grad|=0.729  407s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2000.pt
+  step  2000  L1=3.996  Lfin=3.978  Jacc=1.000  |grad|=0.732  544s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2500.pt
+  step  2500  L1=3.902  Lfin=3.882  Jacc=1.000  |grad|=0.544  680s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R4_seed_0\step_3000.pt
+  step  3000  L1=3.934  Lfin=3.911  Jacc=1.000  |grad|=0.559  817s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R4_s0_per_token_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.9107): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R4\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R4\seed_0\step_3000
+[CKPT] SHA256:      3bc31875de3df41e45fb6b2817dc027d145ef78ce9b2d3b5676c0b33da509c00
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srcore_b32_R4_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=4
+  vocab=8000  steps=3000  818s
+====================================================================
+Verlust pro Iteration:  [3.934, 3.917, 3.911, 3.911]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [1.0, 1.0, 1.0]
+Hub-Gini:               0.3730  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     31.3%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=4.0  p50=4  p90=4  (max=16)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 16.0x weniger Transfer
+  n_blocks=256: 64.0x weniger Transfer
+  n_blocks=1000: 250.0x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.217  zufaellig=0.919  (4.2x)
+  cap=  8: gelernt=0.177  zufaellig=0.788  (4.4x)
+  cap= 16: gelernt=0.095  zufaellig=0.527  (5.5x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.934  Lfin=3.911  unique_blocks=4.0  k=4
+  Effizienzgewinn = 23.75460 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:0.0547  r2:0.0262  r3:0.0185  r4:0.0147
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0039  r2->3:0.0023  r3->4:0.0018
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4
+    r1:  1.00  0.91  0.87  0.83
+    r2:  0.91  1.00  0.94  0.90
+    r3:  0.87  0.94  1.00  0.95
+    r4:  0.83  0.90  0.95  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.955  forced=3.955  delta=+0.000
+    r=2: normal=3.942  forced=nan  delta=+nan
+    r=3: normal=3.938  forced=nan  delta=+nan
+    r=4: normal=3.939  forced=nan  delta=+nan
+2026-06-18 22:54:38  === srcore_b32_R4 exit=0 ===
+2026-06-18 22:54:38  === srcore_b32_R6 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.502  Lfin=240.646  Jacc=1.000  |grad|=18.181  1s
+  step   500  L1=4.934  Lfin=4.927  Jacc=1.000  |grad|=2.793  192s
+  step  1000  L1=4.279  Lfin=4.275  Jacc=1.000  |grad|=1.210  384s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1500.pt
+  step  1500  L1=4.019  Lfin=4.014  Jacc=1.000  |grad|=1.086  576s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2000.pt
+  step  2000  L1=3.782  Lfin=3.774  Jacc=1.000  |grad|=0.885  768s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2500.pt
+  step  2500  L1=3.698  Lfin=3.689  Jacc=1.000  |grad|=0.709  961s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srcore_b32_R6_seed_0\step_3000.pt
+  step  3000  L1=3.714  Lfin=3.701  Jacc=1.000  |grad|=0.635  1156s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R6_s0_per_token_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7012): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R6\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srcore_b32_R6\seed_0\step_3000
+[CKPT] SHA256:      48a46bba0e07376c9bfad9bd11368812598a34a3b47add4649d6c00749628821
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srcore_b32_R6_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=6
+  vocab=8000  steps=3000  1158s
+====================================================================
+Verlust pro Iteration:  [3.714, 3.709, 3.706, 3.703, 3.702, 3.701]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [1.0, 1.0, 1.0, 1.0, 1.0]
+Hub-Gini:               0.4340  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     44.2%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=4.0  p50=4  p90=4  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 16.0x weniger Transfer
+  n_blocks=256: 64.0x weniger Transfer
+  n_blocks=1000: 250.0x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.120  zufaellig=0.919  (7.7x)
+  cap=  8: gelernt=0.089  zufaellig=0.788  (8.9x)
+  cap= 16: gelernt=0.050  zufaellig=0.526  (10.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.714  Lfin=3.701  unique_blocks=4.0  k=4
+  Effizienzgewinn = 12.43496 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:16.5136  r2:0.0276  r3:0.0193  r4:0.0182  r5:0.0179  r6:0.0179
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:inf  r2->3:0.0014  r3->4:0.0012  r4->5:0.0012  r5->6:0.0010
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.23  0.23  0.23  0.23  0.23
+    r2:  0.23  1.00  0.99  0.97  0.96  0.96
+    r3:  0.23  0.99  1.00  0.99  0.98  0.97
+    r4:  0.23  0.97  0.99  1.00  0.99  0.98
+    r5:  0.23  0.96  0.98  0.99  1.00  0.99
+    r6:  0.23  0.96  0.97  0.98  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.739  forced=3.739  delta=+0.000
+    r=2: normal=3.735  forced=nan  delta=+nan
+    r=3: normal=3.733  forced=nan  delta=+nan
+    r=4: normal=3.734  forced=nan  delta=+nan
+    r=5: normal=3.738  forced=nan  delta=+nan
+    r=6: normal=3.743  forced=nan  delta=+nan
+2026-06-18 23:14:26  === srcore_b32_R6 exit=0 ===
+2026-06-18 23:14:26  === srsat_b32_R2 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=2 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=248.969  Lfin=248.097  Jacc=0.945  |grad|=16.929  1s
+  step   500  L1=4.887  Lfin=4.894  Jacc=0.601  |grad|=1.758  89s
+  step  1000  L1=4.300  Lfin=4.305  Jacc=0.600  |grad|=0.892  175s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1500.pt
+  step  1500  L1=4.034  Lfin=4.035  Jacc=0.602  |grad|=1.043  261s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2000.pt
+  step  2000  L1=3.794  Lfin=3.794  Jacc=0.603  |grad|=0.760  348s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2500.pt
+  step  2500  L1=3.677  Lfin=3.677  Jacc=0.605  |grad|=0.524  435s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R2_seed_0\step_3000.pt
+  step  3000  L1=3.737  Lfin=3.737  Jacc=0.612  |grad|=0.550  524s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R2_s0_core_satellite_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7374): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R2\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R2\seed_0\step_3000
+[CKPT] SHA256:      488a64efd755637feae431418c044fb0a79afe62eaf7370e28efceb211c8c518
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srsat_b32_R2_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=2
+  vocab=8000  steps=3000  526s
+====================================================================
+Verlust pro Iteration:  [3.737, 3.737]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.611]
+Hub-Gini:               0.5961  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     51.2%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=5.0  p50=5  p90=5  (max=8)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 12.87x weniger Transfer
+  n_blocks=256: 51.47x weniger Transfer
+  n_blocks=1000: 201.06x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.637  zufaellig=0.920  (1.4x)
+  cap=  8: gelernt=0.308  zufaellig=0.788  (2.6x)
+  cap= 16: gelernt=0.114  zufaellig=0.530  (4.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.737  Lfin=3.737  unique_blocks=5.0  k=4
+  Effizienzgewinn = -0.00000 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:6.7250  r2:0.0138
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0010
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2
+    r1:  1.00  0.05
+    r2:  0.05  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.740  forced=3.740  delta=+0.000
+    r=2: normal=3.741  forced=3.741  delta=+0.000
+2026-06-18 23:23:38  === srsat_b32_R2 exit=0 ===
+2026-06-18 23:23:38  === srsat_b32_R4 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=4 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.977  Lfin=246.704  Jacc=0.948  |grad|=17.328  1s
+  step   500  L1=5.011  Lfin=5.032  Jacc=0.990  |grad|=1.951  148s
+  step  1000  L1=4.421  Lfin=4.424  Jacc=0.995  |grad|=1.769  294s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1500.pt
+  step  1500  L1=4.144  Lfin=4.143  Jacc=0.998  |grad|=1.313  439s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2000.pt
+  step  2000  L1=3.898  Lfin=3.896  Jacc=0.995  |grad|=0.787  586s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2500.pt
+  step  2500  L1=3.790  Lfin=3.787  Jacc=0.991  |grad|=0.575  732s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R4_seed_0\step_3000.pt
+  step  3000  L1=3.820  Lfin=3.818  Jacc=0.991  |grad|=0.595  879s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R4_s0_core_satellite_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.8177): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R4\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R4\seed_0\step_3000
+[CKPT] SHA256:      a1f0c933f12bf88c701c423269ad51e1ec7318c08eb4e5983b3205506c96f0ae
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srsat_b32_R4_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=4
+  vocab=8000  steps=3000  881s
+====================================================================
+Verlust pro Iteration:  [3.82, 3.817, 3.817, 3.818]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.615, 0.976, 0.991]
+Hub-Gini:               0.5946  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     53.5%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=5.0  p50=5  p90=5  (max=16)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 12.69x weniger Transfer
+  n_blocks=256: 50.75x weniger Transfer
+  n_blocks=1000: 198.22x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.271  zufaellig=0.919  (3.4x)
+  cap=  8: gelernt=0.158  zufaellig=0.788  (5.0x)
+  cap= 16: gelernt=0.061  zufaellig=0.527  (8.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.820  Lfin=3.818  unique_blocks=5.0  k=4
+  Effizienzgewinn = 0.00243 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:11.7601  r2:0.0137  r3:0.0104  r4:0.0090
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:inf  r2->3:0.0003  r3->4:0.0003
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4
+    r1:  1.00  0.04  0.04  0.03
+    r2:  0.04  1.00  0.96  0.94
+    r3:  0.04  0.96  1.00  0.97
+    r4:  0.03  0.94  0.97  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.842  forced=3.842  delta=+0.000
+    r=2: normal=3.842  forced=3.842  delta=+0.001
+    r=3: normal=3.842  forced=3.842  delta=+0.000
+    r=4: normal=3.843  forced=3.843  delta=+0.001
+2026-06-18 23:38:51  === srsat_b32_R4 exit=0 ===
+2026-06-18 23:38:51  === srsat_b32_R6 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 10.8M Parameter, n_blocks=32 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.975  Lfin=241.485  Jacc=0.950  |grad|=18.043  1s
+  step   500  L1=4.884  Lfin=4.896  Jacc=1.000  |grad|=2.146  211s
+  step  1000  L1=4.316  Lfin=4.327  Jacc=0.997  |grad|=1.096  422s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1500.pt
+  step  1500  L1=4.051  Lfin=4.062  Jacc=1.000  |grad|=0.898  634s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2000.pt
+  step  2000  L1=3.787  Lfin=3.799  Jacc=0.997  |grad|=0.869  849s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2500.pt
+  step  2500  L1=3.681  Lfin=3.689  Jacc=0.998  |grad|=0.647  1059s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\srsat_b32_R6_seed_0\step_3000.pt
+  step  3000  L1=3.708  Lfin=3.715  Jacc=0.998  |grad|=0.652  1270s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b32k4R6_s0_core_satellite_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7152): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R6\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\srsat_b32_R6\seed_0\step_3000
+[CKPT] SHA256:      22d0c5e7d10eb4d1f0430b866cd3658fce84c38f62325c53cb76489eafd5b0b8
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\srsat_b32_R6_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=32 k=4 R=6
+  vocab=8000  steps=3000  1272s
+====================================================================
+Verlust pro Iteration:  [3.708, 3.709, 3.71, 3.711, 3.713, 3.715]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.607, 0.998, 0.998, 0.998, 0.998]
+Hub-Gini:               0.6179  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     64.9%
+Tote Bloecke:           0 / 32
+
+Einzigartige Bloecke/Token: mean=5.0  p50=5  p90=5  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 12.81x weniger Transfer
+  n_blocks=256: 51.22x weniger Transfer
+  n_blocks=1000: 200.08x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  4: gelernt=0.178  zufaellig=0.919  (5.2x)
+  cap=  8: gelernt=0.087  zufaellig=0.788  (9.1x)
+  cap= 16: gelernt=0.045  zufaellig=0.526  (11.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.708  Lfin=3.715  unique_blocks=5.0  k=4
+  Effizienzgewinn = -0.00672 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:16.0301  r2:0.0015  r3:0.0015  r4:0.0015  r5:0.0015  r6:0.0015
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0000  r2->3:0.0000  r3->4:0.0000  r4->5:0.0000  r5->6:0.0000
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.04  0.04  0.04  0.04  0.04
+    r2:  0.04  1.00  1.00  0.99  0.99  0.99
+    r3:  0.04  1.00  1.00  1.00  0.99  0.99
+    r4:  0.04  0.99  1.00  1.00  1.00  0.99
+    r5:  0.04  0.99  0.99  1.00  1.00  1.00
+    r6:  0.04  0.99  0.99  0.99  1.00  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.735  forced=3.735  delta=+0.000
+    r=2: normal=3.735  forced=nan  delta=+nan
+    r=3: normal=3.735  forced=nan  delta=+nan
+    r=4: normal=3.736  forced=nan  delta=+nan
+    r=5: normal=3.736  forced=nan  delta=+nan
+    r=6: normal=3.736  forced=nan  delta=+nan
+2026-06-19 00:00:35  === srsat_b32_R6 exit=0 ===
+2026-06-19 00:00:35  MATRIX-SWEEP FERTIG.

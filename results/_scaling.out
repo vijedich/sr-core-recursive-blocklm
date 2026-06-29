@@ -1,0 +1,275 @@
+2026-06-18 01:08:11  Skalierungs-Sweep gestartet (PID 23088) — Baenke [64, 128, 256], k=4, R=6
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0.json
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.05_diverse.json
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.05_diverse_model.pt
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_curr30pct.json
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_curr30pct_model.pt
+2026-06-18 01:08:11  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_curr30pct_warm.json
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_curr30pct_warm_model.pt
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_currFromIter2_warm.json
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.0_crd0.0_diverse_currFromIter2_warm_model.pt
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_div0.1_crd0.05.json
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_warm.json
+2026-06-18 01:08:12  Kopien-Regel: gesichert tinystories_b64k4R6_s0_warm_model.pt
+2026-06-18 01:08:12  === Skalierung n_blocks=64 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 19.3M Parameter, n_blocks=64 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=250.473  Lfin=241.434  Jacc=0.893  |grad|=17.598  3s
+  step   500  L1=4.935  Lfin=4.953  Jacc=0.959  |grad|=1.741  343s
+  step  1000  L1=4.331  Lfin=4.344  Jacc=0.993  |grad|=1.625  680s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1500.pt
+  step  1500  L1=4.046  Lfin=4.057  Jacc=0.987  |grad|=0.955  1018s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2000.pt
+  step  2000  L1=3.787  Lfin=3.793  Jacc=0.990  |grad|=1.010  1355s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2500.pt
+  step  2500  L1=3.698  Lfin=3.705  Jacc=0.990  |grad|=0.651  1693s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b64_seed_0\step_3000.pt
+  step  3000  L1=3.714  Lfin=3.720  Jacc=0.987  |grad|=0.581  2030s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b64k4R6_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.7202): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b64\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b64\seed_0\step_3000
+[CKPT] SHA256:      8b89f7e0152a2a59301cd185fc9075d9f8c7ef490a1b718947ae19a70b2c61c7
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\tinystories_scale_b64_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=64 k=4 R=6
+  vocab=8000  steps=3000  2033s
+====================================================================
+Verlust pro Iteration:  [3.714, 3.714, 3.715, 3.716, 3.718, 3.72]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.184, 0.988, 0.988, 0.987, 0.987]
+Hub-Gini:               0.5745  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     40.1%
+Tote Bloecke:           0 / 64
+
+Einzigartige Bloecke/Token: mean=7.1  p50=7  p90=8  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 9.06x weniger Transfer
+  n_blocks=256: 36.22x weniger Transfer
+  n_blocks=1000: 141.5x weniger Transfer
+
+Cache-Miss-Rate:
+  cap=  8: gelernt=0.205  zufaellig=0.896  (4.4x)
+  cap= 16: gelernt=0.150  zufaellig=0.768  (5.1x)
+  cap= 32: gelernt=0.077  zufaellig=0.515  (6.7x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.714  Lfin=3.720  unique_blocks=7.1  k=4
+  Effizienzgewinn = -0.00217 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:23.1355  r2:0.0112  r3:0.0102  r4:0.0096  r5:0.0091  r6:0.0088
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0004  r2->3:0.0003  r3->4:0.0003  r4->5:0.0003  r5->6:0.0003
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.19  0.19  0.19  0.19  0.19
+    r2:  0.19  1.00  0.99  0.98  0.96  0.95
+    r3:  0.19  0.99  1.00  0.99  0.98  0.96
+    r4:  0.19  0.98  0.99  1.00  0.99  0.98
+    r5:  0.19  0.96  0.98  0.99  1.00  0.99
+    r6:  0.19  0.95  0.96  0.98  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.731  forced=3.731  delta=+0.000
+    r=2: normal=3.732  forced=nan  delta=+nan
+    r=3: normal=3.733  forced=nan  delta=+nan
+    r=4: normal=3.734  forced=nan  delta=+nan
+    r=5: normal=3.736  forced=nan  delta=+nan
+    r=6: normal=3.738  forced=nan  delta=+nan
+2026-06-18 01:42:48  === n_blocks=64 exit=0 ===
+2026-06-18 01:42:48  === Skalierung n_blocks=128 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 36.1M Parameter, n_blocks=128 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=248.595  Lfin=239.603  Jacc=0.890  |grad|=16.973  3s
+  step   500  L1=4.799  Lfin=4.804  Jacc=0.966  |grad|=1.678  611s
+  step  1000  L1=4.231  Lfin=4.234  Jacc=0.993  |grad|=1.323  1225s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1500.pt
+  step  1500  L1=3.983  Lfin=4.029  Jacc=0.984  |grad|=0.959  1839s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2000.pt
+  step  2000  L1=3.710  Lfin=3.715  Jacc=0.988  |grad|=0.747  2455s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2500.pt
+  step  2500  L1=3.607  Lfin=3.611  Jacc=0.988  |grad|=0.627  3069s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b128_seed_0\step_3000.pt
+  step  3000  L1=3.628  Lfin=3.630  Jacc=0.990  |grad|=0.603  3681s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b128k4R6_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.6296): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b128\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b128\seed_0\step_3000
+[CKPT] SHA256:      b1b6351be45b476cf33712af7e4ac7fefe81d6ebd2ce7e7eab7a893d1e100046
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\tinystories_scale_b128_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=128 k=4 R=6
+  vocab=8000  steps=3000  3683s
+====================================================================
+Verlust pro Iteration:  [3.628, 3.627, 3.628, 3.628, 3.629, 3.63]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.098, 0.989, 0.99, 0.989, 0.99]
+Hub-Gini:               0.6553  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     28.0%
+Tote Bloecke:           0 / 128
+
+Einzigartige Bloecke/Token: mean=7.5  p50=8  p90=8  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 8.51x weniger Transfer
+  n_blocks=256: 34.05x weniger Transfer
+  n_blocks=1000: 133.01x weniger Transfer
+
+Cache-Miss-Rate:
+  cap= 16: gelernt=0.195  zufaellig=0.886  (4.5x)
+  cap= 32: gelernt=0.128  zufaellig=0.761  (5.9x)
+  cap= 64: gelernt=0.059  zufaellig=0.513  (8.7x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.628  Lfin=3.630  unique_blocks=7.5  k=4
+  Effizienzgewinn = -0.00056 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:28.0633  r2:0.0063  r3:0.0053  r4:0.0048  r5:0.0045  r6:0.0043
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0002  r2->3:0.0001  r3->4:0.0001  r4->5:0.0001  r5->6:0.0001
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.10  0.10  0.10  0.10  0.10
+    r2:  0.10  1.00  0.99  0.98  0.97  0.96
+    r3:  0.10  0.99  1.00  0.99  0.98  0.97
+    r4:  0.10  0.98  0.99  1.00  0.99  0.98
+    r5:  0.10  0.97  0.98  0.99  1.00  0.99
+    r6:  0.10  0.96  0.97  0.98  0.99  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.650  forced=3.650  delta=+0.000
+    r=2: normal=3.650  forced=nan  delta=+nan
+    r=3: normal=3.651  forced=nan  delta=+nan
+    r=4: normal=3.651  forced=nan  delta=+nan
+    r=5: normal=3.652  forced=nan  delta=+nan
+    r=6: normal=3.653  forced=nan  delta=+nan
+2026-06-18 02:44:53  === n_blocks=128 exit=0 ===
+2026-06-18 02:44:53  === Skalierung n_blocks=256 START ===
+[Exp3] Lade TinyStories (vocab=8000, max_docs=20000) ...
+
+
+
+[Exp3] 4,396,460 Tokens geladen, Vokabular: 8000
+[Exp3] Modell C: 69.8M Parameter, n_blocks=256 k=4 R=6 vocab=8000
+[Exp3] Training: 3000 Schritte, bs=32, seq=128, device=cuda
+  step     1  L1=248.523  Lfin=239.835  Jacc=0.869  |grad|=16.777  5s
+  step   500  L1=4.842  Lfin=4.854  Jacc=0.995  |grad|=1.423  1158s
+  step  1000  L1=4.201  Lfin=4.211  Jacc=0.989  |grad|=1.230  2335s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1500.pt
+  step  1500  L1=3.963  Lfin=3.963  Jacc=0.996  |grad|=0.848  3513s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_1900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2000.pt
+  step  2000  L1=3.711  Lfin=3.714  Jacc=0.990  |grad|=0.641  4694s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2100.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2200.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2300.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2400.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2500.pt
+  step  2500  L1=3.603  Lfin=3.623  Jacc=0.979  |grad|=0.676  5876s
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2600.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2700.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2800.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_2900.pt
+  [CKPT] Zwischenstand: checkpoints\.intermediate\tinystories_scale_b256_seed_0\step_3000.pt
+  step  3000  L1=3.638  Lfin=3.650  Jacc=0.980  |grad|=0.572  7058s
+[Exp3] Gewichte gesichert VOR Auswertung: results/tinystories_b256k4R6_s0_model.pt
+[CKPT] Neuer Bestwert (val_loss=3.6498): C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b256\seed_0\step_3000
+[CKPT] Gespeichert: C:\_temp\dev\3D KI Modell\recursive-blocklm\checkpoints\tinystories_scale_b256\seed_0\step_3000
+[CKPT] SHA256:      2a9710f0b15194b0d5687c86eb7c06949351efd245bdef9cbb2cb0ff05d5587f
+[Exp3] Zwischen-Checkpoints aufgeraeumt: checkpoints\.intermediate\tinystories_scale_b256_seed_0
+[Exp3] Auswertung ...
+[Exp3] Per-Iteration-Ablation ...
+
+====================================================================
+EXP3 TINYSTORIES  n_blocks=256 k=4 R=6
+  vocab=8000  steps=3000  7060s
+====================================================================
+Verlust pro Iteration:  [3.638, 3.639, 3.641, 3.643, 3.646, 3.65]
+Zufall:                 8.987  -> unter Zufall: True
+Jaccard (r->r+1):       [0.125, 0.981, 0.981, 0.98, 0.98]
+Hub-Gini:               0.8139  (0=flach, 1=ein Block alles)
+Top-5-Block-Anteil:     32.0%
+Tote Bloecke:           1 / 256
+
+Einzigartige Bloecke/Token: mean=7.4  p50=7  p90=8  (max=24)
+Transfer-Reduktion vs. Layer-Offloading:
+  n_blocks= 64: 8.68x weniger Transfer
+  n_blocks=256: 34.7x weniger Transfer
+  n_blocks=1000: 135.55x weniger Transfer
+
+Cache-Miss-Rate:
+  cap= 32: gelernt=0.123  zufaellig=0.881  (7.2x)
+  cap= 64: gelernt=0.071  zufaellig=0.757  (10.7x)
+  cap=128: gelernt=0.044  zufaellig=0.516  (11.6x)
+
+Effizienzmetrik (L1-Lfin) / (unique_blocks - k):
+  L1=3.638  Lfin=3.650  unique_blocks=7.4  k=4
+  Effizienzgewinn = -0.00353 Nats/Block
+
+--- Per-Iteration-Ablation ---
+  A) Relative Zustandsaenderung ||h_r - h_{r-1}|| / ||h_{r-1}||:
+    r1:25.8878  r2:0.0095  r3:0.0092  r4:0.0094  r5:0.0095  r6:0.0096
+  D) KL-Divergenz p(r) -> p(r+1) [Output-Aenderung]:
+    r1->2:0.0004  r2->3:0.0003  r3->4:0.0003  r4->5:0.0003  r5->6:0.0003
+  B) Jaccard-Matrix aller Iterationspaare:
+         r1  r2  r3  r4  r5  r6
+    r1:  1.00  0.13  0.13  0.13  0.13  0.13
+    r2:  0.13  1.00  0.98  0.96  0.94  0.93
+    r3:  0.13  0.98  1.00  0.98  0.96  0.94
+    r4:  0.13  0.96  0.98  1.00  0.98  0.96
+    r5:  0.13  0.94  0.96  0.98  1.00  0.98
+    r6:  0.13  0.93  0.94  0.96  0.98  1.00
+  C) Erzwungene Diversitaet (Loss-Delta = Forced - Normal, kumulativ):
+    r=1: normal=3.662  forced=3.662  delta=+0.000
+    r=2: normal=3.663  forced=3.662  delta=-0.001
+    r=3: normal=3.665  forced=3.663  delta=-0.002
+    r=4: normal=3.667  forced=3.663  delta=-0.004
+    r=5: normal=3.670  forced=3.665  delta=-0.005
+    r=6: normal=3.673  forced=3.665  delta=-0.008
+2026-06-18 04:43:24  === n_blocks=256 exit=0 ===
+2026-06-18 04:43:24  SKALIERUNGS-SWEEP FERTIG.

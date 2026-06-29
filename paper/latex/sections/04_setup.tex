@@ -1,0 +1,36 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\paragraph{Dataset.}
+We train and evaluate on HeteroMini-v1, a four-domain pretraining corpus of approximately
+6.6M tokens from Web (FineWeb-Edu), Wikipedia, Code (The Stack, Python), and Literature
+(Project Gutenberg), tokenized with a shared byte-level BPE vocabulary of 8,000 tokens.
+Documents are kept contiguous; evaluation uses a matched held-out split with no training
+overlap.
+
+\paragraph{Model and training.}
+We use SR-Core with $n = 64$ blocks, $k = 8$ active blocks per token, and $R = 6$
+recursion steps (${\sim}19$M parameters, $d = 256$, block hidden dimension 512).
+The dense quality baseline is a 24-layer Transformer (\textsc{dense\_d24},
+${\sim}100$M parameters).
+All models use AdamW with a cosine schedule and a deep-supervision LM loss.
+SR-Core models are trained for 15,000 steps as a shared base, then continued for 2,000
+steps with the entropy objective at $\lambda \in \{0.001, 0.003, 0.005, 0.007\}$; the
+unregularized continuation (\textsc{ctrl}) provides the direct ablation baseline.
+The dense baseline trains end-to-end for 17,000 steps.
+Cross-seed replication uses an independently initialized base; we report seed~1 results
+for $\lambda \in \{0.003, 0.005\}$.
+
+\paragraph{Negative controls.}
+\emph{Softfull} applies a soft Jaccard penalty on router probability vectors across
+consecutive tokens; \emph{softsharp\_a2} adds temperature sharpening ($\alpha = 2$);
+\emph{reduced\_noise} uses lower Gumbel noise ($\sigma = 0.1$).
+All controls train for 2,000 steps from the shared 15k base.
+
+\paragraph{Evaluation.}
+Routing metrics are measured on 40 held-out batches via \texttt{eval\_compare.py}:
+router entropy $H(\mathbf{p})$, unique core combinations, hard-overlap Jaccard, and LRU
+bytes/token at cache capacities $K \in \{8,16,24,32\}$.
+Per-domain held-out loss is measured via paired runs with the dense baseline as a
+consistent anchor.
+Offloading simulation uses an LRU cache trace over 1,024 held-out sequences.

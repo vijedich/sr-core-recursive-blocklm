@@ -1,0 +1,25 @@
+2026-06-19 13:03:11  HeteroMini-LONG gestartet (PID 25544), max_steps=5000
+2026-06-19 13:03:11  === hm_srcore_b32_R6 START ===
+[HM-long] hm_srcore_b32_R6: fortgesetzt ab step 5000
+[HM-long] hm_srcore_b32_R6: bereits bei step 5000 >= 5000 — nichts zu tun.
+2026-06-19 13:03:21  === hm_srcore_b32_R6 exit=0 ===
+2026-06-19 13:03:21  === hm_naked_b32_R6 START ===
+[HM-long] hm_naked_b32_R6: 10.8M Params, train 0->5000, lr_horizon=10000, milestones=[1000, 2500, 5000]
+  [hm_naked_b32_R6] step 1000: Lfin=6.9456 WS=7.82 reuseP90=24.0 K8=1284.1KB anytime=0.0165 dead=8  (314s)
+  [hm_naked_b32_R6] step 2500: Lfin=6.1061 WS=6.74 reuseP90=31.0 K8=1493.6KB anytime=0.0077 dead=0  (773s)
+  [hm_naked_b32_R6] step 5000: Lfin=5.5586 WS=6.33 reuseP90=48.0 K8=1797.4KB anytime=0.014 dead=1  (1539s)
+[HM-long] fertig hm_naked_b32_R6 @ step 5000 -> Snapshot C:\_temp\dev\3D KI Modell\recursive-blocklm\results\hm_cont_hm_naked_b32_R6_s0.pt
+2026-06-19 13:29:07  === hm_naked_b32_R6 exit=0 ===
+2026-06-19 13:29:07  === hm_dense_d24 START ===
+[HM-long] hm_dense_d24: fortgesetzt ab step 5000
+[HM-long] hm_dense_d24: bereits bei step 5000 >= 5000 — nichts zu tun.
+2026-06-19 13:29:13  === hm_dense_d24 exit=0 ===
+2026-06-19 13:29:13  === hm_srcore_b64_R6 START ===
+[HM-long] hm_srcore_b64_R6: fortgesetzt ab step 5000
+[HM-long] hm_srcore_b64_R6: bereits bei step 5000 >= 5000 — nichts zu tun.
+2026-06-19 13:29:19  === hm_srcore_b64_R6 exit=0 ===
+2026-06-19 13:29:19  === hm_srcore_b32_R2 START ===
+[HM-long] hm_srcore_b32_R2: fortgesetzt ab step 5000
+[HM-long] hm_srcore_b32_R2: bereits bei step 5000 >= 5000 — nichts zu tun.
+2026-06-19 13:29:25  === hm_srcore_b32_R2 exit=0 ===
+2026-06-19 13:29:25  HETEROMINI-LONG FERTIG.

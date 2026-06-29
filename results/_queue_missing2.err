@@ -1,0 +1,4 @@
+FEHLER: Job 'dense_d48': Log existiert bereits und hat Inhalt: C:\_temp\dev\3D KI Modell\recursive-blocklm\results\_dense_d48_s0.log
+  → job 'overwrite: true' setzen oder --force verwenden
+1 Log-Kollision(en) — kein Job gestartet
+Tipp: anderen 'log'-Namen wählen, 'overwrite: true' setzen, oder --force
