@@ -22,7 +22,7 @@ dissertation and does not claim to be.
 | [02_architecture.md](02_architecture.md) | SR-Core Architecture and WS=k | ~90% | Stable |
 | [03_scaling.md](03_scaling.md) | Bank Size Scaling | ~95% | All tables + cross-seed ablation |
 | [04_dispatch.md](04_dispatch.md) | Dispatch Overhead | ~90% | Benchmark + CPU recorded (i7-10700) |
-| [05_heteromini.md](05_heteromini.md) | HeteroMini Experiments | ~97% | + streaming (5b.4), A-sweep (5d), intrinsic quality gap (5a.5) |
+| [05_heteromini.md](05_heteromini.md) | HeteroMini Experiments | ~97% | + streaming (5b.4), A-sweep (5d), quality gap (budget-matched, 5a.5) |
 | [06_entropy_minimization.md](06_entropy_minimization.md) | Entropy-based Consolidation | ~95% | Long-form paper; λ-sweep now 4 seeds |
 | [07_discussion.md](07_discussion.md) | Discussion and Future Work | ~90% | Claim boundaries updated to measured results |
 | [08_related_work.md](08_related_work.md) | Related Work | ~90% | MoE, looped depth, offloading, routing regularization, positioning table |
@@ -32,9 +32,10 @@ dissertation and does not claim to be.
 ## The four load-bearing results
 
 1. **WS=k guarantee** — architectural and empirical across bank sizes (Ch 2–3).
-2. **Quality cost is intrinsic, ~0.5 nats.** Param- *and* compute-matched SR-Core still trails
-   Dense d24 by ~0.5 nats (Ch 5a.5) — the cost is the format, not the budget. (Lower bound;
-   both undertrained at 15k — see 7.5.6.)
+2. **Quality cost ~0.5 nats, not explained by budget.** Param- *and* compute-matched SR-Core
+   still trails Dense d24 by ~0.5 nats (Ch 5a.5). Matching parameters and compute does not
+   close the gap; the evidence points to the narrow-active-set + recursion format. Lower bound
+   — both models undertrained at 15k; convergence open (see 7.5.6).
 3. **Real wall-clock streaming win, measured.** RAM→VRAM prototype on an RTX 2060: ~1.6× over
    dense layer-offloading once per-block launch overhead is removed and transfer/compute
    overlapped (Ch 5b.4). The chain *fewer bytes → more tokens/s* is measured, not simulated.

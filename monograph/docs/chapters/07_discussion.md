@@ -33,14 +33,17 @@ of entropy-based router consolidation on cache efficiency and language quality.
   4 seeds), ~0.5–0.6 nats behind Dense d24 (~4.70–4.81) — and Dense achieves this with half
   the block-applications per token (24 vs. 48). SR-Core does not win on language quality
   (Chapter 5a.5)
-- The gap is intrinsic to the format, not a budget artifact: a param- *and* compute-matched
-  SR-Core (8.75M params, 6.29M apps/token = Dense d24) still trails by ~0.5 nats (Chapter 5a.5).
-  Matching parameters and compute does not close it — the cost is the narrow-active-set +
-  recursion format, not a parameter or compute deficit. (Both models are still descending at
-  15k, so the figure is a lower bound, not a converged value)
+- The gap is not explained by parameter count or block-application compute in the tested
+  regime: a param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token = Dense d24)
+  still trails by ~0.5 nats (Chapter 5a.5). The evidence points to the narrow-active-set +
+  recursion format as the source. Whether the gap narrows at convergence or scale remains open
+  (Section 7.5.6). (Both models are still descending at 15k, so the figure is a lower bound,
+  not a converged value)
 - This is by design, not a shortfall: SR-Core's contribution is transfer efficiency, not
-  quality. Under the bandwidth-bound premise (Chapter 5b.0) the extra compute is free, and the
-  quality gap is the price paid for moving k=8 instead of 24 blocks per token
+  quality. Additional block compute is not the limiting term in the transfer-bound deployment
+  regime — provided sparse dispatch is fused enough that per-block kernel-launch overhead is
+  sub-dominant (achieved in Chapter 5b.4 via grouped matmul). The quality gap is the price
+  paid for moving k=8 instead of 24 blocks per token
 - λ=0.003 entropy consolidation does not degrade quality relative to ctrl
 
 ## 7.2 What This Work Does Not Demonstrate
@@ -79,14 +82,15 @@ The original research plan (Theorie.md) envisioned a 7-phase program:
 | 2 | Harder routing (Gumbel, temperature curriculum) | Partial (top-k with noise) |
 | 3 | 3D spatial topology, trainable coordinates | Not implemented |
 | 4 | Leiterbahn index | Not implemented |
-| 5 | I/O loss, hardware-cost simulation | LRU simulation only |
+| 5 | I/O loss, hardware-cost simulation | LRU simulation + real prototype (Ch. 5b.4) |
 | 6 | Dynamic halting | Not implemented |
-| 7 | Real RAM→VRAM streaming | Not implemented |
+| 7 | Real RAM→VRAM streaming | Implemented at small scale (Ch. 5b.4); deployment-scale pending |
 
 The work presented here covers Phase 1 (fully), a component of Phase 2 (entropy
-regularization as an alternative to temperature curriculum), and Phase 5 (LRU
-simulation). The 3D topology and Leiterbahn concepts remain important directions but
-were not the focus of this experimental program.
+regularization as an alternative to temperature curriculum), and Phase 5 (LRU simulation
+plus a first real-hardware RAM→VRAM prototype at small scale). The 3D topology and
+Leiterbahn concepts remain important directions but were not the focus of this
+experimental program.
 
 The entropy regularization approach (Chapter 6) was not part of the original plan; it
 emerged from the observation that routing collapse at deep steps was a training artifact,
@@ -194,7 +198,8 @@ It also claims, now backed by measurement rather than simulation:
 
 > Under RAM→VRAM offloading on consumer hardware (RTX 2060), SR-Core achieves a real
 > wall-clock throughput advantage over dense layer-offloading (~1.6×) at small scale, at a
-> measured intrinsic quality cost of ~0.5 nats (param- and compute-matched).
+> measured quality cost of ~0.5 nats (param- and compute-matched, at this training horizon and
+> scale; whether the gap changes at convergence or larger scale remains open).
 
 It does **not** claim:
 
@@ -202,9 +207,10 @@ It does **not** claim:
 > scale* (≫VRAM models, batched serving).
 
 The honest framing is: the chain *fewer bytes → more tokens/second* is now demonstrated
-end-to-end on real hardware, and the quality price for it is measured and intrinsic to the
-format. What remains open is magnitude at scale — whether the small-scale throughput win and the
-quality gap both move favourably as models grow — which requires hardware beyond this program.
+end-to-end on real hardware, and the quality price for it is measured and not attributable to
+parameter or compute budget at this training horizon. What remains open is magnitude at scale —
+whether the small-scale throughput win and the quality gap both move favourably as models grow
+— which requires hardware beyond this program.
 
 ## 7.7 Conclusion
 

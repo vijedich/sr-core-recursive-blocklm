@@ -127,16 +127,15 @@ Dense d24, trained to the same step count, reaches L ≈ 4.70 (4.81 at 17k) — 
 nats better than SR-Core, with half the block-applications per token** (24 vs. k·R = 48). At
 this scale **Dense d24 is the quality ceiling; SR-Core does not match it.**
 
-**The gap is intrinsic to the format, not the budget.** A *param- and compute-matched*
-comparison settles this directly. A SR-Core variant sized to Dense d24 — n=64, k=16, R=4,
-block_hidden=192 — has 8.75M parameters (vs. d24's 8.70M) and performs exactly **6.29M
-parameter-applications per token** (k·R·block = 64·98k), identical to d24's 24·262k. Same
-parameters, same compute, same backbone. Across three seeds it reaches **L = 5.26 ± 0.03 —
-still ~0.5 nats behind Dense d24**. Matching both parameters *and* compute does **not** close the
-gap. The ~0.5-nat cost is therefore a property of the SR-Core *format* (narrow active set +
-weight-tied recursion), not of a parameter or compute deficit. (This refutes the natural
-hypothesis that the gap is mostly the compute difference: at matched compute it persists
-unchanged.)
+**The observed gap is not explained by parameter count or block-application compute.** A
+*param- and compute-matched* comparison settles this directly. A SR-Core variant sized to
+Dense d24 — n=64, k=16, R=4, block_hidden=192 — has 8.75M parameters (vs. d24's 8.70M) and
+performs exactly **6.29M parameter-applications per token** (k·R·block = 64·98k), identical
+to d24's 24·262k. Same parameters, same compute, same backbone. Across three seeds it reaches
+**L = 5.26 ± 0.03 — still ~0.5 nats behind Dense d24**. Matching both parameters *and*
+compute does **not** close the gap. The evidence points to the SR-Core *format* (narrow active
+set + weight-tied recursion) as the source — the gap persists even when both budgets are
+matched. Whether it narrows at convergence or at larger scale remains open (Section 7.5.6).
 
 The mechanism is a breadth-vs-depth tradeoff at fixed compute: dense brings ~6.3M *distinct*
 parameters to bear per token (each applied once), while this SR-Core touches only ~1.6M distinct
@@ -417,12 +416,14 @@ figure: `figures/fig_asweep_depth.png` (script: `scripts/plot_asweep.py`).
 
 HeteroMini experiments establish:
 
-1. **Dense d24 is the quality ceiling; the ~0.5-nat gap is intrinsic to the format.** SR-Core
-   b64 k8 R6 reaches L = 5.30 ± 0.05 (4 seeds) vs. Dense d24's ~4.70. A param- *and*
-   compute-matched SR-Core (8.75M params, 6.29M apps/token, identical to d24) still trails by
-   ~0.5 nats (L = 5.26 ± 0.03; Section 5a.5) — so the cost is the format (narrow active set +
-   recursion), not a budget deficit. Both models are still descending at 15k, so this is a
-   lower bound, not a converged value. SR-Core's contribution is transfer efficiency, not quality.
+1. **Dense d24 is the quality ceiling; the ~0.5-nat gap is not explained by parameter or
+   compute budget.** SR-Core b64 k8 R6 reaches L = 5.30 ± 0.05 (4 seeds) vs. Dense d24's
+   ~4.70. A param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token, identical to
+   d24) still trails by ~0.5 nats (L = 5.26 ± 0.03; Section 5a.5) — so the gap is not a budget
+   artifact; the evidence points to the narrow-active-set + recursion format. Both models are
+   still descending at 15k, so this is a lower bound, not a converged value; whether the gap
+   narrows at convergence or scale remains open (Section 7.5.6). SR-Core's contribution is
+   transfer efficiency, not quality.
 
 2. **Recursion has a measurable useful-depth band** (Section 5d): below an active-brain floor
    (A ≈ 1M) recursion is dead; above it, per-step gains saturate by r≈4. Magnitude is

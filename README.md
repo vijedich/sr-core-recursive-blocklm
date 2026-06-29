@@ -22,7 +22,7 @@ enabling predictable RAM→VRAM prefetching.
 | # | Result | Where |
 |---|---|---|
 | 1 | **WS=k guarantee holds** across bank sizes (n=32 to 64) and recursion depths (R=2 to 6), architectural and empirical | Ch. 2–3 |
-| 2 | **Quality cost ~0.5 nats is intrinsic** to the format: a param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token = Dense d24) still trails by ~0.5 nats. Matching budget does not close the gap. | Ch. 5a.5 |
+| 2 | **Quality cost ~0.5 nats, not explained by budget:** a param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token = Dense d24) still trails by ~0.5 nats. The evidence points to the narrow-active-set + recursion format. Lower bound — convergence open (7.5.6). | Ch. 5a.5 |
 | 3 | **Real wall-clock streaming win measured** on an RTX 2060: ~1.6× over dense layer-offloading once per-block kernel-launch overhead is removed (grouped matmul) and transfer/compute overlap is added. Chain "fewer bytes → more tokens/s" is measured end-to-end, not simulated. | Ch. 5b.4 |
 | 4 | **Recursion useful-depth band**: floor at active-brain A ≈ 1M params; per-step gain saturates by r ≈ 4; magnitude is seed-dominated. | Ch. 5d |
 
@@ -35,8 +35,8 @@ rblm/                       Core library (model, router, trainer, eval)
 experiments/                Experiment scripts (heteromini_long.py, streaming_prototype.py, …)
 scripts/                    Utilities (plot_asweep.py, build_figures.py, …)
 queues/                     JSON job queues used for overnight training runs
-dissertation/
-  docs/dissertation_draft/  Research monograph (8 chapters, Markdown)
+monograph/
+  docs/chapters/            Research monograph (8 chapters, Markdown)
   data/eval/                All eval JSON artifacts (no checkpoints)
   figures/                  Publication-ready figures (PNG)
 paper/                      Condensed paper drafts (draft_v3.md = submission-ready)
@@ -48,8 +48,8 @@ data/                       Training corpus — not committed (see below)
 
 ## Research monograph
 
-The full write-up is in [`dissertation/docs/dissertation_draft/`](dissertation/docs/dissertation_draft/).
-Eight chapters, all numerical claims backed by eval JSON files in `dissertation/data/eval/`.
+The full write-up is in [`monograph/docs/chapters/`](monograph/docs/chapters/).
+Eight chapters, all numerical claims backed by eval JSON files in `monograph/data/eval/`.
 
 | Chapter | Topic |
 |---|---|
@@ -66,17 +66,17 @@ Eight chapters, all numerical claims backed by eval JSON files in `dissertation/
 
 ## Reproducing figures
 
-Figures depend only on `dissertation/data/eval/` — no checkpoints needed:
+Figures depend only on `monograph/data/eval/` — no checkpoints needed:
 
 ```bash
 # Entropy Pareto + router consolidation + dense-vs-sparse quality
-python scripts/build_figures.py
+python monograph/scripts/build_figures.py
 
 # A-sweep depth plot
 python scripts/plot_asweep.py
 ```
 
-Output goes to `dissertation/figures/`.
+Output goes to `monograph/figures/`.
 
 ---
 
@@ -119,7 +119,7 @@ They are hosted on Hugging Face: **[HUGGINGFACE-REPO]**
 Key checkpoints:
 - `hm_cont_hm_srcore_b64_k8_R6_s{0-3}.pt` — SR-Core b64 k8 R6, 4 seeds (quality evidence)
 - `hm_cont_hm_dense_d24_s0.pt` — Dense d24 quality ceiling
-- `hm_cont_hm_srcore_b64_k16_R4_d256h192_s{0-2}.pt` — Param/compute-matched (intrinsic gap evidence)
+- `hm_cont_hm_srcore_b64_k16_R4_d256h192_s{0-2}.pt` — Param/compute-matched (quality gap evidence)
 
 ---
 

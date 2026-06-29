@@ -69,11 +69,12 @@ This monograph investigates four questions:
 
 This work operates at small scale: a ~19M parameter model trained on a ~6.6M token
 four-domain corpus. Results are not transferable to large-scale models without further
-validation. No wall-clock inference speedup is demonstrated — the dispatch overhead of
-sparse block selection imposes a CPU-side penalty (~2.8× relative to compute-matched
-dense in CPU benchmark) that offsets the bytes-in-motion reduction in the current
-prototype. The contribution is a demonstration of architectural properties and a
-simulation-level analysis of the offloading case.
+validation. A small-scale RAM→VRAM prototype demonstrates a measured throughput advantage
+under forced offloading (Chapter 5b.4); deployment-scale throughput, batched serving, and
+large-block scaling remain untested. The CPU-side dispatch overhead (~2.8× relative to
+compute-matched dense, Chapter 4) limits throughput in the compute-bound regime; it
+becomes sub-dominant only in the transfer-bound regime after sparse dispatch has been fused
+to remove per-block kernel-launch overhead.
 
 ## 1.6 Chapter Overview
 

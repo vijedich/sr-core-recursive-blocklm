@@ -254,7 +254,8 @@ consistency is a side effect, not the direct target.
 
 **Where to operate:**
 - **λ=0.003** is the recommended balanced operating point — Pareto improvement in both
-  cache and quality, replicated across seeds.
+  cache and quality at s0/s1 (full Pareto, 2 seeds); quality consistency extended to 4 seeds
+  (s0–s3), cache side not separately measured for s2/s3.
 - **λ=0.005** is the preferred cache/systems operating point — largest consistent cache
   gain (−7.5% at K=24), quality effect seed-dependent (not a consistent cost or benefit).
 - **λ=0.007** is the cache-best boundary — lowest absolute bytes/token in the sweep
@@ -263,7 +264,9 @@ consistency is a side effect, not the direct target.
 
 ## 6.9 What This Chapter Does Not Show
 
-- Wall-clock inference speedup (CPU dispatch overhead ~2.8×, no RAM→VRAM prototype)
+- Wall-clock inference speedup *due to entropy consolidation* (the cache/locality improvement
+  is measured in simulated bytes/token; whether it translates to additional throughput gain on
+  top of the architectural win demonstrated in Chapter 5b.4 is untested)
 - Dense-quality parity (dense d24 remains the upper bound)
 - Scaling behavior beyond n=64 or this training corpus
 - Downstream task performance
