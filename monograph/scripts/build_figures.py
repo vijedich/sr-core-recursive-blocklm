@@ -1,6 +1,6 @@
 """Build paper figures for entropy-minimization sweep.
 
-Outputs (all in results/):
+Reads eval JSON from data/eval/entmin/, writes figures to figures/:
   fig_entropy_pareto.png        -- cache vs code-generalization Pareto
   fig_router_consolidation.png  -- lambda → routing metrics
   fig_dense_vs_sparse_quality.png -- dense quality upper bound
@@ -14,7 +14,8 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 
 ROOT    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RESULTS = os.path.join(ROOT, "results")
+DATA    = os.path.join(ROOT, "data", "eval", "entmin")
+FIG     = os.path.join(ROOT, "figures")
 
 STYLE = {
     "font.family": "sans-serif",
@@ -39,7 +40,7 @@ COLORS = {
 
 
 def load(name: str) -> dict:
-    return json.load(open(os.path.join(RESULTS, name)))
+    return json.load(open(os.path.join(DATA, name)))
 
 
 def code_ratio_ho(metrics: dict) -> float:
@@ -130,7 +131,7 @@ def fig_pareto() -> None:
             fontsize=7.5, color="#999", va="bottom", style="italic")
 
     fig.tight_layout()
-    out = os.path.join(RESULTS, "fig_entropy_pareto.png")
+    out = os.path.join(FIG, "fig_entropy_pareto.png")
     fig.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved: {out}")
@@ -196,7 +197,7 @@ def fig_router_consolidation() -> None:
                    fontsize=7, color=col, ha="left", va="bottom")
 
     fig.tight_layout()
-    out = os.path.join(RESULTS, "fig_router_consolidation.png")
+    out = os.path.join(FIG, "fig_router_consolidation.png")
     fig.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved: {out}")
@@ -261,7 +262,7 @@ def fig_dense_vs_sparse() -> None:
             fontsize=7.5, color="#999", va="bottom", style="italic")
 
     fig.tight_layout()
-    out = os.path.join(RESULTS, "fig_dense_vs_sparse_quality.png")
+    out = os.path.join(FIG, "fig_dense_vs_sparse_quality.png")
     fig.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved: {out}")
@@ -274,4 +275,4 @@ if __name__ == "__main__":
     fig_pareto()
     fig_router_consolidation()
     fig_dense_vs_sparse()
-    print("Done — all figures in results/")
+    print("Done — all figures in figures/")

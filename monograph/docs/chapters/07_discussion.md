@@ -69,12 +69,14 @@ parameters (where n ≫ 64) is untested.
 reasoning) has been tested.
 
 **Leiterbahn index.** The routing trace analysis sufficient to build a block-prefetch
-index has not been implemented. The Leiterbahn concept (Section 10 of Theorie.md)
-remains a design direction, not an experimental result.
+index has not been implemented. The Leiterbahn ("conductor track") concept — a prefetch
+index mapping routing entry signatures to block-load plans — remains a design direction,
+not an experimental result (see Section 7.5.3).
 
 ## 7.3 Relationship to the Original Research Plan
 
-The original research plan (Theorie.md) envisioned a 7-phase program:
+This project began with a broader 7-phase research plan; this monograph reports what was
+actually built and measured against it:
 
 | Phase | Plan | Status |
 |---|---|---|

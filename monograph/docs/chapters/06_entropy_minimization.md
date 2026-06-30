@@ -5,9 +5,9 @@ entropy-based router consolidation as a controllable axis for cache efficiency a
 characterizes its effects on routing structure, language quality, and simulated
 offloading cost.
 
-The experimental results in this chapter are covered in detail in the accompanying
-technical report (see `paper/latex/main_compact.pdf`). This chapter presents the same
-findings in the broader context of this work.
+This chapter is self-contained: every numerical claim is backed by an eval JSON file in
+`data/eval/entmin/`, and the figures are regenerated from those files by
+`scripts/build_figures.py`.
 
 ---
 

@@ -4,14 +4,14 @@ dissertation/data/checkpoints/
 monograph/data/checkpoints/
 checkpoints/
 
-# ── Directories not part of the monograph publication ────────────────────────
-paper/
-queues/
-results/
-scripts/
-FINDINGS.md
-RESEARCH_NOTE.md
-PUBLICATION_PLAN.md
+# ── Directories not part of the monograph publication (root-level only) ──────
+/paper/
+/queues/
+/results/
+/scripts/
+/FINDINGS.md
+/RESEARCH_NOTE.md
+/PUBLICATION_PLAN.md
 
 # ── Internal working notes (German analysis logs, not part of publication) ────
 AUSWERTUNG_*.md

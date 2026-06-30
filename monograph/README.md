@@ -1,69 +1,38 @@
-# Rekursive Block-Sparse Sprachmodelle: Architektur, Skalierung und Routing-Konsolidierung
+# Recursive Block-Sparse Language Models — Research Monograph
 
-**Dissertation — Viktor Jedich**  
-**Status:** Artefakte eingefroren (2026-06-23).
+**Self-published research monograph / technical report. Not peer-reviewed, not a thesis.**
+Author: Viktor Jedich. Text licensed [CC BY 4.0](../LICENSE-CC-BY-4.0.md).
 
-## Inhalt
+This directory holds the full monograph and everything needed to verify it: the chapter
+text, every eval artifact that backs a numerical claim, the publication figures, and the
+scripts that regenerate those figures from the eval data.
+
+## Contents
 
 ```
-dissertation/
-├── chapters/              LEER — für Fließtext (LaTeX oder Markdown)
-│
-├── figures/               Alle Figuren
-│
-├── data/
-│   ├── checkpoints/
-│   │   ├── phase1/        TinyStories-Matrix + A/B/C Synthetik (b16–b256)
-│   │   ├── heteromini/    HeteroMini Long-Run (b32 k8 R6 s0–s2, k8 R8, naked, dense)
-│   │   └── entmin/        Entmin-Sweep b64 k8 R6 (ctrl, lam001–007, H375/H370, neg-ctrl, dense)
-│   │
-│   └── eval/
-│       ├── phase1/        A/B/C-Vergleich, TinyStories-Ergebnisse, CPU-Benchmark, Offload-Sim
-│       ├── heteromini/    HM-Matrix, Long-Run, Seen/Unknown, Cross-Seed, Anytime, Domain-Partition
-│       └── entmin/        eval_compare_*, eval_quality_*, hm_traj_*b64*, qual_gen
-│
-├── scripts/               Alle 29 Reproduktionsskripte
-│
-└── docs/                  Alle Analyse-Dokumente
-    ├── AUSWERTUNG_*.md    (12 Auswertungsdokumente)
-    ├── EXP*.md            (Phase-1 Experimente)
-    ├── Theorie.md
-    ├── FINDINGS.md
-    ├── results_note_entmin_sweep.md
-    └── writeup_skeleton_entmin.md
+docs/chapters/    The monograph — 8 chapters (Markdown). Start at README.md, then 01–08.
+data/eval/        All eval JSON artifacts, organized by experiment:
+  phase1/           Phase-1 synthetic + TinyStories scaling + CPU benchmark + offload sim
+  heteromini/       HeteroMini matrix, long-run, cross-seed, A-sweep, param-matched anytime
+  entmin/           Entropy-minimization sweep (Chapter 6)
+  streaming/        Real RAM→VRAM measurements (Chapter 5b.4)
+figures/          Publication figures (PNG), regenerated from data/eval/
+scripts/          Figure-generation and evaluation scripts
 ```
 
-## Kapitelstruktur
+Model checkpoints are **not** stored here (too large); they are hosted on Hugging Face —
+see the repository root [README](../README.md).
 
-| Kapitel | Inhalt | Hauptdaten |
-|---|---|---|
-| 1 | Motivation & Problemstellung | — |
-| 2 | SR-Core Architektur, WS-Garantie | `data/eval/phase1/A_*.json`, `B_*.json`, `C_*.json` |
-| 3 | Skalierung: WS bankgrößen-unabhängig | `data/eval/phase1/tinystories_b*.json` |
-| 4 | CPU-Benchmark: Dispatch-Tax | `data/eval/phase1/cpu_benchmark.json` |
-| 5a | HeteroMini Multi-Domain-Matrix | `data/eval/heteromini/heteromini_hm_*.json` |
-| 5b | Offloading-Simulation | `data/eval/phase1/offload_sim.json` |
-| 5c | Cross-Seed-Robustheit k8 R6 | `data/eval/heteromini/routing_analysis_crossseed_k8_R6.json` |
-| 6 | Entropy-Minimierung | `data/eval/entmin/eval_compare_*.json` |
-| 7 | Diskussion & Ausblick | — |
+## Where to start
 
-## Modell-Übersicht
+- Read the chapters in order beginning with [`docs/chapters/README.md`](docs/chapters/README.md),
+  which carries the chapter map and the four load-bearing results.
+- To verify a number, find its data source (each chapter cites the relevant
+  `data/eval/...` file) and inspect the JSON directly.
+- To regenerate the figures: `python scripts/build_figures.py` and
+  `python scripts/plot_asweep.py` (run from the repository root, which provides `rblm/`).
 
-**phase1/** (TinyStories + Synthetik, Phase 1–2):
-- Synthetik: `model_C_routed_s0.pt` (Routing-Attraktor-Nachweis)
-- TinyStories: b16/b32/b64/b128/b256 × k4 × R2/R4/R6, diverse Seeds
-- Dense: `dense_d4/d8/d12/d24_s0_model.pt`
+## License
 
-**heteromini/** (HeteroMini Long-Run Phase 3):
-- HM-Smoke: `heteromini_hm_dense_d8/d24_s0_model.pt`, `hm_naked_b32_R2/R6_s0_model.pt`, etc.
-- Long-Run b32: `hm_cont_hm_srcore_b32_k8_R6_s0/s1/s2.pt`, `hm_cont_hm_naked_b32_R6_s0.pt`
-- Long-Run b64: `hm_cont_hm_srcore_b64_k8_R6_s0/s1.pt`, `hm_cont_hm_srcore_b64_R6_s0.pt`
-
-**entmin/** (Phase 4 Entmin-Sweep):
-- Ctrl: `hm_cont_hm_srcore_b64_k8_R6_ctrl_17k_s0/s1.pt`
-- Dense: `hm_cont_hm_dense_d24_17k_s0.pt`
-- Sweep: lam001, lam003 (s0/s1), lam005 (s0/s1), lam007
-- Target-Entropy: H375, H370
-- Negativ-Kontrollen: softfull, softsharp_a2, noise_0p1, coreloc_r1
-
-**Hinweis:** .pt-Dateien (7.2 GB gesamt) sollten via Git LFS oder HuggingFace Hub gehostet werden.
+The monograph text and figures are licensed under [CC BY 4.0](../LICENSE-CC-BY-4.0.md).
+The scripts in `scripts/` are licensed under [MIT](../LICENSE), like the rest of the code.

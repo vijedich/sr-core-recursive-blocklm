@@ -1,8 +1,8 @@
 # Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-This license applies to the **research monograph and paper** contained in this repository:
-- `monograph/docs/chapters/` — Research Monograph
-- `paper/` — Paper drafts
+This license applies to the **research monograph** contained in this repository:
+- `monograph/docs/` — Research monograph text
+- `monograph/figures/` — Publication figures
 
 Copyright (c) 2026 Viktor Jedich
 
