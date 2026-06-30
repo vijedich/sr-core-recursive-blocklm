@@ -28,7 +28,7 @@ MIT License. See [LICENSE](../../../../LICENSE) in the repository root.
   author  = {Jedich, Viktor},
   year    = {2026},
   note    = {Self-published research monograph.
-             \url{https://github.com/[GITHUB-USERNAME]/sr-core-recursive-blocklm}}
+             \url{https://github.com/vijedich/sr-core-recursive-blocklm}}
 }
 ```
 

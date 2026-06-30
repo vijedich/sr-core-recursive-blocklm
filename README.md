@@ -125,7 +125,7 @@ Checkpoints are saved at milestones (2500 / 5000 / 10000 / 15000 steps) for cras
 ## Checkpoints
 
 Model checkpoints are not committed to this repository (too large).
-They are hosted on Hugging Face: **[HUGGINGFACE-REPO]**
+They are hosted on Hugging Face: **[vijedich/sr-core-recursive-blocklm](https://huggingface.co/vijedich/sr-core-recursive-blocklm)**
 
 Key checkpoints:
 - `hm_cont_hm_srcore_b64_k8_R6_s{0-3}.pt` — SR-Core b64 k8 R6, 4 seeds (quality evidence)
@@ -176,11 +176,9 @@ If you use this work, please cite:
   author  = {Jedich, Viktor},
   year    = {2026},
   note    = {Self-published research monograph.
-             \url{https://github.com/[GITHUB-USERNAME]/sr-core-recursive-blocklm}}
+             \url{https://github.com/vijedich/sr-core-recursive-blocklm}}
 }
 ```
-
-*Replace `[GITHUB-USERNAME]` with your actual username after publishing.*
 
 ---
 
