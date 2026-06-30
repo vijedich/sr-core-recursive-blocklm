@@ -1,19 +1,24 @@
-"""Nachberechnung der Ablations-Daten fuer Seeds 1-3 (TinyStories b64k4R6).
+"""Recompute ablation data for seeds 1-3 (TinyStories b64k4R6).
 
-Laedt jeweils den passendenCheckpoint und fuehrt den Ablationstest durch.
-Ergebnisse werden als JSON in dissertation/data/eval/phase1/ gespeichert.
+Loads the matching checkpoint for each seed and runs the ablation test.
+Results are written as JSON to monograph/data/eval/phase1/.
 
-Nutzung:
-    python -m scripts.competence_ablation_crossseed
-    python -m scripts.competence_ablation_crossseed --device cpu
+This is a pipeline script: it requires the trained checkpoints (hosted on Hugging Face,
+see the repository root README) placed under monograph/data/checkpoints/phase1/. It is
+provided to document how the eval JSONs were produced, not as a no-setup reproduction step.
+
+Usage (run from the repository root):
+    python -m monograph.scripts.competence_ablation_crossseed
+    python -m monograph.scripts.competence_ablation_crossseed --device cpu
 """
 from __future__ import annotations
 import argparse, json, os, sys
 import numpy as np
 import torch
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, ROOT)
+MONO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # monograph/
+REPO = os.path.dirname(MONO)                                         # repo root (has experiments/)
+sys.path.insert(0, REPO)
 
 from experiments.competence_centers_exp import (
     load_with_text,
@@ -27,8 +32,8 @@ from experiments.competence_centers_exp import (
     _load_checkpoint,
 )
 
-RESULTS = os.path.join(ROOT, "results")
-DATA_OUT = os.path.join(ROOT, "dissertation", "data", "eval", "phase1")
+RESULTS = os.path.join(MONO, "data", "checkpoints", "phase1")
+DATA_OUT = os.path.join(MONO, "data", "eval", "phase1")
 
 CHECKPOINTS = {
     1: "tinystories_b64k4R6_s1_div0.0_crd0.0_diverse_currFromIter2_warm_model.pt",

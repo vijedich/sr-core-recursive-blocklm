@@ -49,9 +49,11 @@ dissertation and does not claim to be.
 - **Deployment-scale streaming** — ≫VRAM models, large blocks, batched serving (7.4 / 7.5.1).
 - **Scale validation** (7B+), downstream tasks, the Leiterbahn index (7.5.2–7.5.3).
 
-## Trained artifacts (all present under `data/checkpoints/`)
+## Trained artifacts (hosted on Hugging Face)
 
-The HeteroMini set is now complete for the quality argument:
+Checkpoints are **not** committed to git (see the repository root README for the Hugging Face
+link); the local `data/checkpoints/` directory is gitignored. The HeteroMini set is complete
+for the quality argument:
 - SR-Core b64 k8 R6: seeds **s0–s3** (4 seeds)
 - Dense d24 (17k), Dense d48 (compute-rough baseline, bs=8 — superseded by the param-matched run)
 - **Param/compute-matched SR-Core** (b64 k16 R4 d256h192, 3 seeds) — the definitive quality-cost evidence

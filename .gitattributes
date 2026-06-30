@@ -1,4 +1,6 @@
-# Git LFS tracking — large binary files go to S3 via Gitea LFS
+# Git LFS tracking for large model binaries, should any be committed locally.
+# Note: checkpoints are NOT committed here — they are hosted on Hugging Face.
+# Figures (*.png) are small and committed as regular blobs, not via LFS.
 *.pt        filter=lfs diff=lfs merge=lfs -text
 *.pth       filter=lfs diff=lfs merge=lfs -text
 *.ckpt      filter=lfs diff=lfs merge=lfs -text

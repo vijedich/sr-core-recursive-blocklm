@@ -1,0 +1,9 @@
+# Core — model, training, evaluation, figures
+torch>=2.0
+numpy>=1.24
+matplotlib>=3.7
+
+# Data pipeline — rebuilding HeteroMini / TinyStories corpora (rblm/heteromini.py,
+# rblm/tinystories.py). Not needed for figure regeneration from committed eval JSON.
+datasets>=2.14
+tokenizers>=0.14

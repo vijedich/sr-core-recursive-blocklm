@@ -1,9 +1,9 @@
 import json, os, sys
 
-ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
+DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "eval", "entmin")
 
 def load(name):
-    return json.load(open(os.path.join(ROOT, name)))
+    return json.load(open(os.path.join(DATA, name)))
 
 def code_ratio_ho(metrics):
     lf = metrics["Lfin_heldout"]

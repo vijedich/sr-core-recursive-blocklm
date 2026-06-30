@@ -94,7 +94,7 @@ Output goes to `monograph/figures/`.
 ## Training from scratch
 
 ```bash
-pip install torch numpy matplotlib
+pip install -r requirements.txt   # torch, numpy, matplotlib + datasets, tokenizers (corpus rebuild)
 
 # Single HeteroMini run (GPU required, ~1.5h on RTX 2060 per 15k steps)
 python -m experiments.heteromini_long \
