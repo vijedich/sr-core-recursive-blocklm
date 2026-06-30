@@ -164,8 +164,9 @@ Every comparison in this chapter must be read under the deployment scenario the
 architecture targets: a model too large for VRAM, held in host RAM, streaming k blocks
 per token across PCIe to the GPU. In this regime the GPU is **memory-bandwidth-bound** —
 it stalls waiting for block transfers, not for arithmetic. Compute performed on blocks
-already resident in VRAM is effectively free, because it overlaps with (and is hidden by)
-the transfer latency of subsequent tokens.
+already resident in VRAM can be **partially hidden** when transfer dominates and the sparse
+dispatch is fused (Chapter 5b.4 shows the naive, unfused version is *not* hidden — it is
+kernel-launch-bound and loses to dense until the per-block launches are grouped).
 
 This reframes the compute asymmetry from Section 5a.5. SR-Core's 48 block-applications
 per token (vs. dense d24's 24) are not a cost in this scenario: they execute in wall-clock
@@ -285,7 +286,7 @@ substantially larger advantage but remains a *projection beyond the measured poi
 
 ### 5c.1 Setup
 
-Two independently initialized SR-Core b64 k8 R6 models (seed 0 and seed 1) are trained
+Three independently initialized SR-Core b32 k8 R6 models (seeds 0, 1, and 2) are trained
 on the same HeteroMini-v1 corpus for 15,000 steps.
 
 Question: is the routing structure (Jaccard overlap between seeds, domain specialization

@@ -229,10 +229,14 @@ Data source: `scripts/competence_ablation_crossseed.py` → `data/eval/phase1/co
 
 ## 3.7 Summary
 
-The working-set guarantee WS=k=const holds empirically across bank sizes:
-- Quality does not degrade with increasing n at fixed k
+SR-Core has WS=k by construction (routing fixed at r=1; Chapter 2). What these free-routing
+scaling experiments add is that the surrounding conditions stay healthy as the bank grows:
+- Quality does not degrade — and modestly improves — with increasing n at fixed k
 - Routing remains healthy (no collapse) at all tested bank sizes
 - Routing specialization is stable across seeds
+
+(Note: these are pre-SR-Core free-routing variants with unique-blocks/token ≈6–7, not WS=k=4;
+they validate that bank scaling is benign, not the WS bound itself — that is architectural.)
 
 Sparse routing C outperforms dense A at equal compute, and pure recursion B is
 strictly dominated — validating the architectural motivation for SR-Core.

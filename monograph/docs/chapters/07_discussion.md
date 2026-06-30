@@ -267,7 +267,8 @@ Block-sparse recursive language models with shared routing (SR-Core) combine two
 properties that are jointly necessary for predictable parameter streaming: a hard active-
 set bound (WS=k) and, with entropy regularization, a controllable cache locality axis.
 
-Both properties have been demonstrated at the scale studied. The primary remaining task
-is demonstrating that they survive the translation from simulation to real hardware —
-a demonstration that requires a RAM→VRAM prototype with GPU-native sparse dispatch and
-block sizes large enough to amortize transfer overhead.
+Both properties have been demonstrated at the scale studied, and the simulation-to-real
+translation has been shown at small scale (Chapter 5b.4: 297 vs. 205 tok/s, ~1.6× with
+overlap). The primary remaining task is a *deployment-scale* demonstration — batched
+serving and block sizes large enough that the transfer-bound advantage grows as projected
+on a model that genuinely exceeds VRAM — which requires hardware beyond this program.
