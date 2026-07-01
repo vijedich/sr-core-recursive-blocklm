@@ -1,0 +1,15 @@
+% Header include for the pandoc → xelatex PDF build (build_pdf.py).
+% DejaVu (set via build_pdf.py) covers almost all math/greek glyphs used in the text;
+% these two comparison operators are the only gaps, mapped to their math equivalents.
+\usepackage{newunicodechar}
+\newunicodechar{≫}{\ensuremath{\gg}}
+\newunicodechar{≳}{\ensuremath{\gtrsim}}
+
+% Keep long code lines and wide tables inside the margins.
+\usepackage{fvextra}
+\fvset{breaklines=true,breakanywhere=true}
+\usepackage{ragged2e}
+
+% A little breathing room around section headings.
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{2.2ex plus 1ex minus .2ex}{1.2ex plus .2ex}

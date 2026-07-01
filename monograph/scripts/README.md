@@ -14,6 +14,17 @@ python monograph/scripts/plot_asweep.py      # A-sweep depth (fig_asweep_depth.p
 python monograph/scripts/_check_fig_data.py  # prints the numbers behind the figures (no plotting)
 ```
 
+`build_pdf.py` renders the whole monograph (chapters 00–08) to `../SR-Core-Monograph.pdf`
+via pandoc + xelatex. The committed PDF is built by this script; regenerate with:
+
+```bash
+python monograph/scripts/build_pdf.py
+```
+
+It needs pandoc (on PATH, or `pip install pypandoc_binary`), a LaTeX distribution with
+xelatex (MiKTeX / TeX Live), and the DejaVu fonts. `latex_header.tex` is the shared LaTeX
+preamble it includes.
+
 ## B. Eval / training pipeline — requires checkpoints
 
 `eval_four_seed_quality.py` is the auditable source for the per-seed quality tables in

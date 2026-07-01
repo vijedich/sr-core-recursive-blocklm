@@ -61,6 +61,9 @@ data/                       Training corpus — not committed (rebuild with rblm
 
 The full write-up is in [`monograph/docs/chapters/`](monograph/docs/chapters/).
 Eight chapters, all numerical claims backed by eval JSON files in `monograph/data/eval/`.
+A rendered PDF of the whole monograph is committed at
+[`monograph/SR-Core-Monograph.pdf`](monograph/SR-Core-Monograph.pdf)
+(rebuild: `python monograph/scripts/build_pdf.py` — needs pandoc + xelatex).
 
 | Chapter | Topic |
 |---|---|
