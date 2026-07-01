@@ -1,0 +1,97 @@
+{
+  "protocol": {
+    "heldout_corpus": "data/heteromini_v1_heldout",
+    "seen_corpus": "data/heteromini_v1 (training corpus)",
+    "mode": "contiguous",
+    "metric": "mean cross-entropy at final recursion step r=R",
+    "n_batches": 60,
+    "bs": 16,
+    "seq_len": 128,
+    "tokens": 122880,
+    "eval_seed": "1000 + model_seed (fixed, reproducible)",
+    "generated_by": "monograph/scripts/eval_four_seed_quality.py",
+    "dense_d24_note": "reference is the 17k snapshot; the 10k snapshot measures seen 5.14 / held 5.34 under this same protocol (still descending)"
+  },
+  "srcore_b64_k8_R6": {
+    "heldout": {
+      "s0": 5.4906,
+      "s1": 5.291,
+      "s2": 5.4635,
+      "s3": 5.5175,
+      "mean": 5.4406,
+      "std": 0.0885
+    },
+    "seen": {
+      "s0": 5.3336,
+      "s1": 4.989,
+      "s2": 5.2825,
+      "s3": 5.29,
+      "mean": 5.2238,
+      "std": 0.1369
+    }
+  },
+  "dense_d24": {
+    "heldout": {
+      "s0": 5.1023,
+      "mean": 5.1023,
+      "std": 0.0
+    },
+    "seen": {
+      "s0": 4.7934,
+      "mean": 4.7934,
+      "std": 0.0
+    }
+  },
+  "param_matched_k16_R4": {
+    "heldout": {
+      "s0": 5.4523,
+      "s1": 5.469,
+      "s2": 5.4548,
+      "mean": 5.4587,
+      "std": 0.0074
+    },
+    "seen": {
+      "s0": 5.2864,
+      "s1": 5.2406,
+      "s2": 5.2808,
+      "mean": 5.2693,
+      "std": 0.0204
+    }
+  },
+  "entmin_lam003": {
+    "heldout": {
+      "s0": 5.4852,
+      "s1": 5.2886,
+      "s2": 5.3688,
+      "s3": 5.4007,
+      "mean": 5.3858,
+      "std": 0.0704
+    },
+    "seen": {
+      "s0": 5.3277,
+      "s1": 4.9856,
+      "s2": 5.1473,
+      "s3": 5.1377,
+      "mean": 5.1496,
+      "std": 0.1212
+    }
+  },
+  "entmin_lam005": {
+    "heldout": {
+      "s0": 5.4852,
+      "s1": 5.2887,
+      "s2": 5.3675,
+      "s3": 5.4,
+      "mean": 5.3854,
+      "std": 0.0704
+    },
+    "seen": {
+      "s0": 5.3277,
+      "s1": 4.9856,
+      "s2": 5.1447,
+      "s3": 5.1367,
+      "mean": 5.1487,
+      "std": 0.1212
+    }
+  }
+}

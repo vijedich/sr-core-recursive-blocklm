@@ -172,12 +172,17 @@ In seed 1:
 improve relative to the unregularized baseline, replicated across two independent seeds.
 
 **4-seed update.** Two further seeds (s2, s3) for both λ=0.003 and λ=0.005 are now trained,
-extending the sweep to four seeds. Their overall held-out loss is consistent (λ=0.003:
-s2=5.12, s3=5.17; λ=0.005: s2=5.12, s3=5.17 — alongside s0=5.32 and the known low-loss outlier
-s1=4.74). The *quality* side of the Pareto thus has 4-seed support. The per-seed **cache** table
-(the Pareto x-axis) was not recomputed for s2/s3: `offload_sim` labels checkpoints by
-architecture, not by λ-variant, so a single pass cannot separate them — the cache side remains
-at two seeds. This is the one acknowledged loose end in the entropy chapter.
+extending the sweep to four seeds. Re-measured under the fixed protocol of Section 5a.5, the
+seen final-step loss is consistent across the sweep (λ=0.003: s0=5.328, s2=5.147, s3=5.138,
+with the known low-loss outlier s1=4.986; λ=0.005 within 0.003 of these — the two λ values are
+nearly indistinguishable on quality). The *quality* side of the Pareto thus has 4-seed support.
+The per-seed **cache** table (the Pareto x-axis) was not recomputed for s2/s3: `offload_sim`
+labels checkpoints by architecture, not by λ-variant, so a single pass cannot separate them —
+the cache side remains at two seeds. This is the one acknowledged loose end in the entropy
+chapter.
+
+Data source: `entmin_lam003` / `entmin_lam005` blocks in
+`data/eval/heteromini/eval_quality_four_seed_summary.json`.
 
 ### 6.5.2 λ=0.005: Larger Cache Gain, Seed-Dependent Quality
 

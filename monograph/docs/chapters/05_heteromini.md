@@ -112,30 +112,47 @@ distribution shift. The overall PPL ratio (1.17×) is consistent with a model tr
 ### 5a.5 Quality: Dense Is the Ceiling
 
 The 2,000-step matrix (5a.2) is a smoke run, not a final ranking. With sustained training,
-the held-out loss of SR-Core b64 k8 R6 is reproducible across four independent seeds:
+the final-step loss of SR-Core b64 k8 R6 is reproducible across four independent seeds. All
+values below are the mean cross-entropy at the final recursion step r=R, re-measured under one
+fixed protocol (60×16×128 tokens, contiguous windows) on both the training-domain (seen)
+corpus and the held-out split:
 
-| Seed | L_final (15k steps) |
-|---|---|
-| s0 | 5.331 |
-| s1 | 5.335 |
-| s2 | 5.226 |
-| s3 | 5.305 |
-| **Mean ± std** | **5.299 ± 0.045** |
+| Seed | L (seen) | L (held-out) |
+|---|---|---|
+| s0 | 5.334 | 5.491 |
+| s1 (low-loss outlier) | 4.989 | 5.291 |
+| s2 | 5.283 | 5.464 |
+| s3 | 5.290 | 5.518 |
+| **Mean ± std** | **5.224 ± 0.137** | **5.441 ± 0.089** |
+| Mean excl. s1 | 5.302 | 5.491 |
 
-Seed variance is small (~0.05 nats; 0.11-nat range) — quality is stable, not noise-dominated.
-Dense d24, trained to the same step count, reaches L ≈ 4.70 (4.81 at 17k) — roughly **0.5–0.6
-nats better than SR-Core, with half the block-applications per token** (24 vs. k·R = 48). At
-this scale **Dense d24 is the quality ceiling; SR-Core does not match it.**
+Seed s1 is a low-loss outlier (also noted in Chapter 6); excluding it, the three remaining
+seeds cluster tightly (seen 5.28–5.33). Dense d24 at 17k steps, under the *same* protocol,
+reaches **seen 4.793 / held-out 5.102**. SR-Core therefore trails dense by **~0.5 nats on the
+seen contiguous loss (0.51 excluding s1) and ~0.34 nats held-out** — with half the
+block-applications per token (24 vs. k·R = 48). At this scale **Dense d24 is the quality
+ceiling; SR-Core does not match it.**
+
+Data source: `data/eval/heteromini/eval_quality_four_seed_summary.json` — regenerate with
+`python monograph/scripts/eval_four_seed_quality.py --entropy`. (The earlier version of this
+table reported a single "held-out" column that was in fact the seen-corpus loss and used a
+per-run eval; the numbers above supersede it under one auditable protocol.)
 
 **The observed gap is not explained by parameter count or block-application compute.** A
 *param- and compute-matched* comparison settles this directly. A SR-Core variant sized to
 Dense d24 — n=64, k=16, R=4, block_hidden=192 — has 8.75M parameters (vs. d24's 8.70M) and
 performs exactly **6.29M parameter-applications per token** (k·R·block = 64·98k), identical
-to d24's 24·262k. Same parameters, same compute, same backbone. Across three seeds it reaches
-**L = 5.26 ± 0.03 — still ~0.5 nats behind Dense d24**. Matching both parameters *and*
+to d24's 24·262k. Same parameters, same compute, same backbone. Under the same protocol as
+above, across three seeds it reaches **seen 5.269 ± 0.020 / held-out 5.459 ± 0.007 — still
+~0.48 nats (seen) / ~0.36 nats (held-out) behind Dense d24**. Matching both parameters *and*
 compute does **not** close the gap. The evidence points to the SR-Core *format* (narrow active
 set + weight-tied recursion) as the source — the gap persists even when both budgets are
-matched. Whether it narrows at convergence or at larger scale remains open (Section 7.5.6).
+matched. Note this matched variant is also *tighter* across seeds than the plain k8 R6 set
+(std 0.02 vs 0.14, no low-loss outlier), so it is the cleaner evidence. Whether the gap
+narrows at convergence or at larger scale remains open (Section 7.5.6).
+
+Data source: same summary file (`param_matched_k16_R4` block in
+`data/eval/heteromini/eval_quality_four_seed_summary.json`).
 
 The mechanism is a breadth-vs-depth tradeoff at fixed compute: dense brings ~6.3M *distinct*
 parameters to bear per token (each applied once), while this SR-Core touches only ~1.6M distinct
@@ -418,13 +435,15 @@ figure: `figures/fig_asweep_depth.png` (script: `scripts/plot_asweep.py`).
 HeteroMini experiments establish:
 
 1. **Dense d24 is the quality ceiling; the ~0.5-nat gap is not explained by parameter or
-   compute budget.** SR-Core b64 k8 R6 reaches L = 5.30 ± 0.05 (4 seeds) vs. Dense d24's
-   ~4.70. A param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token, identical to
-   d24) still trails by ~0.5 nats (L = 5.26 ± 0.03; Section 5a.5) — so the gap is not a budget
-   artifact; the evidence points to the narrow-active-set + recursion format. Both models are
-   still descending at 15k, so this is a lower bound, not a converged value; whether the gap
-   narrows at convergence or scale remains open (Section 7.5.6). SR-Core's contribution is
-   transfer efficiency, not quality.
+   compute budget.** Under one fixed protocol (Section 5a.5), SR-Core b64 k8 R6 reaches seen
+   5.30 / held-out 5.44 (three seeds excl. a low-loss outlier) vs. Dense d24's seen 4.79 /
+   held-out 5.10. A param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token,
+   identical to d24) still trails by **~0.48 nats seen / ~0.36 held-out** (seen 5.269 ± 0.020;
+   Section 5a.5) — so the gap is not a budget artifact; the evidence points to the
+   narrow-active-set + recursion format. Both models are still descending at their stops, so
+   this is a lower bound, not a converged value; whether the gap narrows at convergence or
+   scale remains open (Section 7.5.6). SR-Core's contribution is transfer efficiency, not
+   quality.
 
 2. **Recursion has a measurable useful-depth band** (Section 5d): below an active-brain floor
    (A ≈ 1M) recursion is dead; above it, per-step gains saturate by r≈4. Magnitude is

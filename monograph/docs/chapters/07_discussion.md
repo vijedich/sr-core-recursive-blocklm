@@ -29,16 +29,17 @@ of entropy-based router consolidation on cache efficiency and language quality.
 - At K=8, SR-Core requires 4.1× fewer simulated bytes/token than dense layer-offloading
 
 **Quality:**
-- Dense d24 is the quality ceiling. SR-Core b64 k8 R6 reaches L = 5.30 ± 0.05 (stable across
-  4 seeds), ~0.5–0.6 nats behind Dense d24 (~4.70–4.81) — and Dense achieves this with half
-  the block-applications per token (24 vs. 48). SR-Core does not win on language quality
+- Dense d24 is the quality ceiling. Under one fixed protocol (Chapter 5a.5, seen contiguous
+  loss), SR-Core b64 k8 R6 reaches ~5.30 (three seeds excl. a low-loss outlier) vs. Dense d24's
+  4.79 — ~0.5 nats seen (~0.34 held-out) — and Dense achieves this with half the
+  block-applications per token (24 vs. 48). SR-Core does not win on language quality
   (Chapter 5a.5)
 - The gap is not explained by parameter count or block-application compute in the tested
   regime: a param- *and* compute-matched SR-Core (8.75M params, 6.29M apps/token = Dense d24)
-  still trails by ~0.5 nats (Chapter 5a.5). The evidence points to the narrow-active-set +
-  recursion format as the source. Whether the gap narrows at convergence or scale remains open
-  (Section 7.5.6). (Both models are still descending at 15k, so the figure is a lower bound,
-  not a converged value)
+  still trails by ~0.48 nats seen / ~0.36 held-out (Chapter 5a.5). The evidence points to the
+  narrow-active-set + recursion format as the source. Whether the gap narrows at convergence or
+  scale remains open (Section 7.5.6). (Both models are still descending at their stops, so the
+  figure is a lower bound, not a converged value)
 - This is by design, not a shortfall: SR-Core's contribution is transfer efficiency, not
   quality. Additional block compute is not the limiting term in the transfer-bound deployment
   regime — provided sparse dispatch is fused enough that per-block kernel-launch overhead is
