@@ -13,3 +13,8 @@
 % A little breathing room around section headings.
 \usepackage{titlesec}
 \titlespacing*{\section}{0pt}{2.2ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+% More horizontal gap between table columns and a touch more row height, so a long
+% word in a narrow column does not butt against its neighbour.
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.15}

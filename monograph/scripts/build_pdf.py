@@ -17,6 +17,7 @@ import glob, os, shutil, subprocess, sys
 MONO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # monograph/
 CHAPTERS = os.path.join(MONO, "docs", "chapters")
 HEADER = os.path.join(MONO, "scripts", "latex_header.tex")
+TABLE_FILTER = os.path.join(MONO, "scripts", "table_widths.lua")
 OUT = os.path.join(MONO, "SR-Core-Monograph.pdf")
 
 TITLE_BLOCK = """---
@@ -71,9 +72,20 @@ def main() -> None:
         "--from", "gfm+yaml_metadata_block+tex_math_dollars",
         "--pdf-engine=xelatex",
         "-H", HEADER,
+        "--lua-filter", TABLE_FILTER,
         "--top-level-division=chapter",
         "-o", OUT,
     ]
+    # Fail early with a clear message if the target PDF is locked (e.g. open in a viewer).
+    if os.path.exists(OUT):
+        try:
+            with open(OUT, "ab"):
+                pass
+        except PermissionError:
+            os.remove(front)
+            sys.exit(f"Cannot write {OUT} — it is open in another program "
+                     f"(close your PDF viewer and re-run).")
+
     print(f"\npandoc: {pandoc}\nBuilding {OUT} ...")
     try:
         subprocess.run(cmd, check=True)
