@@ -18,6 +18,7 @@ MONO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # monograph
 CHAPTERS = os.path.join(MONO, "docs", "chapters")
 HEADER = os.path.join(MONO, "scripts", "latex_header.tex")
 TABLE_FILTER = os.path.join(MONO, "scripts", "table_widths.lua")
+CODE_FILTER = os.path.join(MONO, "scripts", "breakable_code.lua")
 OUT = os.path.join(MONO, "SR-Core-Monograph.pdf")
 
 TITLE_BLOCK = """---
@@ -73,6 +74,7 @@ def main() -> None:
         "--pdf-engine=xelatex",
         "-H", HEADER,
         "--lua-filter", TABLE_FILTER,
+        "--lua-filter", CODE_FILTER,
         "--top-level-division=chapter",
         "-o", OUT,
     ]
