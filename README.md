@@ -170,16 +170,21 @@ Copyright (c) 2026 Viktor Jedich
 
 ## Citation
 
+This work is archived on Zenodo with a citable DOI:
+**[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)**
+<!-- Replace 10.5281/zenodo.XXXXXXX with the DOI issued after the first GitHub release is archived by Zenodo. -->
+
 If you use this work, please cite:
 
 ```bibtex
-@techreport{jedich2026srcore,
+@misc{jedich2026srcore,
   title   = {Entropy-based Router Consolidation for Cache-Efficient
              Recursive Block-Sparse Language Models},
   author  = {Jedich, Viktor},
   year    = {2026},
-  note    = {Self-published research monograph.
-             \url{https://github.com/vijedich/sr-core-recursive-blocklm}}
+  note    = {Self-published research monograph},
+  doi     = {10.5281/zenodo.XXXXXXX},
+  url     = {https://github.com/vijedich/sr-core-recursive-blocklm}
 }
 ```
 

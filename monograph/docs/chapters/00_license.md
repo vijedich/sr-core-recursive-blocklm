@@ -22,15 +22,18 @@ MIT License. See [LICENSE](../../../../LICENSE) in the repository root.
 **Citation:**
 
 ```bibtex
-@techreport{jedich2026srcore,
+@misc{jedich2026srcore,
   title   = {Entropy-based Router Consolidation for Cache-Efficient
              Recursive Block-Sparse Language Models},
   author  = {Jedich, Viktor},
   year    = {2026},
-  note    = {Self-published research monograph.
-             \url{https://github.com/vijedich/sr-core-recursive-blocklm}}
+  note    = {Self-published research monograph},
+  url     = {https://github.com/vijedich/sr-core-recursive-blocklm}
 }
 ```
+
+This work is archived on Zenodo with a citable, permanent DOI — see the repository
+README for the DOI and the ready-to-use citation.
 
 **Status:** Self-published research monograph / technical report. Not peer-reviewed,
 not a doctoral dissertation.
