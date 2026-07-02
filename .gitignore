@@ -2,6 +2,7 @@
 results/*.pt
 dissertation/data/checkpoints/
 monograph/data/checkpoints/
+monograph/data/_hf_upload/
 checkpoints/
 
 # ── Directories not part of the monograph publication (root-level only) ──────
