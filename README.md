@@ -171,8 +171,10 @@ Copyright (c) 2026 Viktor Jedich
 ## Citation
 
 This work is archived on Zenodo with a citable DOI:
-**[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)**
-<!-- Replace 10.5281/zenodo.XXXXXXX with the DOI issued after the first GitHub release is archived by Zenodo. -->
+**[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21146547.svg)](https://doi.org/10.5281/zenodo.21146547)**
+
+The concept DOI `10.5281/zenodo.21146547` always resolves to the latest version; the
+v1.0 release is `10.5281/zenodo.21146548`.
 
 If you use this work, please cite:
 
@@ -183,7 +185,7 @@ If you use this work, please cite:
   author  = {Jedich, Viktor},
   year    = {2026},
   note    = {Self-published research monograph},
-  doi     = {10.5281/zenodo.XXXXXXX},
+  doi     = {10.5281/zenodo.21146547},
   url     = {https://github.com/vijedich/sr-core-recursive-blocklm}
 }
 ```
